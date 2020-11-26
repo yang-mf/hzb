@@ -1,0 +1,85 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-name" data-rule="required" class="form-control" name="row[name]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Management')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-management" data-rule="required" class="form-control" name="row[management]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('省份，所在市')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="form-inline" data-toggle="cxselect" data-selects="province,city">
+                <select class="province form-control" data-rule="required" name="row[province]" data-url="ajax/area"></select>
+                <select class="city form-control" data-rule="required" name="row[city]" data-url="ajax/area"></select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            {$typeList}
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Category')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-category" data-rule="required" class="form-control" name="row[category]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Nature')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            {$natureList}
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Is_211')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            {$is_211List}
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Is_985')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            {$is_985List}
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Classic')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-classic" class="form-control" name="row[classic]" type="text" value="----">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Renown')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-renown" class="form-control" name="row[renown]" type="text" value="----">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Rank')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-rank" class="form-control" name="row[rank]" type="text" value="----">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('First')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-first" data-rule="required" class="form-control" name="row[first]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

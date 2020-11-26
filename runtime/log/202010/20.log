@@ -1,0 +1,679 @@
+---------------------------------------------------------------
+[ 2020-10-20T16:58:45+08:00 ] 127.0.0.1 GET www.test.com/
+[运行时间：0.056369s] [吞吐率：17.74req/s] [内存消耗：3,135.88kb] [文件加载：126]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000248s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.002497s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002520s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.test.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001746s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\phpstudy_pro\WWW\fw366.cn\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\index\index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-20T16:58:54+08:00 ] 127.0.0.1 GET www.test.com/
+[运行时间：0.045677s] [吞吐率：21.89req/s] [内存消耗：3,005.36kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.001925s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001941s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.test.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.test.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001860s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\phpstudy_pro\WWW\fw366.cn\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\index\index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-20T17:01:51+08:00 ] 127.0.0.1 GET www.test.com/
+[运行时间：0.043277s] [吞吐率：23.11req/s] [内存消耗：3,005.06kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000032s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.002312s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002328s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.test.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001437s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\phpstudy_pro\WWW\fw366.cn\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\index\index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-20T17:13:40+08:00 ] 127.0.0.1 GET www.test.com/
+[运行时间：0.063585s] [吞吐率：15.73req/s] [内存消耗：3,005.36kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000202s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.004728s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004771s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.test.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.test.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001902s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\phpstudy_pro\WWW\fw366.cn\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\index\index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-20T17:15:35+08:00 ] 127.0.0.1 GET www.test.com/
+[运行时间：0.042313s] [吞吐率：23.63req/s] [内存消耗：3,136.78kb] [文件加载：126]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000017s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.002578s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002598s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.test.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.test.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001448s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\phpstudy_pro\WWW\fw366.cn\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\index\index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-20T17:16:20+08:00 ] 127.0.0.1 GET www.test.com/
+[运行时间：0.048557s] [吞吐率：20.59req/s] [内存消耗：3,136.30kb] [文件加载：126]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000020s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003112s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003134s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.test.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001645s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\phpstudy_pro\WWW\fw366.cn\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\index\index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-20T17:22:02+08:00 ] 127.0.0.1 GET www.test.com/
+[运行时间：0.040480s] [吞吐率：24.70req/s] [内存消耗：3,006.39kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000176s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.002342s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002361s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'if-modified-since' => 'Tue, 03 Sep 2019 06:30:48 GMT',
+  'if-none-match' => '"903-591a03aa15600"',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.test.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001448s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\phpstudy_pro\WWW\fw366.cn\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\index\index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-20T17:38:57+08:00 ] 127.0.0.1 GET www.test.com/
+[运行时间：0.046743s] [吞吐率：21.39req/s] [内存消耗：3,005.39kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000018s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.002474s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002492s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.test.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002023s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\phpstudy_pro\WWW\fw366.cn\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\index\index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-20T17:39:00+08:00 ] 127.0.0.1 GET www.test.com/
+[运行时间：0.039489s] [吞吐率：25.32req/s] [内存消耗：3,005.39kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.002899s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002923s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.test.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001808s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\phpstudy_pro\WWW\fw366.cn\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\index\index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-20T17:45:57+08:00 ] 127.0.0.1 GET www.test.com/NVftLdwgMn.php
+[运行时间：0.061747s] [吞吐率：16.20req/s] [内存消耗：3,265.52kb] [文件加载：127]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000021s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.002383s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002400s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.test.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001405s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/common\view\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000290s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-20T17:46:00+08:00 ] 127.0.0.1 GET www.test.com/NVftLdwgMn.php/index/login?url=%2FNVftLdwgMn.php
+[运行时间：0.064864s] [吞吐率：15.42req/s] [内存消耗：3,578.77kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000025s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.002992s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003029s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b6npbh55jtg7qg0liamm9odlsk',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.test.com/NVftLdwgMn.php',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.test.com',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/NVftLdwgMn.php',
+)
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002016s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ E:\phpstudy_pro\WWW\fw366.cn\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/admin\view\index\login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000146s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-20T17:46:00+08:00 ] 127.0.0.1 GET www.test.com/index.php?s=/captcha
+[运行时间：0.046601s] [吞吐率：21.46req/s] [内存消耗：2,370.27kb] [文件加载：112]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003263s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003289s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b6npbh55jtg7qg0liamm9odlsk',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.test.com/NVftLdwgMn.php/index/login?url=%2FNVftLdwgMn.php',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.test.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\phpstudy_pro\WWW\fw366.cn\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-20T17:46:00+08:00 ] 127.0.0.1 GET www.test.com/NVftLdwgMn.php/ajax/lang?callback=define&controllername=index&v=1603187160
+[运行时间：0.032675s] [吞吐率：30.60req/s] [内存消耗：3,440.10kb] [文件加载：128]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.001891s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001908s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b6npbh55jtg7qg0liamm9odlsk',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.test.com/NVftLdwgMn.php/index/login?url=%2FNVftLdwgMn.php',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.test.com',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1603187160',
+)
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001149s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ E:\phpstudy_pro\WWW\fw366.cn\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000122s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-20T17:54:03+08:00 ] 127.0.0.1 GET www.test.com/NVftLdwgMn.php/index/login?url=%2FNVftLdwgMn.php
+[运行时间：0.059799s] [吞吐率：16.72req/s] [内存消耗：3,427.45kb] [文件加载：128]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000021s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.002540s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002557s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b6npbh55jtg7qg0liamm9odlsk',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.test.com/NVftLdwgMn.php',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.test.com',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/NVftLdwgMn.php',
+)
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001692s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ E:\phpstudy_pro\WWW\fw366.cn\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/admin\view\index\login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000256s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-20T17:54:03+08:00 ] 127.0.0.1 GET www.test.com/index.php?s=/captcha
+[运行时间：0.043404s] [吞吐率：23.04req/s] [内存消耗：2,370.40kb] [文件加载：112]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000025s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003461s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003510s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b6npbh55jtg7qg0liamm9odlsk',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.test.com/NVftLdwgMn.php/index/login?url=%2FNVftLdwgMn.php',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.test.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\phpstudy_pro\WWW\fw366.cn\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-20T17:54:03+08:00 ] 127.0.0.1 GET www.test.com/NVftLdwgMn.php/ajax/lang?callback=define&controllername=index&v=1603187643
+[运行时间：0.057451s] [吞吐率：17.41req/s] [内存消耗：3,437.96kb] [文件加载：128]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.002546s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002566s ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=b6npbh55jtg7qg0liamm9odlsk',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.test.com/NVftLdwgMn.php/index/login?url=%2FNVftLdwgMn.php',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.test.com',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1603187643',
+)
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001444s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ E:\phpstudy_pro\WWW\fw366.cn\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] E:\phpstudy_pro\WWW\fw366.cn\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000232s ]
+[ info ] [ LOG ] INIT File

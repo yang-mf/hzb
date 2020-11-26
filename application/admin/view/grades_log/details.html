@@ -1,0 +1,69 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Userschool.province')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-school_id" data-rule="required" data-source="school/index" class="form-control selectpage" name="row[school_id]" type="text" value="{$row.userschool.province|htmlentities}" disabled>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Userschool.city')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-school_id" data-rule="required" data-source="school/index" class="form-control selectpage" name="row[school_id]" type="text" value="{$row.userschool.city|htmlentities}" disabled>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Userschool.area')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-school_id" data-rule="required" data-source="school/index" class="form-control selectpage" name="row[school_id]" type="text" value="{$row.userschool.area|htmlentities}" disabled>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('School_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-school_id" data-rule="required" data-source="school/index" class="form-control selectpage" name="row[school_id]" type="text" value="{$row.userschool.school|htmlentities}" disabled>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Academic_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-academic_id" data-rule="required" data-source="academic/index" class="form-control selectpage" name="row[academic_id]" type="text" value="{$row.useracademic.academic_year|htmlentities}" disabled>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Useracademic.term')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-academic_id" data-rule="required" data-source="academic/index" class="form-control selectpage" name="row[academic_id]" type="text" value="{$row.useracademic.term|htmlentities}" disabled>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User.grade')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_id" data-rule="required" data-source="user/user/index" data-field="nickname" class="form-control selectpage" name="row[user_id]" type="text" value="{$row.user.grade|htmlentities}" disabled>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_id" data-rule="required" data-source="user/user/index" data-field="nickname" class="form-control selectpage" name="row[user_id]" type="text" value="{$row.user.nickname|htmlentities}" disabled>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-name" data-rule="required" class="form-control" name="row[name]" type="text" value="{$row.name|htmlentities}" disabled>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Grades')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-grades" data-rule="required" class="form-control" name="row[grades]" rows="2" disabled>{$row.grades|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Forecast.grades')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-grades" data-rule="required" class="form-control" name="row[grades]" rows="2" disabled>{$row.forecast.grades|htmlentities}</textarea>
+        </div>
+    </div>
+</form>

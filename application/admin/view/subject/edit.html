@@ -1,0 +1,39 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Grade_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            {:Form::select('row[grade_id]', $gradeList, $row.grade_id, ['data-rule'=>'required'])}
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Subject_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <dl class="fieldlist" >
+                <dd>
+                    <ins></ins>
+                    <ins>{:__('科目')}</ins>
+                    <ins>{:__('满分')}</ins>
+                </dd>
+                {php}$i=0;{/php}
+                {foreach $subjectList as $key => $val}
+                <dd class="form-inline">
+                    <ins><input name="row[subject][{$i}][id]" class="subject" type="checkbox" value="{$key}" {neq name="$row['subject_arr'][$key]" value=""}checked{/neq}></ins>
+                    <ins>{$val}</ins>
+                    <ins><input type="nubmer" name="row[subject][{$i}][full]" class="form-control full" value="{$row['subject_arr'][$key]}" {eq name="$row['subject_arr'][$key]" value=""}disabled{/eq}/></ins>
+                </dd>
+                {php}$i++;{/php}
+                {/foreach}
+                
+            </dl>
+            
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

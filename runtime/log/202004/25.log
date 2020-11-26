@@ -1,0 +1,4112 @@
+---------------------------------------------------------------
+[ 2020-04-25T01:23:35+08:00 ] 14.37.163.47 GET 116.255.140.98:81/
+[运行时间：0.048218s] [吞吐率：20.74req/s] [内存消耗：2,893.31kb] [文件加载：121]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001458s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36',
+  'host' => '116.255.140.98:81',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002094s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T02:21:09+08:00 ] 83.97.20.34 GET /
+[运行时间：0.047626s] [吞吐率：21.00req/s] [内存消耗：2,892.03kb] [文件加载：121]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001485s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002028s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T03:03:47+08:00 ] 89.122.90.104 GET 116.255.140.98:81/
+[运行时间：0.046843s] [吞吐率：21.35req/s] [内存消耗：2,893.31kb] [文件加载：121]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001444s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36',
+  'host' => '116.255.140.98:81',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002048s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T04:10:34+08:00 ] 212.230.181.230 GET 116.255.140.98:81/
+[运行时间：0.046035s] [吞吐率：21.72req/s] [内存消耗：2,893.31kb] [文件加载：121]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001471s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36',
+  'host' => '116.255.140.98:81',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002029s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T08:39:21+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/index/login?url=%2FNVftLdwgMn.php
+[运行时间：0.053835s] [吞吐率：18.58req/s] [内存消耗：3,461.54kb] [文件加载：127]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001449s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/NVftLdwgMn.php',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002122s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ /www/wwwroot/fw366.cn/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/admin/view/index/login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000119s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T08:39:21+08:00 ] 1.192.37.22 GET fw366.cn:81/index.php?s=/captcha
+[运行时间：0.035750s] [吞吐率：27.97req/s] [内存消耗：2,068.76kb] [文件加载：105]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001455s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/index/login?url=%2FNVftLdwgMn.php',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /www/wwwroot/fw366.cn/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T08:39:21+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/ajax/lang?callback=define&controllername=index&v=1587775161
+[运行时间：0.051866s] [吞吐率：19.28req/s] [内存消耗：3,326.98kb] [文件加载：125]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001434s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/index/login?url=%2FNVftLdwgMn.php',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1587775161',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002061s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/fw366.cn/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000138s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T08:39:36+08:00 ] 1.192.37.22 POST fw366.cn:81/NVftLdwgMn.php/index/login?url=%2FNVftLdwgMn.php
+[运行时间：0.088303s] [吞吐率：11.32req/s] [内存消耗：4,118.33kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001449s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/index/login?url=%2FNVftLdwgMn.php',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://fw366.cn:81',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '86',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/NVftLdwgMn.php',
+  '__token__' => '6692a1699d75d7e53e0065b92989b62c',
+  'username' => 'admin',
+  'password' => '123456',
+  'captcha' => 'ypty',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002046s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ /www/wwwroot/fw366.cn/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.007960s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T08:39:36+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php
+[运行时间：0.143530s] [吞吐率：6.97req/s] [内存消耗：4,551.26kb] [文件加载：144]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001419s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/index/login?url=%2FNVftLdwgMn.php',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002054s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ /www/wwwroot/fw366.cn/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/admin/view/index/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000082s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T08:39:36+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/ajax/lang?callback=define&controllername=index&v=1587775176
+[运行时间：0.065518s] [吞吐率：15.26req/s] [内存消耗：4,311.58kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001497s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1587775176',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002103s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/fw366.cn/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000110s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T08:39:37+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/general/config?addtabs=1
+[运行时间：0.069635s] [吞吐率：14.36req/s] [内存消耗：4,302.90kb] [文件加载：131]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001389s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'general.config',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/general/config?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002032s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/general/config.php
+[ info ] [ RUN ] app\admin\controller\general\Config->index[ /www/wwwroot/fw366.cn/application/admin/controller/general/Config.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/admin/view/general/config/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'siteList',
+  6 => 'typeList',
+  7 => 'ruleList',
+  8 => 'groupList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000113s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T08:39:37+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/ajax/lang?callback=define&controllername=general.config&v=1587775177
+[运行时间：0.065161s] [吞吐率：15.35req/s] [内存消耗：4,311.19kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001402s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/general/config?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'general.config',
+  'v' => '1587775177',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002021s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/fw366.cn/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/general/config.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000115s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T08:44:21+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/addon?addtabs=1
+[运行时间：0.068812s] [吞吐率：14.53req/s] [内存消耗：4,363.67kb] [文件加载：141]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001440s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002095s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->index[ /www/wwwroot/fw366.cn/application/admin/controller/Addon.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/admin/view/addon/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000118s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T08:44:22+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/ajax/lang?callback=define&controllername=addon&v=1587775461
+[运行时间：0.064984s] [吞吐率：15.39req/s] [内存消耗：4,314.32kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001453s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'addon',
+  'v' => '1587775461',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002006s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/fw366.cn/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000115s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T08:44:36+08:00 ] 1.192.37.22 POST fw366.cn:81/NVftLdwgMn.php/addon/install
+[运行时间：1.800422s] [吞吐率：0.56req/s] [内存消耗：4,461.31kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001454s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'install',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon?addtabs=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://fw366.cn:81',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '114',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'epay',
+  'force' => '0',
+  'uid' => '10531',
+  'token' => 'afd706e6-2d54-4cbb-ab73-7746741cb18e',
+  'version' => '1.0.5',
+  'faversion' => '1.0.0.20200228_beta',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002060s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->install[ /www/wwwroot/fw366.cn/application/admin/controller/Addon.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.031951s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T08:44:36+08:00 ] 1.192.37.22 POST fw366.cn:81/NVftLdwgMn.php/index/index
+[运行时间：0.152004s] [吞吐率：6.58req/s] [内存消耗：4,596.79kb] [文件加载：148]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003231s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003254s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon?ref=addtabs',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://fw366.cn:81',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '18',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'refreshmenu',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002064s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ /www/wwwroot/fw366.cn/application/admin/controller/Index.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.009307s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T08:44:39+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/addon/config?name=epay&dialog=1
+[运行时间：0.067191s] [吞吐率：14.88req/s] [内存消耗：4,371.73kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003179s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003202s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'config',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon?addtabs=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'epay',
+  'dialog' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002035s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->config[ /www/wwwroot/fw366.cn/application/admin/controller/Addon.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/admin/view/addon/config.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'addon',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000113s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T08:44:39+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/ajax/lang?callback=define&controllername=addon&v=1587775479
+[运行时间：0.066015s] [吞吐率：15.15req/s] [内存消耗：4,343.40kb] [文件加载：134]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003133s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003156s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon/config?name=epay&dialog=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'addon',
+  'v' => '1587775479',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002005s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/fw366.cn/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000112s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T10:56:43+08:00 ] 171.42.226.255 GET 116.255.140.98:81/%5ccgi-bin/login.cgi
+[运行时间：0.037053s] [吞吐率：26.99req/s] [内存消耗：2,263.73kb] [文件加载：112]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003074s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003105s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '\\cgi-bin',
+    1 => 'login.cgi',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '116.255.140.98:81',
+  'user-agent' => 'Mozilla/5.0',
+  'accept-language' => 'zh-CN,en,*',
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T10:56:43+08:00 ] 171.42.226.255 GET 116.255.140.98:81/%5ccgi-bin/get_status.cgi
+[运行时间：0.035484s] [吞吐率：28.18req/s] [内存消耗：2,263.77kb] [文件加载：112]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000037s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.002974s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002995s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '\\cgi-bin',
+    1 => 'get_status.cgi',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '116.255.140.98:81',
+  'user-agent' => 'Mozilla/5.0',
+  'accept-language' => 'zh-CN,en,*',
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T11:30:25+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/addon/downloaded?callback=jQuery22409720840945975873_1587775442098&sort=id&order=desc&offset=0&limit=50&filter=%7B%22type%22%3A%22local%22%2C%22faversion%22%3A%221.0.0.20200228_beta%22%7D&op=%7B%22type%22%3A%22%3D%22%2C%22faversion%22%3A%22%3D%22%7D&uid=10531&token=afd706e6-2d54-4cbb-ab73-7746741cb18e&version=1.0.0.20200228_beta&_=1587775442103
+[运行时间：1.504495s] [吞吐率：0.66req/s] [内存消耗：4,392.34kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003196s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003219s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'downloaded',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'jQuery22409720840945975873_1587775442098',
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '50',
+  'filter' => '{"type":"local","faversion":"1.0.0.20200228_beta"}',
+  'op' => '{"type":"=","faversion":"="}',
+  'uid' => '10531',
+  'token' => 'afd706e6-2d54-4cbb-ab73-7746741cb18e',
+  'version' => '1.0.0.20200228_beta',
+  '_' => '1587775442103',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001972s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->downloaded[ /www/wwwroot/fw366.cn/application/admin/controller/Addon.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000156s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T11:30:28+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/addon/config?name=epay&dialog=1
+[运行时间：0.067916s] [吞吐率：14.72req/s] [内存消耗：4,371.73kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003239s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003262s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'config',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon?addtabs=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'epay',
+  'dialog' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002055s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->config[ /www/wwwroot/fw366.cn/application/admin/controller/Addon.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/admin/view/addon/config.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'addon',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000112s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T11:30:28+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/ajax/lang?callback=define&controllername=addon&v=1587785428
+[运行时间：0.065249s] [吞吐率：15.33req/s] [内存消耗：4,343.40kb] [文件加载：134]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000025s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003173s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003195s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon/config?name=epay&dialog=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'addon',
+  'v' => '1587785428',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002068s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/fw366.cn/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000113s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T13:24:06+08:00 ] 196.52.43.98 GET 116.255.140.98:81/
+[运行时间：0.047458s] [吞吐率：21.07req/s] [内存消耗：2,920.63kb] [文件加载：123]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003219s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003241s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3602.2 Safari/537.36',
+  'host' => '116.255.140.98:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002096s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T14:10:40+08:00 ] 218.206.249.133 GET /
+[运行时间：0.048137s] [吞吐率：20.77req/s] [内存消耗：2,919.45kb] [文件加载：123]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003198s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003233s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002060s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T14:12:55+08:00 ] 218.206.249.133 GET 116.255.140.98:81/nmaplowercheck1587795175
+[运行时间：0.037474s] [吞吐率：26.69req/s] [内存消耗：2,263.35kb] [文件加载：112]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003101s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003122s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'nmaplowercheck1587795175',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => '116.255.140.98:81',
+  'user-agent' => 'Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T14:12:56+08:00 ] 218.206.249.133 GET 116.255.140.98:81/HNAP1
+[运行时间：0.039249s] [吞吐率：25.48req/s] [内存消耗：2,263.06kb] [文件加载：112]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003185s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003208s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'HNAP1',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => '116.255.140.98:81',
+  'user-agent' => 'Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T14:12:56+08:00 ] 218.206.249.133 GET /
+[运行时间：0.047447s] [吞吐率：21.08req/s] [内存消耗：2,919.45kb] [文件加载：123]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003262s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003285s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002142s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T14:12:56+08:00 ] 218.206.249.133 GET 116.255.140.98/
+[运行时间：0.046623s] [吞吐率：21.45req/s] [内存消耗：2,919.72kb] [文件加载：123]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003126s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003149s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '116.255.140.98',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002012s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T14:12:58+08:00 ] 218.206.249.133 POST 116.255.140.98:81/sdk
+[运行时间：0.039147s] [吞吐率：25.54req/s] [内存消耗：2,263.27kb] [文件加载：112]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003151s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003173s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'sdk',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => '116.255.140.98:81',
+  'user-agent' => 'Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)',
+  'content-length' => '441',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T14:24:37+08:00 ] 1.192.37.22 POST fw366.cn:81/NVftLdwgMn.php/addon/config?name=epay&dialog=1
+[运行时间：0.103798s] [吞吐率：9.63req/s] [内存消耗：4,439.24kb] [文件加载：146]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003229s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003252s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'config',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon/config?name=epay&dialog=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://fw366.cn:81',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '2251',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'epay',
+  'dialog' => '1',
+  'row' => 
+  array (
+    'wechat' => '{"appid":"wxb8aa10b908791d54","app_id":"","app_secret":"","miniapp_id":"","mch_id":"1580155701","key":"3dc2bf4cdb43b86408c579bba7b4fe9d","notify_url":"/addons/epay/api/notifyx/type/wechat","cert_client":"/epay/certs/apiclient_cert.pem","cert_key":"/epay/certs/apiclient_key.pem","log":"1"}',
+    'alipay' => '{"app_id":"","notify_url":"\\/addons\\/epay\\/api\\/notifyx\\/type\\/alipay","return_url":"\\/addons\\/epay\\/api\\/returnx\\/type\\/alipay","ali_public_key":"","private_key":"","log":1}',
+  ),
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002113s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->config[ /www/wwwroot/fw366.cn/application/admin/controller/Addon.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.032052s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T14:24:39+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/addon/downloaded?callback=jQuery22409720840945975873_1587775442098&sort=id&order=desc&offset=0&limit=50&filter=%7B%22type%22%3A%22local%22%2C%22faversion%22%3A%221.0.0.20200228_beta%22%7D&op=%7B%22type%22%3A%22%3D%22%2C%22faversion%22%3A%22%3D%22%7D&uid=10531&token=afd706e6-2d54-4cbb-ab73-7746741cb18e&version=1.0.0.20200228_beta&_=1587775442104
+[运行时间：2.377587s] [吞吐率：0.42req/s] [内存消耗：4,392.34kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003162s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003185s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'downloaded',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'jQuery22409720840945975873_1587775442098',
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '50',
+  'filter' => '{"type":"local","faversion":"1.0.0.20200228_beta"}',
+  'op' => '{"type":"=","faversion":"="}',
+  'uid' => '10531',
+  'token' => 'afd706e6-2d54-4cbb-ab73-7746741cb18e',
+  'version' => '1.0.0.20200228_beta',
+  '_' => '1587775442104',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002010s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->downloaded[ /www/wwwroot/fw366.cn/application/admin/controller/Addon.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000150s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T14:25:55+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/addon/config?name=epay&dialog=1
+[运行时间：0.067536s] [吞吐率：14.81req/s] [内存消耗：4,371.82kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003144s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003165s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'config',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon?addtabs=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'epay',
+  'dialog' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002027s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->config[ /www/wwwroot/fw366.cn/application/admin/controller/Addon.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/admin/view/addon/config.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'addon',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000117s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T14:25:55+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/ajax/lang?callback=define&controllername=addon&v=1587795955
+[运行时间：0.065076s] [吞吐率：15.37req/s] [内存消耗：4,343.40kb] [文件加载：134]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000024s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003195s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003218s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon/config?name=epay&dialog=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'addon',
+  'v' => '1587795955',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002031s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/fw366.cn/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000113s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T14:57:48+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.043452s] [吞吐率：23.01req/s] [内存消耗：2,500.52kb] [文件加载：121]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003164s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003187s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '0',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '5a045115-6a14-488b-8dc7-549df025dbb5',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002031s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T14:58:12+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.064704s] [吞吐率：15.46req/s] [内存消耗：3,936.16kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003175s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003198s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '0',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '7587e497-dde2-4b6d-8338-e4758160004d',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002020s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T15:04:37+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.327014s] [吞吐率：3.06req/s] [内存消耗：4,785.44kb] [文件加载：174]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000031s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003180s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003203s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '0',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '9576eb54-6814-4036-a095-b0a529194a1b',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002034s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [20000]getResult error:appid参数长度有误[/www/wwwroot/fw366.cn/addons/epay/library/Yansongda/Pay/Gateways/Wechat/Wechat.php:223]
+---------------------------------------------------------------
+[ 2020-04-25T15:20:22+08:00 ] 1.192.37.22 POST fw366.cn:81/NVftLdwgMn.php/addon/config?name=epay&dialog=1
+[运行时间：0.089315s] [吞吐率：11.20req/s] [内存消耗：4,439.68kb] [文件加载：146]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003161s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003195s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'config',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon/config?name=epay&dialog=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://fw366.cn:81',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '2387',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'epay',
+  'dialog' => '1',
+  'row' => 
+  array (
+    'wechat' => '{"appid":"wxb8aa10b908791d54","app_id":"wx11c7d1eba680d4c4","app_secret":"be5b2583778d8b8df80b9cf68e889b8c","miniapp_id":"wxca1f0641dd7075ba","mch_id":"1580155701","key":"3dc2bf4cdb43b86408c579bba7b4fe9d","notify_url":"/addons/epay/api/notifyx/type/wechat","cert_client":"/epay/certs/apiclient_cert.pem","cert_key":"/epay/certs/apiclient_key.pem","log":"1"}',
+    'alipay' => '{"app_id":"","notify_url":"\\/addons\\/epay\\/api\\/notifyx\\/type\\/alipay","return_url":"\\/addons\\/epay\\/api\\/returnx\\/type\\/alipay","ali_public_key":"","private_key":"","log":1}',
+  ),
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001927s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->config[ /www/wwwroot/fw366.cn/application/admin/controller/Addon.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.019139s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T15:20:24+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/addon/downloaded?callback=jQuery22409720840945975873_1587775442098&sort=id&order=desc&offset=0&limit=50&filter=%7B%22type%22%3A%22local%22%2C%22faversion%22%3A%221.0.0.20200228_beta%22%7D&op=%7B%22type%22%3A%22%3D%22%2C%22faversion%22%3A%22%3D%22%7D&uid=10531&token=afd706e6-2d54-4cbb-ab73-7746741cb18e&version=1.0.0.20200228_beta&_=1587775442105
+[运行时间：1.480076s] [吞吐率：0.68req/s] [内存消耗：4,392.34kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003273s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003296s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'downloaded',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'jQuery22409720840945975873_1587775442098',
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '50',
+  'filter' => '{"type":"local","faversion":"1.0.0.20200228_beta"}',
+  'op' => '{"type":"=","faversion":"="}',
+  'uid' => '10531',
+  'token' => 'afd706e6-2d54-4cbb-ab73-7746741cb18e',
+  'version' => '1.0.0.20200228_beta',
+  '_' => '1587775442105',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002108s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->downloaded[ /www/wwwroot/fw366.cn/application/admin/controller/Addon.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000158s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T15:20:25+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/ajax/wipecache?type=all&_=1587775156961
+[运行时间：0.071446s] [吞吐率：14.00req/s] [内存消耗：4,465.04kb] [文件加载：145]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003173s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003195s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'wipecache',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon?ref=addtabs',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'type' => 'all',
+  '_' => '1587775156961',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002039s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->wipecache[ /www/wwwroot/fw366.cn/application/admin/controller/Ajax.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000111s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T15:20:29+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.540775s] [吞吐率：1.85req/s] [内存消耗：4,726.90kb] [文件加载：170]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003130s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003153s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '0',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '2ad728c8-f77a-4e91-8f74-4e34672294e2',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002009s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T15:22:32+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.452181s] [吞吐率：2.21req/s] [内存消耗：4,722.09kb] [文件加载：170]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003169s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003191s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '0',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => 'f45ad417-4aae-4977-88a8-0e7d29b8873c',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002029s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T15:24:13+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.425951s] [吞吐率：2.35req/s] [内存消耗：4,782.65kb] [文件加载：174]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003169s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003191s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '0',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => 'efedbf55-ddce-49ad-9cc2-a7202a6b76ec',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002038s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [20000]getResult error:OK - 201 商户订单号重复[/www/wwwroot/fw366.cn/addons/epay/library/Yansongda/Pay/Gateways/Wechat/Wechat.php:223]
+---------------------------------------------------------------
+[ 2020-04-25T15:24:47+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.445772s] [吞吐率：2.24req/s] [内存消耗：4,724.79kb] [文件加载：170]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003249s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003271s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '0',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => 'ecde0773-072e-4d7c-abd3-9fab89af57af',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002095s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T15:25:16+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.393971s] [吞吐率：2.54req/s] [内存消耗：4,782.65kb] [文件加载：174]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003138s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003161s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '0',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => 'fa6c4b32-3fa8-45ac-a0fc-a42707df5533',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002014s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [20000]getResult error:OK - 201 商户订单号重复[/www/wwwroot/fw366.cn/addons/epay/library/Yansongda/Pay/Gateways/Wechat/Wechat.php:223]
+---------------------------------------------------------------
+[ 2020-04-25T15:26:02+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.387554s] [吞吐率：2.58req/s] [内存消耗：4,782.16kb] [文件加载：174]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003242s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003265s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '0',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '9fbc80f7-7ea0-4c7e-89af-cd9e03a3c6ff',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002089s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [20000]getResult error:OK - 201 商户订单号重复[/www/wwwroot/fw366.cn/addons/epay/library/Yansongda/Pay/Gateways/Wechat/Wechat.php:223]
+---------------------------------------------------------------
+[ 2020-04-25T15:26:28+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.461113s] [吞吐率：2.17req/s] [内存消耗：4,720.04kb] [文件加载：169]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003226s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003248s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '0',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => 'e8573ada-94fc-480a-ac83-89a17798ccec',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002096s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T15:26:54+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.394791s] [吞吐率：2.53req/s] [内存消耗：4,722.07kb] [文件加载：169]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003199s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003220s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '0',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '225f38fa-5fb1-47f7-858b-dc0098160b65',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002064s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T15:27:53+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.458891s] [吞吐率：2.18req/s] [内存消耗：4,717.88kb] [文件加载：169]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003227s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003250s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '0',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '97190c6b-003d-4f07-8804-5676ad378e90',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002094s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T15:30:06+08:00 ] 1.192.37.22 POST fw366.cn:81/NVftLdwgMn.php/general/config/check
+[运行时间：0.087154s] [吞吐率：11.47req/s] [内存消耗：4,277.39kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003135s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003169s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'general.config',
+    2 => 'check',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/general/config?addtabs=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://fw366.cn:81',
+  'accept' => '*/*',
+  'content-length' => '19',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'name' => 'price',
+  ),
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001983s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/general/config.php
+[ info ] [ RUN ] app\admin\controller\general\Config->check[ /www/wwwroot/fw366.cn/application/admin/controller/general/Config.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.018873s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T15:30:06+08:00 ] 1.192.37.22 POST fw366.cn:81/NVftLdwgMn.php/general.config/add
+[运行时间：0.085158s] [吞吐率：11.74req/s] [内存消耗：4,280.26kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003179s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003201s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'general.config',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/general/config?addtabs=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://fw366.cn:81',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '270',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+)
+[ info ] [ PARAM ] array (
+  '__token__' => 'a00e076d4766b3f96a52ccb4c8832790',
+  'row' => 
+  array (
+    'type' => 'array',
+    'group' => 'data',
+    'name' => 'price',
+    'title' => '价格设置',
+    'value' => '',
+    'content' => 'value1|title1
+value2|title2',
+    'tip' => '',
+    'rule' => '',
+    'extend' => '',
+  ),
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001890s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/general/config.php
+[ info ] [ RUN ] app\admin\controller\general\Config->add[ /www/wwwroot/fw366.cn/application/admin/controller/general/Config.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.009437s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T15:30:07+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/general/config?addtabs=1
+[运行时间：0.076254s] [吞吐率：13.11req/s] [内存消耗：4,542.66kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003164s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003187s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'general.config',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/general/config?addtabs=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002053s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/general/config.php
+[ info ] [ RUN ] app\admin\controller\general\Config->index[ /www/wwwroot/fw366.cn/application/admin/controller/general/Config.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/admin/view/general/config/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'siteList',
+  6 => 'typeList',
+  7 => 'ruleList',
+  8 => 'groupList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000107s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T15:30:08+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/ajax/lang?callback=define&controllername=general.config&v=1587799807
+[运行时间：0.065025s] [吞吐率：15.38req/s] [内存消耗：4,340.12kb] [文件加载：134]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000024s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003214s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003236s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/general/config?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'general.config',
+  'v' => '1587799807',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002088s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/fw366.cn/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/general/config.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000110s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T15:30:52+08:00 ] 1.192.37.22 POST fw366.cn:81/NVftLdwgMn.php/general.config/edit
+[运行时间：0.142556s] [吞吐率：7.01req/s] [内存消耗：4,285.42kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003209s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003232s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'general.config',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/general/config?addtabs=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://fw366.cn:81',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '619',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+)
+[ info ] [ PARAM ] array (
+  '__token__' => '692c0d902a5e3bbc68824ff9c5645d5a',
+  'row' => 
+  array (
+    'year' => '{"2017":"2017年","2018":"2018年"}',
+    'price' => '{"score":"0.01","school":"0.01","major":"0.01"}',
+  ),
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002052s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/general/config.php
+[ info ] [ RUN ] app\admin\controller\general\Config->edit[ /www/wwwroot/fw366.cn/application/admin/controller/general/Config.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.028557s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:07:00+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.065693s] [吞吐率：15.22req/s] [内存消耗：3,877.76kb] [文件加载：134]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003226s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003249s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '59',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => 'e383e122-821c-47b1-a74e-8c0d93aca510',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '2',
+  'amount' => '0.01',
+  'type' => 'wechat',
+  'method' => 'web',
+  'category' => 'score',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002082s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Class 'app\api\controller\Db' not found[/www/wwwroot/fw366.cn/application/api/controller/Pay.php:60]
+---------------------------------------------------------------
+[ 2020-04-25T17:07:22+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.061586s] [吞吐率：16.24req/s] [内存消耗：3,877.76kb] [文件加载：134]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003202s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003224s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '59',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '934c12f2-a18b-4c0f-83f0-b7ebd78f1d80',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '2',
+  'amount' => '0.01',
+  'type' => 'wechat',
+  'method' => 'web',
+  'category' => 'score',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002085s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Class 'app\api\controller\Db' not found[/www/wwwroot/fw366.cn/application/api/controller/Pay.php:60]
+---------------------------------------------------------------
+[ 2020-04-25T17:07:39+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.064216s] [吞吐率：15.57req/s] [内存消耗：3,884.15kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003213s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003235s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '59',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '47da361a-8311-41e7-86f6-2ff03fa0a38c',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '2',
+  'amount' => '0.01',
+  'type' => 'wechat',
+  'method' => 'web',
+  'category' => 'score',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002086s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]method not exist:think\db\Query->creteOrder[/www/wwwroot/fw366.cn/thinkphp/library/think/db/Query.php:103]
+---------------------------------------------------------------
+[ 2020-04-25T17:08:28+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.064718s] [吞吐率：15.45req/s] [内存消耗：3,884.15kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003200s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003222s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '59',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '5f97ab08-6b13-4052-9cbf-1d7ded0cf4b7',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '2',
+  'amount' => '0.01',
+  'type' => 'wechat',
+  'method' => 'web',
+  'category' => 'score',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002078s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]method not exist:think\db\Query->creteOrder[/www/wwwroot/fw366.cn/thinkphp/library/think/db/Query.php:103]
+---------------------------------------------------------------
+[ 2020-04-25T17:09:00+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.062270s] [吞吐率：16.06req/s] [内存消耗：3,826.63kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003194s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003216s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '59',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '1f2edd9f-9f9f-4a40-87e0-f38fd02dad5a',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '2',
+  'amount' => '0.01',
+  'type' => 'wechat',
+  'method' => 'web',
+  'category' => 'score',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002079s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:09:37+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.061620s] [吞吐率：16.23req/s] [内存消耗：3,826.63kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003206s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003228s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '59',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '7f5e1c01-b664-4dbc-905d-1d36adadaf38',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '2',
+  'amount' => '0.01',
+  'type' => 'wechat',
+  'method' => 'web',
+  'category' => 'score',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002082s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:10:45+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.059018s] [吞吐率：16.94req/s] [内存消耗：3,807.82kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.002961s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002982s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '59',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '367a4ab3-737f-43e4-87f4-f62c20384ff7',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '2',
+  'amount' => '0.01',
+  'type' => 'wechat',
+  'method' => 'web',
+  'category' => 'score',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001879s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:10:48+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.061909s] [吞吐率：16.15req/s] [内存消耗：3,826.70kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003134s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003156s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '59',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '41ebcd2b-cd85-4459-87a7-21e341384fed',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '1',
+  'amount' => '0.01',
+  'type' => 'wechat',
+  'method' => 'web',
+  'category' => 'score',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002004s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:11:22+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.082656s] [吞吐率：12.10req/s] [内存消耗：3,802.21kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003182s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003205s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '59',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '8c1abbca-3e5d-4d4d-8de7-c7265b20c126',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '1',
+  'amount' => '0.01',
+  'type' => 'wechat',
+  'method' => 'web',
+  'category' => 'score',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002042s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:14:45+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.472203s] [吞吐率：2.12req/s] [内存消耗：4,718.48kb] [文件加载：172]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003241s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003264s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '59',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '8dc80d8f-916b-410c-9edd-dc4d9766b718',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '1',
+  'amount' => '0.01',
+  'type' => 'wechat',
+  'method' => 'web',
+  'category' => 'score',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002097s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:15:53+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：1.507330s] [吞吐率：0.66req/s] [内存消耗：4,723.16kb] [文件加载：172]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000031s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003184s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003206s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '59',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => 'd5106ff3-c536-46df-b0fa-c1a19bf63f4e',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '1',
+  'amount' => '0.01',
+  'type' => 'wechat',
+  'method' => 'web',
+  'category' => 'score',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002028s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:16:20+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.437060s] [吞吐率：2.29req/s] [内存消耗：4,720.51kb] [文件加载：172]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003184s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003206s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '59',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '9c00b677-14a5-4919-8376-520d7c0f1553',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '1',
+  'amount' => '0.01',
+  'type' => 'wechat',
+  'method' => 'app',
+  'category' => 'score',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002069s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:21:06+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/addon/downloaded?callback=jQuery22409720840945975873_1587775442098&sort=id&order=desc&offset=0&limit=50&filter=%7B%22type%22%3A%22local%22%2C%22faversion%22%3A%221.0.0.20200228_beta%22%7D&op=%7B%22type%22%3A%22%3D%22%2C%22faversion%22%3A%22%3D%22%7D&uid=10531&token=afd706e6-2d54-4cbb-ab73-7746741cb18e&version=1.0.0.20200228_beta&_=1587775442106
+[运行时间：2.101422s] [吞吐率：0.48req/s] [内存消耗：4,392.85kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003165s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003187s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'downloaded',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'jQuery22409720840945975873_1587775442098',
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '50',
+  'filter' => '{"type":"local","faversion":"1.0.0.20200228_beta"}',
+  'op' => '{"type":"=","faversion":"="}',
+  'uid' => '10531',
+  'token' => 'afd706e6-2d54-4cbb-ab73-7746741cb18e',
+  'version' => '1.0.0.20200228_beta',
+  '_' => '1587775442106',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001990s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->downloaded[ /www/wwwroot/fw366.cn/application/admin/controller/Addon.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000157s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:28:07+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/addon/config?name=epay&dialog=1
+[运行时间：0.072202s] [吞吐率：13.85req/s] [内存消耗：4,530.13kb] [文件加载：137]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003235s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003257s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'config',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon?addtabs=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'epay',
+  'dialog' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002086s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->config[ /www/wwwroot/fw366.cn/application/admin/controller/Addon.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/admin/view/addon/config.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'addon',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000114s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:28:07+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/ajax/lang?callback=define&controllername=addon&v=1587806887
+[运行时间：0.065062s] [吞吐率：15.37req/s] [内存消耗：4,343.91kb] [文件加载：134]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000024s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003161s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003183s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon/config?name=epay&dialog=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'addon',
+  'v' => '1587806887',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002053s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/fw366.cn/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000112s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:50:39+08:00 ] 1.192.37.22 POST fw366.cn:81/NVftLdwgMn.php/addon/config?name=epay&dialog=1
+[运行时间：0.106830s] [吞吐率：9.36req/s] [内存消耗：4,459.86kb] [文件加载：146]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003111s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003133s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'config',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon/config?name=epay&dialog=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://fw366.cn:81',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '6661',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'epay',
+  'dialog' => '1',
+  'row' => 
+  array (
+    'wechat' => '{"appid":"wxb8aa10b908791d54","app_id":"wx11c7d1eba680d4c4","app_secret":"be5b2583778d8b8df80b9cf68e889b8c","miniapp_id":"wxca1f0641dd7075ba","mch_id":"1580155701","key":"3dc2bf4cdb43b86408c579bba7b4fe9d","notify_url":"\\/addons\\/epay\\/api\\/notifyx\\/type\\/wechat","cert_client":"\\/epay\\/certs\\/apiclient_cert.pem","cert_key":"\\/epay\\/certs\\/apiclient_key.pem","log":"1"}',
+    'alipay' => '{"app_id":"2019112987371224","notify_url":"/addons/epay/api/notifyx/type/alipay","return_url":"/addons/epay/api/returnx/type/alipay","ali_public_key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk4psyWHu+3UvQvrwE+CsN13ZxXy5qLWKfAtfCZInOpq9KHFmQ28c/q+Wt1/QDpTRKtm7J9mNhq4Rn2CbnGmRTVPznK7yuJKhWJkHS9NQmmSwoZRhjdJMMhQBN7pOr3gGP9oXJQ/a34E4eT79zuPKmWEvtYNfqfIdcwKTQsgZKdrQbVinnqDHdWDviyJJ/BgvD2d2l3nO0scORx5EaWCoUusJ7/tz7oOmwzRV811J7f6H5yH3Ums6L9qfWMBbgAm8JlOt8vJKv6+qirQuswSkR888MdGjtTDUlIb7LxZYIktE6P9zSBrN/11SXYSXA91wMJDmkvaeYnhEQ7hGsM75/wIDAQAB","private_key":"MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCTimzJYe77dS9C+vAT4Kw3XdnFfLmotYp8C18Jkic6mr0ocWZDbxz+r5a3X9AOlNEq2bsn2Y2GrhGfYJucaZFNU/OcrvK4kqFYmQdL01CaZLChlGGN0kwyFAE3uk6veAY/2hclD9rfgTh5Pv3O48qZYS+1g1+p8h1zApNCyBkp2tBtWKeeoMd1YO+LIkn8GC8PZ3aXec7Sxw5HHkRpYKhS6wnv+3Pug6bDNFXzXUnt/ofnIfdSazov2p9YwFuACbwmU63y8kq/r6qKtC6zBKRHzzwx0aO1MNSUhvsvFlgiS0To/3NIGs3/XVJdhJcD3XAwkOaS9p5ieERDuEawzvn/AgMBAAECggEBAIwwu62eoLXOY1oBlp1Mnlb9li9QlBj6Ztv28hbmCOBmp9YF6mWo7qQRs+QJ5mf0f8t3l54F2bRfMd9+rF2y8Z3IZ3I5yegXa7gDsCscXzpU8oCVvRxE9qGe4IlTPfD82vNRByzwI8i7wC107TXovFmBPxP6AKw6okDl8YdDGqXpEHjrVSLw97KhxQQRruViGMLy6xXVpNdTSTcH95ImWRzUNQZDyiU39rrVB49t460ANwq0f0aoLljV7xeDoUeQERJblw1v1GIEKpwF41A4RVq0XcMroCzFTJiYZMVnKBeJXTTX6He4xlhwgNK1wxeQRBKqWklnjGNCpHdaCL2/xAECgYEA2/DdamcI1lXQQ81TJMXljBfErgf4WAfMANSFhqQ7YcIUPNxE+AilPODj7oR0FELlGCZyXiGXJIT7QidBQhASlLPjBkE7B4vzL6+xF7Nz2gFaBBNpGBRNPp3aib/pV3+PR3/r2+wKCiKN7oZzm8vDkyPCkmerehAmQamsxBQ15TcCgYEAq7rasCKFJunJiR6JvVKLDA56Vt0eS7jb31ywOqMVDGgigGesJ8yaJ6Lbk3wcCqwBFTM4XxCRTS2eFOqDVrHNOCTnaGFw3/BH333v4tAX79IxGzZP7nSIlEMVsgkK4AQkfQXuX4RyYnGAWuGhEpSiTP0XjMlpTym9ln2iy2TI9XkCgYBr+NHpw00uU5BbSLgRbGllHeH7AYSkSqeWnL40O/m+4xUmT4g4L55WxZx/4lxN+g0XjwBEP79AOVxTvIunz9YfVDQWRP2ilcy700df+EPeeR1ktNa58HV/UOURDLqTrtZ65ky2eSjwksgUmcK1cBHB8SM61lPzJ2xwfciHtdhDfwKBgH4B5WVIbxtWgCK03aylXJHELdB+/zPguLT0dfsQnukzn91INPIfFx3uSd+2OX07KLA9nSdkKLnQtyXxzd1XKZYAvivBE+m9jX9YESUEPAwk1xN4jr4RlAX2E31HVUt6vqteJsK/lI7Xaa9Fz8KqfUywiQ8s2rDTl+FM3p8PnMVBAoGBANCotiC33bEHQdV/Kz99IhqXvh09YEmQV9s6bQ+MZWWmY/q3MkAEzLaPZpgxfuctDL5oJPV4xnJlo76a6edI81oX4HmAdfYoG04TjD6D6Jal7DoH6PJzdiJruksn4uuPHOZtLaoCJ6gZ3L6eTo3V9jn9ZMDan09d7zV8CSQ374Kv","log":"1"}',
+  ),
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001998s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->config[ /www/wwwroot/fw366.cn/application/admin/controller/Addon.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.037960s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:50:41+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/addon/downloaded?callback=jQuery22409720840945975873_1587775442098&sort=id&order=desc&offset=0&limit=50&filter=%7B%22type%22%3A%22local%22%2C%22faversion%22%3A%221.0.0.20200228_beta%22%7D&op=%7B%22type%22%3A%22%3D%22%2C%22faversion%22%3A%22%3D%22%7D&uid=10531&token=afd706e6-2d54-4cbb-ab73-7746741cb18e&version=1.0.0.20200228_beta&_=1587775442107
+[运行时间：2.321411s] [吞吐率：0.43req/s] [内存消耗：4,392.85kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003294s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003317s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'downloaded',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'jQuery22409720840945975873_1587775442098',
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '50',
+  'filter' => '{"type":"local","faversion":"1.0.0.20200228_beta"}',
+  'op' => '{"type":"=","faversion":"="}',
+  'uid' => '10531',
+  'token' => 'afd706e6-2d54-4cbb-ab73-7746741cb18e',
+  'version' => '1.0.0.20200228_beta',
+  '_' => '1587775442107',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002120s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->downloaded[ /www/wwwroot/fw366.cn/application/admin/controller/Addon.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000163s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:53:43+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.429413s] [吞吐率：2.33req/s] [内存消耗：4,722.68kb] [文件加载：172]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003185s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003207s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '59',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '7eec18a2-6650-477a-a742-a2f0fc07b1f1',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '1',
+  'amount' => '0.01',
+  'type' => 'alipay',
+  'method' => 'app',
+  'category' => 'score',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002080s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:53:52+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.497236s] [吞吐率：2.01req/s] [内存消耗：4,722.68kb] [文件加载：172]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003188s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003210s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '59',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '4204d6b7-4de4-41b3-83c9-3036b4abae40',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '1',
+  'amount' => '0.01',
+  'type' => 'alipay',
+  'method' => 'app',
+  'category' => 'score',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002067s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:54:29+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/addon/config?name=epay&dialog=1
+[运行时间：0.066847s] [吞吐率：14.96req/s] [内存消耗：4,374.56kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003197s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003219s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'config',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon?addtabs=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'epay',
+  'dialog' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002072s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->config[ /www/wwwroot/fw366.cn/application/admin/controller/Addon.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/admin/view/addon/config.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'addon',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000127s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:54:29+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/ajax/lang?callback=define&controllername=addon&v=1587808469
+[运行时间：0.064716s] [吞吐率：15.45req/s] [内存消耗：4,343.91kb] [文件加载：134]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003211s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003234s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon/config?name=epay&dialog=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'addon',
+  'v' => '1587808469',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001969s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/fw366.cn/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000116s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:59:09+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.082013s] [吞吐率：12.19req/s] [内存消耗：3,929.92kb] [文件加载：141]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003020s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003040s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '59',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '91ee7bc0-f1b9-4f02-9da4-27115e588ad1',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '1',
+  'amount' => '0.01',
+  'type' => 'alipay',
+  'method' => 'app',
+  'category' => 'score',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001946s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:59:19+08:00 ] 47.103.65.214 POST fw366.cn:81/api/pay/pay
+[运行时间：0.085508s] [吞吐率：11.69req/s] [内存消耗：3,930.37kb] [文件加载：141]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003211s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003233s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => 'fw366.cn:81',
+  'content-length' => '59',
+  'user-agent' => 'EOLINKER',
+  'eo-token' => '7c4e2a92-5ad2-4e9a-86ce-0ac57a24a006',
+  'cookie' => 'uid=1; path=/;token=97a89d48-b76a-42bc-80e9-84e33750e0bd; path=/;',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '1',
+  'amount' => '0.01',
+  'type' => 'alipay',
+  'method' => 'web',
+  'category' => 'score',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002082s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\pay->pay[ /www/wwwroot/fw366.cn/application/api/controller/Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:59:48+08:00 ] 1.192.37.22 GET fw366.cn:81/addons/epay
+[运行时间：0.049740s] [吞吐率：20.10req/s] [内存消耗：3,153.60kb] [文件加载：127]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003228s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003250s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon?addtabs=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'epay',
+  'controller' => NULL,
+  'action' => NULL,
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/fw366.cn/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.002219s ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/addons/epay/view/index/index.html [ array (
+  0 => 'config',
+  1 => 'user',
+  2 => 'site',
+  3 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T17:59:49+08:00 ] 1.192.37.22 GET fw366.cn:81/favicon.ico
+[运行时间：0.039073s] [吞吐率：25.59req/s] [内存消耗：2,268.83kb] [文件加载：112]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003250s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003273s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/addons/epay',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T18:00:08+08:00 ] 1.192.37.22 GET fw366.cn:81/addons/epay
+[运行时间：0.049116s] [吞吐率：20.36req/s] [内存消耗：2,988.61kb] [文件加载：125]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003303s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003326s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon?addtabs=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addon' => 'epay',
+  'controller' => NULL,
+  'action' => NULL,
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /www/wwwroot/fw366.cn/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.002332s ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/addons/epay/view/index/index.html [ array (
+  0 => 'config',
+  1 => 'user',
+  2 => 'site',
+  3 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T18:00:54+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/addon/config?name=epay&dialog=1
+[运行时间：0.068284s] [吞吐率：14.64req/s] [内存消耗：4,374.56kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003252s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003274s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'config',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon?addtabs=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'epay',
+  'dialog' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002028s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->config[ /www/wwwroot/fw366.cn/application/admin/controller/Addon.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/admin/view/addon/config.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'addon',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000116s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T18:00:54+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/ajax/lang?callback=define&controllername=addon&v=1587808854
+[运行时间：0.070340s] [吞吐率：14.22req/s] [内存消耗：4,343.91kb] [文件加载：134]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003303s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003326s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon/config?name=epay&dialog=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'addon',
+  'v' => '1587808854',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002121s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/fw366.cn/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000153s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T18:01:16+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/addon/config?name=epay&dialog=1
+[运行时间：0.068332s] [吞吐率：14.63req/s] [内存消耗：4,374.56kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003291s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003314s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'config',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon?addtabs=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'epay',
+  'dialog' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002134s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->config[ /www/wwwroot/fw366.cn/application/admin/controller/Addon.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/admin/view/addon/config.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'addon',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000115s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T18:01:16+08:00 ] 1.192.37.22 GET fw366.cn:81/NVftLdwgMn.php/ajax/lang?callback=define&controllername=addon&v=1587808876
+[运行时间：0.066328s] [吞吐率：15.08req/s] [内存消耗：4,343.91kb] [文件加载：134]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003174s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003196s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=v5lhki3o0u8f12agv2ake27f9v',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fw366.cn:81/NVftLdwgMn.php/addon/config?name=epay&dialog=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fw366.cn:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'addon',
+  'v' => '1587808876',
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002023s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/fw366.cn/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000111s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T18:52:12+08:00 ] 198.108.67.48 GET 116.255.140.98:81/
+[运行时间：0.050636s] [吞吐率：19.75req/s] [内存消耗：3,058.09kb] [文件加载：125]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003317s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003341s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '116.255.140.98:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002139s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T19:15:14+08:00 ] 221.219.152.115 GET 116.255.140.98:81/
+[运行时间：0.046134s] [吞吐率：21.68req/s] [内存消耗：2,921.51kb] [文件加载：123]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003149s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003172s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'Keep-Alive',
+  'host' => '116.255.140.98:81',
+  'user-agent' => 'Mozilla/4.0 (compatible; Win32; WinHttp.WinHttpRequest.5)',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001896s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T19:39:29+08:00 ] 172.104.67.101 GET 116.255.140.98:81/
+[运行时间：0.045043s] [吞吐率：22.20req/s] [内存消耗：2,920.91kb] [文件加载：123]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003075s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003097s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'user-agent' => 'HTTP Banner Detection (https://security.ipip.net)',
+  'host' => '116.255.140.98:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001946s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T20:28:54+08:00 ] 5.28.139.40 GET 116.255.140.98:81/
+[运行时间：0.047624s] [吞吐率：21.00req/s] [内存消耗：2,921.49kb] [文件加载：123]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003215s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003238s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36',
+  'host' => '116.255.140.98:81',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002092s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T20:33:02+08:00 ] 49.232.9.65 GET /
+[运行时间：0.048521s] [吞吐率：20.61req/s] [内存消耗：2,919.96kb] [文件加载：123]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003241s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003266s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002217s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T20:33:08+08:00 ] 49.232.9.65 POST 116.255.140.98:81/sdk
+[运行时间：0.037239s] [吞吐率：26.85req/s] [内存消耗：2,263.77kb] [文件加载：112]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000025s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.002994s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003015s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'sdk',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '116.255.140.98:81',
+  'content-length' => '441',
+  'connection' => 'close',
+  'user-agent' => 'Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T20:33:08+08:00 ] 49.232.9.65 GET 116.255.140.98:81/nmaplowercheck1587817988
+[运行时间：0.037527s] [吞吐率：26.65req/s] [内存消耗：2,263.86kb] [文件加载：112]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000025s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003104s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003125s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'nmaplowercheck1587817988',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '116.255.140.98:81',
+  'connection' => 'close',
+  'user-agent' => 'Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T20:33:08+08:00 ] 49.232.9.65 GET /
+[运行时间：0.054244s] [吞吐率：18.44req/s] [内存消耗：2,919.96kb] [文件加载：123]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000023s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.002736s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002755s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001787s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T20:33:09+08:00 ] 49.232.9.65 GET 116.255.140.98/
+[运行时间：0.054324s] [吞吐率：18.41req/s] [内存消耗：2,920.23kb] [文件加载：123]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000032s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.004936s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004967s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '116.255.140.98',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002940s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T20:33:09+08:00 ] 49.232.9.65 GET 116.255.140.98:81/HNAP1
+[运行时间：0.039954s] [吞吐率：25.03req/s] [内存消耗：2,263.57kb] [文件加载：112]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000020s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.002523s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002541s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'HNAP1',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '116.255.140.98:81',
+  'connection' => 'close',
+  'user-agent' => 'Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T21:56:04+08:00 ] 218.206.249.133 GET 116.255.140.98/
+[运行时间：0.047495s] [吞吐率：21.05req/s] [内存消耗：2,924.89kb] [文件加载：123]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003228s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003251s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'host' => '116.255.140.98',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002102s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T22:25:57+08:00 ] 71.78.121.118 GET 116.255.140.98:81/
+[运行时间：0.047295s] [吞吐率：21.14req/s] [内存消耗：2,921.49kb] [文件加载：123]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003143s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003166s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36',
+  'host' => '116.255.140.98:81',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002023s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-25T23:55:47+08:00 ] 104.251.122.79 GET 116.255.140.98:81/
+[运行时间：0.048652s] [吞吐率：20.55req/s] [内存消耗：2,921.01kb] [文件加载：123]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\epay\Epay @app_init [ RunTime:0.003237s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003275s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 zgrab/0.x',
+  'host' => '116.255.140.98:81',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002075s ]
+[ info ] [ LANG ] /www/wwwroot/fw366.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/fw366.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/fw366.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File

@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a2dd538-ed0a-4624-87c1-fc809c5df608" name="Default Changelist" comment="" />
+    <list default="true" id="6a2dd538-ed0a-4624-87c1-fc809c5df608" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/application/index/view/test/atest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/index/view/test/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/index/view/test/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/index/view/test/showall.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/index/view/test/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/model/BatchData.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/api/model/BatchData.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Check.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Check.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/model/HzbData2016Batch.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/model/HzbDataBatch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/log/202011/26.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/log/202011/26.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/46ac6ac839170c81cadb115fcb6eb2d0.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/46ac6ac839170c81cadb115fcb6eb2d0.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/c7b41c7a1b7ff3f46ac6e6838093bad4.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/c7b41c7a1b7ff3f46ac6e6838093bad4.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,9 +49,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="composer.json" />
+        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -59,25 +97,32 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1j8SO7mKDLnYb2aRJ02VdN8HDOF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/index/model" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\phpstudy_pro\WWW\fw366.cn\application\index\model" />
-      <recent name="E:\phpstudy_pro\WWW\fw366.cn\application\index\controller" />
       <recent name="E:\phpstudy_pro\WWW\fw366.cn\public" />
-      <recent name="E:\phpstudy_pro\WWW\fw366.cn\application\api\controller" />
+      <recent name="E:\phpstudy_pro\WWW\fw366.cn\application\index\view\atest" />
+      <recent name="E:\phpstudy_pro\WWW\fw366.cn\application\index\model" />
+      <recent name="E:\phpstudy_pro\WWW\fw366.cn\application\index\view\lay" />
+      <recent name="E:\phpstudy_pro\WWW\fw366.cn\application\index\controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\phpstudy_pro\WWW\fw366.cn\public\assets\css" />
+      <recent name="E:\phpstudy_pro\WWW\fw366.cn\application\index\view\ " />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -93,30 +138,50 @@
       <workItem from="1605588475923" duration="3029000" />
       <workItem from="1606116765957" duration="27085000" />
       <workItem from="1606265442659" duration="3080000" />
-      <workItem from="1606273491323" duration="31470000" />
+      <workItem from="1606273491323" duration="38251000" />
+      <workItem from="1606381586683" duration="3902000" />
+      <workItem from="1606438000724" duration="10781000" />
+      <workItem from="1606449091122" duration="11045000" />
+      <workItem from="1606468421079" duration="31591000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="484" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606291979569">
+    <state x="484" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606528111083">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="484" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606291979569" />
+    <state x="484" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606528111083" />
     <state x="641" y="289" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606292863680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="641" y="289" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606292863680" />
-    <state x="740" y="278" key="FileChooserDialogImpl" timestamp="1606292814945">
+    <state x="740" y="278" key="FileChooserDialogImpl" timestamp="1606535385663">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606292814945" />
+    <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606535385663" />
     <state x="776" y="442" key="NewPhpFileDialog" timestamp="1606270643687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="776" y="442" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606270643687" />
+    <state x="680" y="239" key="RollbackChangesDialog" timestamp="1606550587882">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="680" y="239" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606550587882" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1603327383364">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -125,9 +190,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1606297158186" />
-    <state x="612" y="133" width="598" height="804" key="find.popup" timestamp="1606278066056">
+    <state x="901" y="236" width="598" height="804" key="find.popup" timestamp="1606471356424">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="612" y="133" width="598" height="804" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606278066056" />
+    <state x="901" y="236" width="598" height="804" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606471356424" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1606552951958">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606552951958" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606533754974">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606533754974" />
   </component>
 </project>

@@ -11,11 +11,9 @@ class Index extends Frontend
     protected $noNeedLogin = '*';
     protected $noNeedRight = '*';
     protected $layout = '';
-//    protected $noNeedRight = ['index'];
 
     public function index()
     {
-
         //自己写的页面
         return $this->view->fetch('test/index');
         //原页面

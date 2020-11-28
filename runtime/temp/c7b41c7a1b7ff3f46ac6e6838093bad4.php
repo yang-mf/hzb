@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:81:"E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\user\changepwd.html";i:1583049507;s:71:"E:\phpstudy_pro\WWW\fw366.cn\application\index\view\layout\default.html";i:1583049507;s:68:"E:\phpstudy_pro\WWW\fw366.cn\application\index\view\common\meta.html";i:1583049507;s:71:"E:\phpstudy_pro\WWW\fw366.cn\application\index\view\common\sidenav.html";i:1583049507;s:70:"E:\phpstudy_pro\WWW\fw366.cn\application\index\view\common\script.html";i:1583049507;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:81:"E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\user\changepwd.html";i:1583049507;s:71:"E:\phpstudy_pro\WWW\fw366.cn\application\index\view\layout\default.html";i:1606270665;s:68:"E:\phpstudy_pro\WWW\fw366.cn\application\index\view\common\meta.html";i:1583049507;s:71:"E:\phpstudy_pro\WWW\fw366.cn\application\index\view\common\sidenav.html";i:1583049507;s:70:"E:\phpstudy_pro\WWW\fw366.cn\application\index\view\common\script.html";i:1583049507;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -51,6 +51,7 @@
                             <a href="<?php echo url('user/index'); ?>" class="dropdown-toggle" data-toggle="dropdown" style="padding-top: 10px;height: 50px;">
                                 <span class="avatar-img"><img src="<?php echo cdnurl($user['avatar']); ?>" alt=""></span>
                             </a>
+
                             <?php else: ?>
                             <a href="<?php echo url('user/index'); ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo __('User center'); ?> <b class="caret"></b></a>
                             <?php endif; ?>

@@ -75,9 +75,9 @@ class BatchData extends Model
         //得出去年得分
         $last_year_score=Db::name('hzb_rank')->where($year_name['last_year'],'>=',$this_year_now)->select();
         $last_year_score = $last_year_score[0]['score'];
-        //今年应得分数有加分项
+        //去年应得分数有加分项
         $score_max =floor($last_year_score + $w) ;
-        //今年应得分数无加分项
+        //去年应得分数无加分项
         $score = floor($last_year_score);
         //查询去年的录取信息
         $table='hzb_data_'.$last_year.'_batch';
@@ -115,7 +115,6 @@ class BatchData extends Model
         $green=$data_third_info;
         $school_info = ['red'=>$red,'blue'=>$blue,'green'=>$green];
         return $school_info;
-
     }
 
     /*
@@ -140,6 +139,7 @@ class BatchData extends Model
         return $year_name;
     }
     /*
+     * 查询得分所能达到的学校批次
      * @param string $last_year 上一年
      * @param string $type 文理科
      * @param string $score_max 最高得分（有加分）
@@ -149,7 +149,6 @@ class BatchData extends Model
      * @throws \think\db\exception\ModelNotFoundException
      * @throws \think\exception\DbException
      */
-    //查询得分所能达到的学校批次
     public function Batch($last_year,$type,$score_max,$score)
     {
         $batch_data = Db::name('hzb_batch')

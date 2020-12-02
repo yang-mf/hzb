@@ -10,7 +10,7 @@ use think\Db;
 class HzbDataBatch extends Model
 {
     // 设置主表名
-//    protected $table = 'yzx_hzb_data_2016_batch';
+    // protected $table = 'yzx_hzb_data_2016_batch';
     /**
      * 获取导航
      *
@@ -27,9 +27,9 @@ class HzbDataBatch extends Model
      * @param string $status 冲刺保守保底
      *
      */
-    public function getBatchData($score,$status,$type,$year=null,$batch=null)
+    public function getBatchData($score,$status=null,$type,$year=null,$batch=null ,$page = null)
     {
-        $result =  $this->test($score,$year,$type,$batch,$status);
+        $result =  $this->test($score,$year,$type,$batch,$status,$page);
         return $result;
     }
 
@@ -70,13 +70,13 @@ class HzbDataBatch extends Model
         //得出加分项
         $w=floor($rank/100);
         //得出去年得分
-        $last_year_score=Db::name('hzb_rank')->where($year_name['last_year'],'>=',$this_year_now)->select();
-        $last_year_score = $last_year_score[0]['score'];
+        $last_year_score=Db::name('hzb_rank')->where($year_name['last_year'],'>=',$this_year_now)->find();
+        $last_year_score = $last_year_score['score'];
         //今年应得分数有加分项
         $score_max =floor($last_year_score + $w) ;
-//        var_dump($score_max);die;
         //今年应得分数无加分项
         $score = floor($last_year_score);
+//        var_dump($score_max);die;
         //查询去年的录取信息
         $table='hzb_data_batch';
         $join_table_name = 'hzb_data_school_info';
@@ -87,52 +87,84 @@ class HzbDataBatch extends Model
         }else{
             $batch = ['score_max'=>$batch,'score'=>$batch];
         }
+//        var_dump($score);die;
         //演示时输入状态  冲刺保守保底 判断，直接返回值
-        if(empty(!$status)){
+        if(!empty($status)){
             $result = $this->CheckType($status,$score_max,$score,$table,$type,$batch,$join_table_name,$page=null,$last_year);
-            setcookie('score','');
-            setcookie('year','');
-            setcookie('type','');
-            setcookie('batch','');
             return $result;
         }
         $where_first = 'fraction_max >= '.$score_max.' and fraction_min <= ' .$score_max;
         $where_second = 'fraction_max >= '.$score.' and fraction_min <= ' .$score;
         $where_third = 'fraction_min <= ' .$score;
         $object=Db::name($table)
-            ->alias('a')    // alias 表示命名数据库的别称为a
-            ->join($join_table_name .' j','a.school_num = j.school_num')
-            ->where($where_first)
-            ->whereOr($where_second)
-            ->whereOr($where_third)
+            ->where(function ($query)use($where_first,$where_second,$where_third) {
+                $query->where($where_first)->whereOr($where_second)->whereOr($where_third);
+            })
             ->where('the_year','=',$last_year)
             ->where('type', '=',$type)
             ->where('batch','=',$batch['score_max'])
-            ->paginate(20,false,$config = [$page]);
-        $info = $object->items();
-        foreach ($info as $k => &$v){
+            ->where('ler','>=',$this_year_now)
+            ->select();
+        foreach ($object as $key => $value) {
+            $school_num[] = $value['school_num'];
+        }
+        $where_school_num = array();
+        $where_school_num ['school_num'] = array('in',$school_num);
+        $school_data = Db::name('hzb_data_all_school_info')
+            ->where($where_school_num)
+            ->select();
+        if(empty($object)){
+            print_r("请重新输入分数，或选择批次");die;
+        }
+        foreach ($object as $k => &$v){
             $fraction_max = $v['fraction_max'];
             $fraction_min = $v['fraction_min'];
-            $items[$k]['color'] = '';
-
             if($fraction_max >= $score_max && $fraction_min <= $score_max ){
-                $info[$k]['color'] = "red";
-//                $info[$k]['i'] = $i ;
+                $object[$k]['color'] = "red";
+                $school_date_info[] = $v;
             }
-            if ($fraction_max >= $score && $fraction_min <= $score ){
-                $info[$k]['color'] = "green";
+            if($fraction_max >= $score && $fraction_min <= $score ){
+                $object[$k]['color'] = "blue";
+                $school_date_info[] = $v;
             }
             if ($fraction_min <= $score ){
-                $info[$k]['color'] = "blue";
+                $object[$k]['color'] = "green";
+                $school_date_info[] = $v;
             }
-
         }
-        $data = ['object'=>$object,'info'=>$info];
-        setcookie('score','');
-        setcookie('status','');
-        setcookie('year','');
-        setcookie('type','');
-        setcookie('batch','');
+        foreach ($school_date_info as $k => &$v) {
+            if($school_date_info[$k]['color'] == "red" ){
+                $new_info[] = $v;
+            }
+        }
+        foreach ($school_date_info as $k => &$v) {
+            if ($school_date_info[$k]['color'] == "blue") {
+                $new_info[] = $v;
+            }
+        }
+        foreach ($school_date_info as $k => &$v){
+            if ($school_date_info[$k]['color'] == "green" ){
+                $new_info[] = $v;
+            }
+        }
+        foreach ($new_info as $ok => $ov)
+        {
+            foreach ($school_data as $sk => $sv)
+            {
+                if($ov['school_num'] == $sv['school_num'])
+                {
+                    $new_info[$ok]['school_type'] = $sv['school_type'];
+                    $new_info[$ok]['school_management'] = $sv['school_management'];
+                    $new_info[$ok]['school_province'] = $sv['school_province'];
+                    $new_info[$ok]['school_city'] = $sv['school_city'];
+                    $new_info[$ok]['school_nature'] = $sv['school_nature'];
+                    $new_info[$ok]['province_school_number'] = $sv['province_school_number'];
+                    $new_info[$ok]['school_renown'] = $sv['school_renown'];
+                    $new_info[$ok]['school_independent'] = $sv['school_independent'];
+                }
+            }
+        }
+        $data = ['info'=>$new_info];
         return $data;
     }
     /*
@@ -212,42 +244,18 @@ class HzbDataBatch extends Model
     public function Sprint($score_max,$score,$table,$type,$batch,$join_table_name,$page=null,$last_year)
     {
         $where = 'fraction_max >= '.$score_max.' and fraction_min <= ' .$score_max;
-        $object=Db::name($table)
+        $info=Db::name($table)
             ->alias('a')    // alias 表示命名数据库的别称为a
             ->join($join_table_name .' j','a.school_num = j.school_num')
             ->where($where)
             ->where('the_year','=',$last_year)
             ->where('type', '=',$type)
             ->where('batch','=',$batch['score_max'])
-            ->paginate(20,false,$config = [$page])
-            ->each(function($item, $key){
-                $item['color'] = 'red';
-                return $item;
-            });
-        $info = $object->items();
+            ->select();
         foreach ($info as $k => &$v){
-            $fraction_max = $v['fraction_max'];
-            $fraction_min = $v['fraction_min'];
-            $items[$k]['color'] = '';
-
-            if($fraction_max >= $score_max && $fraction_min <= $score_max ){
-                $info[$k]['color'] = "red";
-//                $info[$k]['i'] = $i ;
-            }
-            if ($fraction_max >= $score && $fraction_min <= $score ){
-                $info[$k]['color'] = "green";
-            }
-            if ($fraction_min <= $score ){
-                $info[$k]['color'] = "blue";
-            }
-
+            $info[$k]['color'] = "red";
         }
-        $data = ['object'=>$object,'info'=>$info];
-        setcookie('score','');
-        setcookie('status','');
-        setcookie('year','');
-        setcookie('type','');
-        setcookie('batch','');
+        $data = ['info'=>$info];
         return $data;
     }
     //保守
@@ -262,42 +270,18 @@ class HzbDataBatch extends Model
     public function Conservative($score_max,$score,$table,$type,$batch,$join_table_name,$page=null,$last_year)
     {
         $where = 'fraction_max >= '.$score.' and fraction_min <= ' .$score;
-        $object=Db::name($table)
+        $info=Db::name($table)
             ->alias('a')    // alias 表示命名数据库的别称为a
             ->join($join_table_name .' j','a.school_num = j.school_num')
             ->where($where)
             ->where('the_year','=',$last_year)
             ->where('type', '=',$type)
             ->where('batch','=',$batch['score'])
-            ->paginate(20,false,$config = [$page])
-            ->each(function($item, $key){
-                $item['color'] = 'green';
-                return $item;
-            });
-        $info = $object->items();
+            ->select();
         foreach ($info as $k => &$v){
-            $fraction_max = $v['fraction_max'];
-            $fraction_min = $v['fraction_min'];
-            $items[$k]['color'] = '';
-
-            if($fraction_max >= $score_max && $fraction_min <= $score_max ){
-                $info[$k]['color'] = "red";
-//                $info[$k]['i'] = $i ;
-            }
-            if ($fraction_max >= $score && $fraction_min <= $score ){
-                $info[$k]['color'] = "green";
-            }
-            if ($fraction_min <= $score ){
-                $info[$k]['color'] = "blue";
-            }
-
+            $info[$k]['color'] = "blue";
         }
-        $data = ['object'=>$object,'info'=>$info];
-        setcookie('score','');
-        setcookie('status','');
-        setcookie('year','');
-        setcookie('type','');
-        setcookie('batch','');
+        $data = ['info'=>$info];
         return $data;
     }
     //保底
@@ -312,42 +296,18 @@ class HzbDataBatch extends Model
     public function Guaranteed($score_max,$score,$table,$type,$batch,$join_table_name,$page=null,$last_year)
     {
         $where = 'fraction_min <= ' .$score;
-        $object=Db::name($table)
+        $info=Db::name($table)
             ->alias('a')    // alias 表示命名数据库的别称为a
             ->join($join_table_name .' j','a.school_num = j.school_num')
             ->where($where)
             ->where('the_year','=',$last_year)
             ->where('type', '=',$type)
             ->where('batch','=',$batch['score'])
-            ->paginate(20,false,$config = [$page])
-            ->each(function($item, $key){
-                $item['color'] = 'blue';
-                return $item;
-            });
-        $info = $object->items();
+            ->select();
         foreach ($info as $k => &$v){
-            $fraction_max = $v['fraction_max'];
-            $fraction_min = $v['fraction_min'];
-            $items[$k]['color'] = '';
-
-            if($fraction_max >= $score_max && $fraction_min <= $score_max ){
-                $info[$k]['color'] = "red";
-//                $info[$k]['i'] = $i ;
-            }
-            if ($fraction_max >= $score && $fraction_min <= $score ){
-                $info[$k]['color'] = "green";
-            }
-            if ($fraction_min <= $score ){
-                $info[$k]['color'] = "blue";
-            }
-
+            $info[$k]['color'] = "green";
         }
-        $data = ['object'=>$object,'info'=>$info];
-        setcookie('score','');
-        setcookie('status','');
-        setcookie('year','');
-        setcookie('type','');
-        setcookie('batch','');
+        $data = ['info'=>$info];
         return $data;
     }
     //判断冲刺保守保底
@@ -361,17 +321,24 @@ class HzbDataBatch extends Model
      * @param string $status 冲刺保守保底
      */
     public function CheckType($status,$score_max,$score,$table,$type,$batch,$join_table_name,$page=null,$last_year){
+//        var_dump($page);die;
         if($status == 1){
+//            var_dump($status);die;
             $red = $this->Sprint($score_max,$score,$table,$type,$batch,$join_table_name,$page=null,$last_year);
             return $red;
         }elseif ($status == 2){
+//            var_dump($status);die;
             $blue = $this->Conservative($score_max,$score,$table,$type,$batch,$join_table_name,$page=null,$last_year);
             return $blue;
         }elseif ($status == 3){
+//            var_dump($status);die;
             $green = $this->Guaranteed($score_max,$score,$table,$type,$batch,$join_table_name,$page=null,$last_year);
             return $green;
         }
     }
+
+
+
 
 
 

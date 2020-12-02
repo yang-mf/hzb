@@ -132,6 +132,7 @@ return [
         // 标签库标签结束标记
         'taglib_end'   => '}',
         'tpl_cache'    => true,
+//        'layout_on'    =>true,
     ],
     // 视图输出字符串内容替换,留空则会自动进行计算
     'view_replace_str'       => [

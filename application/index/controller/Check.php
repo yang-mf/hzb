@@ -17,6 +17,12 @@ class Check extends Frontend
     {
         parent::_initialize();
     }
+    //首页展示
+    public function index()
+    {
+        //自己写的页面
+        return $this->view->fetch('test/check');
+    }
 
     //获取学生位次信息
     /*
@@ -40,49 +46,29 @@ class Check extends Frontend
         //批次
         $batch = $this->request->request('batch');
         $page = $this->request->request('page');
-        setcookie('score',$score);
-        setcookie('status',$status);
-        setcookie('year',$year);
-        setcookie('type',$type);
-        setcookie('batch',$batch);
-        if(empty($score) && empty($status)&& empty($year)&& empty($type)&& empty($batch)){
-            $score = cookie('score');
-            $year = cookie('year');
-            $type = cookie('type');
-            $batch = cookie('batch');
+        if(empty($score) && empty($type) ){
+            $score = session('score');
+            $year = session('year');
+            $type = session('type');
+            $batch = session('batch');
+            $status = session('status');
+        }else{
+            session('score',$score);
+            session('status',$status);
+            session('year',$year);
+            session('type',$type);
+            session('batch',$batch);
         }
         //获取数据
         if(!empty($year)){
-            $result = model('HzbDataBatch')->getBatchData($score,$status,$type,$year,$batch);
+            $year = date($year);
+            $result = model('HzbDataBatch')->getBatchData($score,$status,$type,$year,$batch,$page);
         }else{
             $year = date('Y');
             $result = model('HzbDataBatchYear')->getBatchData($score,$status,$type,$year,$batch,$page);
         }
-//        var_dump($result['info']);die;
-        $this->assign('object',$result['object']);
         $this->assign('info',$result['info']);
         return $this->view->fetch('test/show');
     }
 
-    public function index()
-    {
-        //自己写的页面
-        return $this->view->fetch('test/index');
-        //原页面
-//        return $this->view->fetch();
-    }
-    public function lay()
-    {
-        //自己写的页面
-        return $this->view->fetch('lay/layout');
-        //原页面
-//        return $this->view->fetch();
-    }
-    public function test()
-    {
-        //自己写的页面
-        return $this->view->fetch('test/atest');
-        //原页面
-//        return $this->view->fetch();
-    }
 }

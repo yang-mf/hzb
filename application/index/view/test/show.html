@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-<table width="700px" border="1px"  >
+<table width="100%" border="1px"  >
     {foreach($info as $k => $v)}
     <tr style="color:{$v.color}" class="span_school_num" data-id="{$v.school_num}" >
         <td >院校名称</td>
@@ -16,23 +16,12 @@
         <td >{$v.school_name}</td>
         <td >院校代码</td>
         <td >{$v.school_num}</td>
-        <td >办学类型</td>
-        <td >{$v.school_type}</td>
+        <td >公民办</td>
+        <td >{$v.school_type?$v.school_type:''}</td>
     </tr>
+
     {/foreach}
 </table>
+
 </body>
 </html>
-{$object->render()}
-<script src="/jquery-3.5.1.min.js"></script>
-<script>
-    $(document).ready(function(){
-        // $("tr").ready(function(){
-        //     var color = $(".td").html();
-        //     $("tr").attr("style",'color: '+color);
-        // });
-        // $("tr").click(function (){
-        //     var school_num = $("#data-id").html()
-        // });
-    });
-</script>

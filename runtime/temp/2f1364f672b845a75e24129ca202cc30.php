@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\test\index.html";i:1606441358;s:67:"E:\phpstudy_pro\WWW\fw366.cn\application\index\view\lay\layout.html";i:1606441358;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\test\index.html";i:1606441358;s:67:"E:\phpstudy_pro\WWW\fw366.cn\application\index\view\lay\lay.html";i:1606441358;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>

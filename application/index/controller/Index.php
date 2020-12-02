@@ -14,10 +14,7 @@ class Index extends Frontend
 
     public function index()
     {
-        //自己写的页面
-        return $this->view->fetch('test/index');
-        //原页面
-//        return $this->view->fetch();
+        //前端展示查学校模块
+        return $this->view->fetch();
     }
-
 }

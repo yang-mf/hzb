@@ -66,7 +66,8 @@ class Agent extends Frontend
         //获取数据
         if(!empty($year)){
             $year = date($year);
-            $result = model('HzbDataBatchAgent')->getBatchData($score,$status,$type,$year,$batch,$page);
+//            var_dump($year);die;
+            $result = model('HzbDataBatchAgent')->getBatchData($score,$type,$year,$batch,$status);
         }else{
             $year = date('Y');
             $result = model('HzbDataBatchAgentYear')->getBatchData($score,$status,$type,$year,$batch,$page);
@@ -74,10 +75,6 @@ class Agent extends Frontend
         $this->assign('info',$result['info']);
         return $this->view->fetch('test/show');
     }
-    //测试layout
-    public function lay()
-    {
-        return $this->view->fetch('test/lay');
-    }
+
 
 }

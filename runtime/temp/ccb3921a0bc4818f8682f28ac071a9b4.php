@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\test\show.html";i:1606880245;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\test\show.html";i:1606900817;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,6 +19,7 @@
         <td ><?php echo $v['school_num']; ?></td>
         <td >公民办</td>
         <td ><?php echo !empty($v['school_type'])?$v['school_type']:''; ?></td>
+
     </tr>
 
     <?php endforeach; ?>

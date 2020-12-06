@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\test\agent.html";i:1606806993;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\test\agent.html";i:1606901401;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -33,6 +33,8 @@
         <option value="reason" selected>理科</option>
         <option value="culture">文科</option>
     </select>
+    <br>
+
     <br>
     <input type="submit" value="确认">
 </form>

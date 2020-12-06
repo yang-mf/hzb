@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<table width="100%" border="1px"  >
+    {foreach($info as $k => $v)}
+        <tr style="color:{$v.color}" class="span_school_num" data-id="{$v.school_num}" >
+            <td >院校名称</td>
+            <td >{$v.color}</td>
+            <td >{$v.school_name}</td>
+            <td >院校代码</td>
+            <td >{$v.school_num}</td>
+            <td >公民办</td>
+            <td >{$v.school_type?$v.school_type:''}</td>
+            <td >最高分</td>
+            <td >{$v.school_type?$v.school_type:''}</td>
+            <td >最低分</td>
+            <td >{$v.school_type?$v.school_type:''}</td>
+            <td >最低分与分数线差值</td>
+            <td >{$v.school_type?$v.school_type:''}</td>
+            <td >录取最低分位次</td>
+            <td >{$v.school_type?$v.school_type:''}</td>
+            <td >平均分</td>
+            <td >{$v.school_type?$v.school_type:''}</td>
+            <td >平均分与分数线差值</td>
+            <td >{$v.school_type?$v.school_type:''}</td>
+        </tr>
+    {/foreach}
+</table>
+</body>
+</html>

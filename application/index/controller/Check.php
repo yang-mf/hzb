@@ -45,7 +45,6 @@ class Check extends Frontend
         $type = $this->request->request('type');
         //批次
         $batch = $this->request->request('batch');
-        $page = $this->request->request('page');
         if(empty($score) && empty($type) ){
             $score = session('score');
             $year = session('year');
@@ -62,10 +61,10 @@ class Check extends Frontend
         //获取数据
         if(!empty($year)){
             $year = date($year);
-            $result = model('HzbDataBatch')->getBatchData($score,$status,$type,$year,$batch,$page);
+            $result = model('HzbDataBatch')->getBatchData($score,$type,$year,$batch,$status);
         }else{
             $year = date('Y');
-            $result = model('HzbDataBatchYear')->getBatchData($score,$status,$type,$year,$batch,$page);
+            $result = model('HzbDataBatchYear')->getBatchData($score,$type,$year,$batch,$status);
         }
         $this->assign('info',$result['info']);
         return $this->view->fetch('test/show');

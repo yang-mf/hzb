@@ -20,35 +20,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a2dd538-ed0a-4624-87c1-fc809c5df608" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/index/controller/Test.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/index/model/HzbDataBatchAgent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/index/model/HzbDataBatchAgentYear.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/index/model/TestHzbDataBatch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/index/model/TestHzbDataBatchYear.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/index/view/test/agent.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/index/view/test/check.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/index/view/test/lay.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/index/view/test/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/static/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/static/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/static/js/vue.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vue.min .js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/index/model/TestHzbDataCategory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/index/model/TestHzbDataSelectBatch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/index/view/test/test1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/index/view/test/testshow.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/fonts/element-icons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/fonts/element-icons.woff" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Agent.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Agent.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/controller/Check.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Check.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/controller/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Test.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Test.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/model/HzbDataBatch.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/model/HzbDataBatch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/model/HzbDataBatchAgent.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/model/HzbDataBatchAgent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/model/HzbDataBatchAgentYear.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/model/HzbDataBatchAgentYear.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/model/HzbDataBatchYear.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/model/HzbDataBatchYear.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/test/atest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/test/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/test/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/model/TestHzbDataBatch.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/model/TestHzbDataBatch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/model/TestHzbDataBatchYear.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/model/TestHzbDataBatchYear.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/test/agent.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/test/agent.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/view/test/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/test/show.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/test/showall.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/2f1364f672b845a75e24129ca202cc30.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/2f1364f672b845a75e24129ca202cc30.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/46ac6ac839170c81cadb115fcb6eb2d0.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/46ac6ac839170c81cadb115fcb6eb2d0.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/c4c537a4e6620ee21dc7f9748f4968a0.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/c4c537a4e6620ee21dc7f9748f4968a0.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/test/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/test/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/css/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/js/vue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/log/202012/02.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/log/202012/02.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/119a0b345df87b83e01d59bfdef4280e.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/119a0b345df87b83e01d59bfdef4280e.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/55bf04c4712a927f3e6c2c8f5c0aece5.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/55bf04c4712a927f3e6c2c8f5c0aece5.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/temp/ccb3921a0bc4818f8682f28ac071a9b4.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/ccb3921a0bc4818f8682f28ac071a9b4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/cf0cc040a2f0e49104fa7dce9822d0b0.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/cf0cc040a2f0e49104fa7dce9822d0b0.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/temp/d7a4cb5d99d707f1fc8b58de7876f684.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/d7a4cb5d99d707f1fc8b58de7876f684.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +122,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/static/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/index/model" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="E:\PhpStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -130,11 +130,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\phpstudy_pro\WWW\fw366.cn\public\static\js" />
       <recent name="E:\phpstudy_pro\WWW\fw366.cn\application\index\model" />
-      <recent name="E:\phpstudy_pro\WWW\fw366.cn\application\index\controller" />
       <recent name="E:\phpstudy_pro\WWW\fw366.cn\application\index\view\test" />
-      <recent name="E:\phpstudy_pro\WWW\fw366.cn\public" />
+      <recent name="E:\phpstudy_pro\WWW\fw366.cn\public\assets\css" />
+      <recent name="E:\phpstudy_pro\WWW\fw366.cn\public\assets\js" />
+      <recent name="E:\phpstudy_pro\WWW\fw366.cn\public\assets\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\phpstudy_pro\WWW\fw366.cn\public\static\css" />
@@ -164,7 +164,12 @@
       <workItem from="1606697689871" duration="23906000" />
       <workItem from="1606784476776" duration="12685000" />
       <workItem from="1606870462518" duration="3686000" />
-      <workItem from="1606874169832" duration="6660000" />
+      <workItem from="1606874169832" duration="21592000" />
+      <workItem from="1606956960375" duration="19743000" />
+      <workItem from="1607050971333" duration="16449000" />
+      <workItem from="1607078750257" duration="675000" />
+      <workItem from="1607129972094" duration="24810000" />
+      <workItem from="1607217288484" duration="20507000" />
     </task>
     <servers />
   </component>
@@ -184,10 +189,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="484" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606528111083">
+    <state x="649" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606892050966">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="484" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606528111083" />
+    <state x="649" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606892050966" />
+    <state x="484" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607067645621">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="484" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607067645621" />
     <state x="641" y="289" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606292863680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -212,17 +221,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1606297158186" />
-    <state x="901" y="236" width="598" height="804" key="find.popup" timestamp="1606471356424">
+    <state x="901" y="236" width="598" height="804" key="find.popup" timestamp="1606902522435">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="901" y="236" width="598" height="804" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606471356424" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1606705194374">
+    <state x="901" y="236" width="598" height="804" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606902522435" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1607159825794">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606705194374" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606533754974">
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607159825794" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607159162224">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606533754974" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607159162224" />
   </component>
 </project>

@@ -27,9 +27,9 @@ class HzbDataBatchAgent extends Model
      * @param string $status 冲刺保守保底
      *
      */
-    public function getBatchData($score,$status=null,$type,$year=null,$batch=null ,$page = null)
+    public function getBatchData($score,$type,$year=null,$batch=null,$status=null)
     {
-        $result =  $this->test($score,$year,$type,$batch,$status,$page);
+        $result =  $this->test($score,$year,$type,$batch,$status);
         return $result;
     }
 
@@ -46,7 +46,7 @@ class HzbDataBatchAgent extends Model
      * @throws \think\db\exception\ModelNotFoundException
      * @throws \think\exception\DbException
      */
-    public function test($score,$year,$type,$batch,$status,$page=null)
+    public function test($score,$year,$type,$batch,$status)
     {
         $this_year=$year;
         $last_year=$year-1;
@@ -89,9 +89,10 @@ class HzbDataBatchAgent extends Model
 //        var_dump($score);die;
         //演示时输入状态  冲刺保守保底 判断，直接返回值
         if(!empty($status)){
-            $result = $this->CheckType($status,$score_max,$score,$table,$type,$batch,$join_table_name,$page=null,$last_year);
+            $result = $this->CheckType($status,$score_max,$score,$table,$type,$batch,$join_table_name,$last_year);
             return $result;
         }
+        //根据分数查询数据
         $where_first = 'fraction_max >= '.$score_max.' and fraction_min <= ' .$score_max;
         $where_second = 'fraction_max >= '.$score.' and fraction_min <= ' .$score;
         $where_third = 'fraction_min <= ' .$score;
@@ -104,17 +105,19 @@ class HzbDataBatchAgent extends Model
             ->where('batch','=',$batch['score_max'])
             ->where('ler','>=',$this_year_now)
             ->select();
-            foreach ($object as $key => $value) {
-                $school_num[] = $value['school_num'];
-            }
-        $where_school_num = array();
-        $where_school_num ['school_num'] = array('in',$school_num);
-            $school_data = Db::name('hzb_data_all_school_info')
-                ->where($where_school_num)
-                ->select();
         if(empty($object)){
             print_r("请重新输入分数，或选择批次");die;
         }
+        foreach ($object as $key => $value) {
+            $school_num[] = $value['school_num'];
+        }
+        //根据school_num获取学校基本信息
+        $where_school_num = array();
+        $where_school_num ['school_num'] = array('in',$school_num);
+        $school_data = Db::name('hzb_data_all_school_info')
+            ->where($where_school_num)
+            ->select();
+        //上颜色
         foreach ($object as $k => &$v){
             $fraction_max = $v['fraction_max'];
             $fraction_min = $v['fraction_min'];
@@ -131,6 +134,7 @@ class HzbDataBatchAgent extends Model
                 $school_date_info[] = $v;
             }
         }
+        //颜色区分冲刺，保守，保底
         foreach ($school_date_info as $k => &$v) {
             if($school_date_info[$k]['color'] == "red" ){
                 $new_info[] = $v;
@@ -146,6 +150,7 @@ class HzbDataBatchAgent extends Model
                 $new_info[] = $v;
             }
         }
+        //根据school_num获取的学校基本信息取需要的数据与分数查询出的数据合并
         foreach ($new_info as $ok => $ov)
         {
             foreach ($school_data as $sk => $sv)
@@ -240,7 +245,7 @@ class HzbDataBatchAgent extends Model
      * @param null $batch 批次
      * @param string $table 表名字
      */
-    public function Sprint($score_max,$score,$table,$type,$batch,$join_table_name,$page=null,$last_year)
+    public function Sprint($score_max,$score,$table,$type,$batch,$join_table_name,$last_year)
     {
         $where = 'fraction_max >= '.$score_max.' and fraction_min <= ' .$score_max;
         $info=Db::name($table)
@@ -266,7 +271,7 @@ class HzbDataBatchAgent extends Model
      * @param null $batch 批次
      * @param string $table 表名字
      */
-    public function Conservative($score_max,$score,$table,$type,$batch,$join_table_name,$page=null,$last_year)
+    public function Conservative($score_max,$score,$table,$type,$batch,$join_table_name,$last_year)
     {
         $where = 'fraction_max >= '.$score.' and fraction_min <= ' .$score;
         $info=Db::name($table)
@@ -292,7 +297,7 @@ class HzbDataBatchAgent extends Model
      * @param null $batch 批次
      * @param string $table 表名字
      */
-    public function Guaranteed($score_max,$score,$table,$type,$batch,$join_table_name,$page=null,$last_year)
+    public function Guaranteed($score_max,$score,$table,$type,$batch,$join_table_name,$last_year)
     {
         $where = 'fraction_min <= ' .$score;
         $info=Db::name($table)
@@ -319,19 +324,18 @@ class HzbDataBatchAgent extends Model
      * @param null $batch 批次
      * @param string $status 冲刺保守保底
      */
-    public function CheckType($status,$score_max,$score,$table,$type,$batch,$join_table_name,$page=null,$last_year){
-//        var_dump($page);die;
+    public function CheckType($status,$score_max,$score,$table,$type,$batch,$join_table_name,$last_year){
         if($status == 1){
 //            var_dump($status);die;
-            $red = $this->Sprint($score_max,$score,$table,$type,$batch,$join_table_name,$page=null,$last_year);
+            $red = $this->Sprint($score_max,$score,$table,$type,$batch,$join_table_name,$last_year);
             return $red;
         }elseif ($status == 2){
 //            var_dump($status);die;
-            $blue = $this->Conservative($score_max,$score,$table,$type,$batch,$join_table_name,$page=null,$last_year);
+            $blue = $this->Conservative($score_max,$score,$table,$type,$batch,$join_table_name,$last_year);
             return $blue;
         }elseif ($status == 3){
 //            var_dump($status);die;
-            $green = $this->Guaranteed($score_max,$score,$table,$type,$batch,$join_table_name,$page=null,$last_year);
+            $green = $this->Guaranteed($score_max,$score,$table,$type,$batch,$join_table_name,$last_year);
             return $green;
         }
     }

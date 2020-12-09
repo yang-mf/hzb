@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\test\test.html";i:1607246481;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\test\test.html";i:1607509110;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,37 +8,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/assets/css/index.css">
     <title>test</title>
-
 </head>
 <body>
 <div id="app">
     <div v-show="show_table">
     <el-form ref="form" :model="form" label-width="80px">
-        <el-form-item label="分数" style="width: 20%">
-            <el-input v-model="form.score" ></el-input>
-        </el-form-item>
-        <el-form-item label="年份">
-            <el-select v-model="form.year" placeholder="请选择年份">
-                <el-option label="2017" value="2017"></el-option>
-                <el-option label="2018" value="2018"></el-option>
-                <el-option label="2019" value="2019"></el-option>
-                <el-option label="2020" value="2020"></el-option>
-            </el-select>
-        </el-form-item>
-        <el-form-item label="批次">
-            <el-select v-model="form.batch" placeholder="请选择批次">
-                <el-option label="一批" value="1"></el-option>
-                <el-option label="二批" value="2"></el-option>
-                <el-option label="三批" value="3"></el-option>
-                <el-option label="大专" value="4"></el-option>
-            </el-select>
-        </el-form-item>
-        <el-form-item label="文科/理科">
-            <el-select v-model="form.type" placeholder="请选择文科/理科">
-                <el-option label="理科" value="reason"></el-option>
-                <el-option label="文科" value="culture"></el-option>
-            </el-select>
-        </el-form-item>
+        <div v-show="input_show">
+            <el-form-item label="分数" style="width: 20%">
+                <el-input v-model="form.score" placeholder="请输入分数" :disabled=form.region ></el-input>
+            </el-form-item>
+            <el-form-item label="年份">
+                <el-select v-model="form.year" placeholder="请选择年份" :disabled=form.region>
+                    <el-option label="2017" value="2017"></el-option>
+                    <el-option label="2018" value="2018"></el-option>
+                    <el-option label="2019" value="2019"></el-option>
+                    <el-option label="2020" value="2020"></el-option>
+                </el-select>
+            </el-form-item>
+            <el-form-item label="批次">
+                <el-select v-model="form.batch" placeholder="请选择批次" :disabled=form.region>
+                    <el-option label="一批" value="1"></el-option>
+                    <el-option label="二批" value="2"></el-option>
+                    <el-option label="三批" value="3"></el-option>
+                    <el-option label="大专" value="4"></el-option>
+                </el-select>
+            </el-form-item>
+            <el-form-item label="文科/理科">
+                <el-select v-model="form.type" placeholder="请选择文科/理科" :disabled=form.region>
+                    <el-option label="理科" value="reason"></el-option>
+                    <el-option label="文科" value="culture"></el-option>
+                </el-select>
+            </el-form-item>
+        </div>
         <div v-show="show_add">
             <el-form-item label="专业" style="width: 30%">
                 <el-autocomplete
@@ -67,7 +68,15 @@
                 <el-button @click.native="school_type($event)" id="type4" :type="type_primary('type4')">中外合作办学</el-button>
             </el-form-item>
             <el-form-item label="省份" style="width: 20%">
-                <el-button @click.native="province_type($event)" id="province" :type="province_primary('province')">省份排序</el-button>
+                <template>
+                    <el-checkbox-group v-model="checkList">
+                        <el-checkbox label="复选框 A"></el-checkbox>
+                        <el-checkbox label="复选框 B"></el-checkbox>
+                        <el-checkbox label="复选框 C"></el-checkbox>
+                    </el-checkbox-group>
+                </template>
+                <!--<el-button @click.native="province_type($event)"
+                id="province" :type="province_primary('province')">省份排序</el-button>-->
             </el-form-item>
         </div>
         <el-form-item>
@@ -77,144 +86,43 @@
     </el-form>
     </div>
     <div v-show="show_data">
-        <el-table
-                :cell-style="cellStyle"
-                :data="show_info"
-                @row-click="clickShow"
-                style="width: 100%"
-        >
-            <el-table-column
-                    prop="school_name"
-                    label="学校名称"
-                    sortable
-                    width="250">
-            </el-table-column>
-            <el-table-column
-                    prop="school_num"
-                    label="院校代码"
-                    sortable
-                    width="100">
-            </el-table-column>
-            <el-table-column
-                    prop="school_type"
-                    label="公民办"
-                    sortable
-                    width="180">
-            </el-table-column>
-            <el-table-column
-                    prop="school_nature"
-                    label="类别"
-                    sortable
-                    width="180">
-            </el-table-column>
-            <el-table-column
-                    prop="school_province"
-                    label="省份"
-                    sortable
-                    width="180">
-            </el-table-column>
-        </el-table>
+        <template>
+            <div
+                    :data="show_info"
+                    style="width: 100%"
+                    v-for="(info,index) in show_info"
+            >
+                <p>{{index}}</p>
+
+                <el-table
+                        v-for="now_info in info"
+                        style="width: 100%"
+                >
+                    <el-table-column label="省份首字母">
+                        <span>
+                            {{now_info}}
+                        </span>
+                    </el-table-column>
+                </el-table>
+            </div>
+        </template>
     </div>
-    <div v-show="show_select_data">
-        <el-table
-                :cell-style="cellStyle"
-                :data="show_select_info"
-                style="width: 100%"
-        >
-            <el-table-column
-                    prop="school_name"
-                    label="学校名称"
-                    sortable
-                    width="250">
-            </el-table-column>
-            <el-table-column
-                    prop="school_num"
-                    label="院校代码"
-                    sortable
-                    width="100">
-            </el-table-column>
-            <el-table-column
-                    prop="school_type"
-                    label="公民办"
-                    sortable
-                    width="180">
-            </el-table-column>
-            <el-table-column
-                    prop="school_nature"
-                    label="类别"
-                    sortable
-                    width="180">
-            </el-table-column>
-            <el-table-column
-                    prop="school_province"
-                    label="省份"
-                    sortable
-                    width="180">
-            </el-table-column>
-        </el-table>
-    </div>
-    <template>
-        <el-table
-                :data="tableData"
-                style="width: 100%">
-            <el-table-column type="expand">
-                <template slot-scope="props">
-                    <el-form label-position="left" inline class="demo-table-expand">
-                        <el-form-item label="商品名称">
-                            <span>{{ props.row.name }}</span>
-                        </el-form-item>
-                        <el-form-item label="所属店铺">
-                            <span>{{ props.row.shop }}</span>
-                        </el-form-item>
-                        <el-form-item label="商品 ID">
-                            <span>{{ props.row.id }}</span>
-                        </el-form-item>
-                        <el-form-item label="店铺 ID">
-                            <span>{{ props.row.shopId }}</span>
-                        </el-form-item>
-                        <el-form-item label="商品分类">
-                            <span>{{ props.row.category }}</span>
-                        </el-form-item>
-                        <el-form-item label="店铺地址">
-                            <span>{{ props.row.address }}</span>
-                        </el-form-item>
-                        <el-form-item label="商品描述">
-                            <span>{{ props.row.desc }}</span>
-                        </el-form-item>
-                    </el-form>
-                </template>
-            </el-table-column>
-            <el-table-column
-                    label="商品 ID"
-                    prop="id">
-            </el-table-column>
-            <el-table-column
-                    label="商品名称"
-                    prop="name">
-            </el-table-column>
-            <el-table-column
-                    label="描述"
-                    prop="desc">
-            </el-table-column>
-        </el-table>
-    </template>
 </div>
 </body>
 <script src="/assets/js/vue.js"></script>
 <script src="/assets/js/index.js"></script>
 <script src="/jquery-3.5.1.min.js"></script>
-<<style>
+<style>
     .demo-table-expand {
         font-size: 0;
     }
     .demo-table-expand label {
-        width: 90px;
         color: #99a9bf;
     }
     .demo-table-expand .el-form-item {
         margin-right: 0;
+        margin-left: 10px;
         margin-bottom: 0;
-        width: 50%;
     }
 </style>
 <script>
@@ -228,79 +136,44 @@
                     type: '',       //文科理科值
                     year: '',       //年份值
                     show_info: '',  //分数值
+                    region:false
                 },
-                show_table: true,
-                show_data: false,
-                show_select_data: false,
-                show_add:false,
-                show_info:[],
-                show_select_info:[],
-                profession_restaurants: [],
-                school_restaurants: [],
-                state: '',
-                state_school:'',
+                checkList: '',
+                show_table: true,               //条件搜索的div，默认为true不改变
+                show_data: true,               //条件搜索的div，默认为false普通搜索之后改为true
+                show_select_data: false,        //附加条件搜索的div，默认为false筛选搜索之后改为true
+                show_add:false,                 //附加条件筛选的div，默认为false普通搜索之后改为true
+                input_show:true,                //输入搜索条件的div，默认为true不改变
+                show_info:[],                   //普通搜索之后的用来展示的数据
+                show_select_info:[],            //加筛选条件搜索之后的用来展示的数据
+                profession_restaurants: [],     //专业下拉框展示数据
+                school_restaurants: [],         //学校下拉框展示数据
+                state: '',                      //专业下拉框输入的或者选中的数据
+                state_school:'',                //学校下拉框输入的或者选中的数据
                 timeout:  null,
-                sta_profession:'',  //input输入的专业值
-                sta_school:'',      //input输入的学校值
-                profession:'',      //专业（本科/专科）值
-                pp_type:'',         //公办民办值
-                province:'',        //省份值
-                tableData: [{
-                    id: '12987122',
-                    name: '好滋好味鸡蛋仔',
-                    category: '江浙小吃、小吃零食',
-                    desc: '荷兰优质淡奶，奶香浓而不腻',
-                    address: '上海市普陀区真北路',
-                    shop: '王小虎夫妻店',
-                    shopId: '10333'
-                }, {
-                    id: '12987123',
-                    name: '好滋好味鸡蛋仔',
-                    category: '江浙小吃、小吃零食',
-                    desc: '荷兰优质淡奶，奶香浓而不腻',
-                    address: '上海市普陀区真北路',
-                    shop: '王小虎夫妻店',
-                    shopId: '10333'
-                }, {
-                    id: '12987125',
-                    name: '好滋好味鸡蛋仔',
-                    category: '江浙小吃、小吃零食',
-                    desc: '荷兰优质淡奶，奶香浓而不腻',
-                    address: '上海市普陀区真北路',
-                    shop: '王小虎夫妻店',
-                    shopId: '10333'
-                }, {
-                    id: '12987126',
-                    name: '好滋好味鸡蛋仔',
-                    category: '江浙小吃、小吃零食',
-                    desc: '荷兰优质淡奶，奶香浓而不腻',
-                    address: '上海市普陀区真北路',
-                    shop: '王小虎夫妻店',
-                    shopId: '10333'
-                }]
+                sta_profession:'',              //input输入的专业值
+                sta_school:'',                  //input输入的学校值
+                profession:'',                  //专业（本科/专科）值
+                pp_type:'',                     //公办民办值
+                province:'',                    //省份值
             }
         },
         methods: {
             onSubmit() {
-                //专业，学校，公民办，省份排序以及信息展示，默认为false，有值改为true
-                // this.show_data=true;
-                // this.show_add=true;
                 var score = this.form.score;                //分数值
                 var batch = this.form.batch;                //批次值
                 var type = this.form.type;                  //文科理科值
                 var year = this.form.year;                  //年份值
-                var sta_profession = this.sta_profession.profession_name ? this.sta_profession.profession_name : '';     //input输入的专业值
-                // var sta_profession = this.sta_profession ? this.sta_profession : '';     //input输入的专业值
-                var sta_school = this.sta_school.school_name ? this.sta_school.school_name : '';                 //input输入的学校值
-                // console.log(sta_school);return;
-                var profession = this.profession ? this.profession: 'profession1';      //专业（本科/专科）值
-                var pp_type = this.pp_type ? this.pp_type: '';                          //公办民办值
-                var province = this.province ? this.province: '';                       //省份值
+                var sta_profession = this.sta_profession.profession_name
+                    ? this.sta_profession.profession_name : '';                                     //input输入的专业值
+                var sta_school = this.sta_school.school_name ? this.sta_school.school_name : '';    //input输入的学校值
+                var profession = this.profession ? this.profession: 'profession1';                  //专业（本科/专科）值
+                var pp_type = this.pp_type ? this.pp_type: '';                                      //公办民办值
+                var province = this.province ? this.province: '';                                   //省份值
                 var show_info = this.show_info ;
                 var _this = this   //很重要！！
                 if(sta_profession=='' && sta_school==''
                     && pp_type=='' ){
-                    // console.log(111);return
                     //查询当前输入的分数，批次，文理科，年份
                     $.post('/index/test/get_ajax_info', {
                         'score':score ,
@@ -308,25 +181,25 @@
                         'type':type,
                         'year':year,
                     }, function (response) {
-                        if(response){
                             //默认为false，有值改为true
+                        if(response){
+                            // _this.form.region=true
                             _this.show_data=true;
-                            _this.show_add=true;
+                            _this.show_add=false;
                             _this.show_select_data=false;
                             _this.show_info = response.info;
-                            console.log(response.info);
+                            console.log( response.info);
+                        }else if(response['code']==2){
+                            _this.show_data=false;
+                            _this.show_add=false;
+                            _this.show_select_data=false;
+                            alert(response['message']);return ;
                         }
                     });
                     return
                 }
-                // console.log(score);return;
-
                 //查询当前输入的分数，批次，文理科，年份以及专业名称，学校名称，专业（本科/专科），公民办，省份排序值
                 $.post('/index/test/get_select_info', {
-                    'score':score ,
-                    'batch':batch ,
-                    'type':type,
-                    'year':year,
                     'show_info':JSON.stringify(show_info),
                     'sta_profession':sta_profession,
                     'sta_school':sta_school,
@@ -339,19 +212,15 @@
                         alert(response['message']);return ;
                     }
                     if(response['code']==1){
-                        console.log(response.info);
+                        _this.show_add=true;
                         _this.show_data=false;
                         _this.show_select_data=true;
                         _this.show_select_info = response['info'];
-                        // console.log(333);return
                     }
-
                 });
                 return;
             },
             cellStyle(row,column,rowIndex,columnIndex){
-                // console.log(row);
-                // console.log(row.row.color);
                 if(row.row.color==='red'){
                     return 'color:red'
                 }else if(row.row.color==='blue'){
@@ -364,7 +233,6 @@
             load_profession_name(state=null, cb) {
                 var that = this;
                 var profession = this.profession ? this.profession: '';      //专业（本科/专科）值
-                // console.log(profession);return
                 if(state){
                     $.post('/index/test/get_select_profession_name', {
                         'profession':profession,
@@ -419,7 +287,6 @@
                 var _this = this;
                 var state_school = _this.state_school;
                 _this.sta_school=state_school;
-                // console.log(_this.sta_school);
                 _this.load_school_name(state_school, cb);return
             },
             handleSelectProfession(item) {
@@ -452,7 +319,7 @@
                     _this.pp_type = '';
                 }
             },
-            //更改省份
+            //省份
             province_type:function (e){
                 //获取当前点击的按钮的id值
                 var current_id = e.currentTarget.id;
@@ -462,11 +329,19 @@
                 if(province==current_id){
                     _this.province = '';
                 }
+                var show_info = _this.show_info
+                $.post('/index/test/province', {
+
+                }, function (response) {
+                    that.school_restaurants = response;
+                    cb(response);
+                    return
+                });
+
             },
             //省份排序
             clickShow(row, event, column){
                 console.log(row.school_num)
-
             },
             //更改专业默认选中值
             profession_primary(val){

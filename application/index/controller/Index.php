@@ -17,4 +17,9 @@ class Index extends Frontend
         //前端展示查学校模块
         return $this->view->fetch();
     }
+    public function test()
+    {
+        //前端展示查学校模块
+        return $this->view->fetch('test/index');
+    }
 }

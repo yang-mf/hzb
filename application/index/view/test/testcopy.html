@@ -11,70 +11,78 @@
 <body>
 <div id="app">
     <div v-show="show_table">
-        <el-form ref="form" :model="form" label-width="80px">
-            <div v-show="input_show">
-                <el-form-item label="分数" style="width: 20%">
-                    <el-input v-model="form.score" placeholder="请输入分数" :disabled=form.region ></el-input>
-                </el-form-item>
-                <el-form-item label="年份">
-                    <el-select v-model="form.year" placeholder="请选择年份" :disabled=form.region>
-                        <el-option label="2017" value="2017"></el-option>
-                        <el-option label="2018" value="2018"></el-option>
-                        <el-option label="2019" value="2019"></el-option>
-                        <el-option label="2020" value="2020"></el-option>
-                    </el-select>
-                </el-form-item>
-                <el-form-item label="批次">
-                    <el-select v-model="form.batch" placeholder="请选择批次" :disabled=form.region>
-                        <el-option label="一批" value="1"></el-option>
-                        <el-option label="二批" value="2"></el-option>
-                        <el-option label="三批" value="3"></el-option>
-                        <el-option label="大专" value="4"></el-option>
-                    </el-select>
-                </el-form-item>
-                <el-form-item label="文科/理科">
-                    <el-select v-model="form.type" placeholder="请选择文科/理科" :disabled=form.region>
-                        <el-option label="理科" value="reason"></el-option>
-                        <el-option label="文科" value="culture"></el-option>
-                    </el-select>
-                </el-form-item>
-            </div>
-            <div v-show="show_add">
-                <el-form-item label="专业" style="width: 30%">
-                    <el-autocomplete
-                            v-model="state"
-                            :fetch-suggestions="querySearchProfession"
-                            value-key="profession_name"
-                            placeholder="请输入专业（默认本科专业）"
-                            @select="handleSelectProfession"
-                    ></el-autocomplete>
-                    <el-button @click.native="profession_name($event)" id="profession1" :type="profession_primary('profession1')">本科</el-button>
-                    <el-button @click.native="profession_name($event)" id="profession2" :type="profession_primary('profession2')">专科</el-button>
-                </el-form-item>
-                <el-form-item label="院校名称" style="width: 30%">
-                    <el-autocomplete
-                            v-model="state_school"
-                            :fetch-suggestions="querySearchSchool"
-                            value-key="school_name"
-                            placeholder="请输入院校名称"
-                            @select="handleSelectSchool"
-                    ></el-autocomplete>
-                </el-form-item>
-                <el-form-item label="办学类型" style="width: 30%">
-                    <el-button @click.native="school_type($event)" id="type1" :type="type_primary('type1')">公办</el-button>
-                    <el-button @click.native="school_type($event)" id="type2" :type="type_primary('type2')">民办</el-button>
-                    <el-button @click.native="school_type($event)" id="type3" :type="type_primary('type3')">内地与港澳台地区合作办学</el-button>
-                    <el-button @click.native="school_type($event)" id="type4" :type="type_primary('type4')">中外合作办学</el-button>
-                </el-form-item>
-                <el-form-item label="省份" style="width: 20%">
-                    <el-button @click.native="province_type($event)" id="province" :type="province_primary('province')">省份排序</el-button>
-                </el-form-item>
-            </div>
-            <el-form-item>
-                <el-button @click="onSubmit" id="button" >确定</el-button>
-                <el-button>取消</el-button>
+    <el-form ref="form" :model="form" label-width="80px">
+        <div v-show="input_show">
+            <el-form-item label="分数" style="width: 20%">
+                <el-input v-model="form.score" placeholder="请输入分数" :disabled=form.region ></el-input>
             </el-form-item>
-        </el-form>
+            <el-form-item label="年份">
+                <el-select v-model="form.year" placeholder="请选择年份" :disabled=form.region>
+                    <el-option label="2017" value="2017"></el-option>
+                    <el-option label="2018" value="2018"></el-option>
+                    <el-option label="2019" value="2019"></el-option>
+                    <el-option label="2020" value="2020"></el-option>
+                </el-select>
+            </el-form-item>
+            <el-form-item label="批次">
+                <el-select v-model="form.batch" placeholder="请选择批次" :disabled=form.region>
+                    <el-option label="一批" value="1"></el-option>
+                    <el-option label="二批" value="2"></el-option>
+                    <el-option label="三批" value="3"></el-option>
+                    <el-option label="大专" value="4"></el-option>
+                </el-select>
+            </el-form-item>
+            <el-form-item label="文科/理科">
+                <el-select v-model="form.type" placeholder="请选择文科/理科" :disabled=form.region>
+                    <el-option label="理科" value="reason"></el-option>
+                    <el-option label="文科" value="culture"></el-option>
+                </el-select>
+            </el-form-item>
+        </div>
+        <div v-show="show_add">
+            <el-form-item label="专业" style="width: 30%">
+                <el-autocomplete
+                        v-model="state"
+                        :fetch-suggestions="querySearchProfession"
+                        value-key="profession_name"
+                        placeholder="请输入专业（默认本科专业）"
+                        @select="handleSelectProfession"
+                ></el-autocomplete>
+                <el-button @click.native="profession_name($event)" id="profession1" :type="profession_primary('profession1')">本科</el-button>
+                <el-button @click.native="profession_name($event)" id="profession2" :type="profession_primary('profession2')">专科</el-button>
+            </el-form-item>
+            <el-form-item label="院校名称" style="width: 30%">
+                <el-autocomplete
+                        v-model="state_school"
+                        :fetch-suggestions="querySearchSchool"
+                        value-key="school_name"
+                        placeholder="请输入院校名称"
+                        @select="handleSelectSchool"
+                ></el-autocomplete>
+            </el-form-item>
+            <el-form-item label="办学类型" style="width: 30%">
+                <el-button @click.native="school_type($event)" id="type1" :type="type_primary('type1')">公办</el-button>
+                <el-button @click.native="school_type($event)" id="type2" :type="type_primary('type2')">民办</el-button>
+                <el-button @click.native="school_type($event)" id="type3" :type="type_primary('type3')">内地与港澳台地区合作办学</el-button>
+                <el-button @click.native="school_type($event)" id="type4" :type="type_primary('type4')">中外合作办学</el-button>
+            </el-form-item>
+            <el-form-item label="省份" style="width: 20%">
+                <template>
+                    <el-checkbox-group v-model="checkList">
+                        <el-checkbox label="复选框 A"></el-checkbox>
+                        <el-checkbox label="复选框 B"></el-checkbox>
+                        <el-checkbox label="复选框 C"></el-checkbox>
+                    </el-checkbox-group>
+                </template>
+                <!--<el-button @click.native="province_type($event)"
+                id="province" :type="province_primary('province')">省份排序</el-button>-->
+            </el-form-item>
+        </div>
+        <el-form-item>
+            <el-button @click="onSubmit" id="button" >确定</el-button>
+            <el-button>取消</el-button>
+        </el-form-item>
+    </el-form>
     </div>
     <div v-show="show_data">
         <template>
@@ -259,10 +267,11 @@
                     show_info: '',  //分数值
                     region:false
                 },
+                checkList: '',
                 show_table: true,               //条件搜索的div，默认为true不改变
                 show_data: false,               //条件搜索的div，默认为false普通搜索之后改为true
                 show_select_data: false,        //附加条件搜索的div，默认为false筛选搜索之后改为true
-                show_add:false,                 //附加条件筛选的div，默认为false普通搜索之后改为true
+                show_add:true,                 //附加条件筛选的div，默认为false普通搜索之后改为true
                 input_show:true,                //输入搜索条件的div，默认为true不改变
                 show_info:[],                   //普通搜索之后的用来展示的数据
                 show_select_info:[],            //加筛选条件搜索之后的用来展示的数据

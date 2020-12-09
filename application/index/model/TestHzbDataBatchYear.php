@@ -10,7 +10,7 @@ use think\Db;
 class TestHzbDataBatchYear extends Model
 {
     // 设置主表名
-//    protected $table = 'yzx_hzb_data_2016_batch';
+    // protected $table = 'yzx_hzb_data_2016_batch';
     /**
      * 获取导航
      *
@@ -25,11 +25,11 @@ class TestHzbDataBatchYear extends Model
      * @param string $type 文理科
      * @param null $batch 批次
      * @param string $status 冲刺保守保底
-     *
+     *$score,$type,$year,$batch
      */
-    public function getBatchData($score,$type,$year=null,$batch=null ,$page = null,$status=null)
+    public function getBatchData($score,$type,$year=null,$batch=null ,$status=null)
     {
-        $result =  $this->test($score,$year,$type,$batch,$status,$page);
+        $result =  $this->test($score,$year,$type,$batch,$status);
         return $result;
     }
 
@@ -71,15 +71,12 @@ class TestHzbDataBatchYear extends Model
         $w=floor($rank/100);
         //得出去年得分
         $last_year_score=Db::name('hzb_rank')->where($year_name['last_year'],'>=',$this_year_now)->find();
-//        var_dump($last_year_score);die;
         $last_year_score = $last_year_score['score'];
-//        var_dump($last_year_score);die;
-
         //今年应得分数有加分项
         $score_max =floor($last_year_score + $w) ;
-//        var_dump($score_max);die;
         //今年应得分数无加分项
         $score = floor($last_year_score);
+//        var_dump($score_max);die;
         //查询去年的录取信息
         $table='hzb_data_batch';
         $join_table_name = 'hzb_data_school_info';
@@ -172,8 +169,77 @@ class TestHzbDataBatchYear extends Model
                 }
             }
         }
+        $new_info=$this->GetYearInfo($school_num,$type,$batch,$new_info,$this_year);
+//        var_dump($new_info);die;
         $data = ['info'=>$new_info];
         return $data;
+    }
+
+    public function GetYearInfo($school_num,$type,$batch,$new_info,$this_year)
+    {
+        $where_school_num = array();
+        $where_school_num ['school_num'] = array('in',$school_num);
+        $year_info = $school_data = Db::name('hzb_data_batch')
+            ->where($where_school_num)
+            ->where('type','=',$type)
+            ->where('batch','=',$batch['score_max'])
+            ->select();
+        $show_year = $this_year - 2016;
+        $show__year=[];
+        if($show_year<=1)
+        {
+            $show__year=$this_year-1;
+        }else if($show_year<3 && $show_year>1)
+        {
+            $show__year[]=$this_year-1;
+            $show__year[]=$this_year-2;
+        }else if($show_year>=3)
+        {
+            $show__year[]=$this_year-1;
+            $show__year[]=$this_year-2;
+            $show__year[]=$this_year-3;
+        }
+//        var_dump($show_year);die;
+        foreach ($new_info as $ok => $ov)
+        {
+            foreach ($year_info as $sk => $sv)
+            {
+                if(is_array($show__year)){
+                    foreach ($show__year as $kk => $vv)
+                    {
+                        if($sv['the_year'] == $vv && $ov['school_num'] == $sv['school_num'] )
+                        {
+                            $new_info[$ok]['show_year'][$vv]['the_year'] = $sv['the_year'];
+                            $new_info[$ok]['show_year'][$vv]['plan'] = $sv['plan'];
+                            $new_info[$ok]['show_year'][$vv]['admit'] = $sv['admit'];
+                            $new_info[$ok]['show_year'][$vv]['fraction_max'] = $sv['fraction_max'];
+                            $new_info[$ok]['show_year'][$vv]['fraction_min'] = $sv['fraction_min'];
+                            $new_info[$ok]['show_year'][$vv]['msd'] = $sv['msd'];
+                            $new_info[$ok]['show_year'][$vv]['ler'] = $sv['ler'];
+                            $new_info[$ok]['show_year'][$vv]['tas'] = $sv['tas'];
+                            $new_info[$ok]['show_year'][$vv]['dbas'] = $sv['dbas'];
+                        }
+                    }
+                }else{
+                    if($sv['the_year'] == $show__year && $ov['school_num'] == $sv['school_num'])
+                    {
+                        $new_info[$ok]['show_year'][$show__year]['the_year'] = $sv['the_year'];
+
+                        $new_info[$ok]['show_year'][$show__year]['the_year'] = $sv['the_year'];
+                        $new_info[$ok]['show_year'][$show__year]['plan'] = $sv['plan'];
+                        $new_info[$ok]['show_year'][$show__year]['admit'] = $sv['admit'];
+                        $new_info[$ok]['show_year'][$show__year]['fraction_max'] = $sv['fraction_max'];
+                        $new_info[$ok]['show_year'][$show__year]['fraction_min'] = $sv['fraction_min'];
+                        $new_info[$ok]['show_year'][$show__year]['msd'] = $sv['msd'];
+                        $new_info[$ok]['show_year'][$show__year]['ler'] = $sv['ler'];
+                        $new_info[$ok]['show_year'][$show__year]['tas'] = $sv['tas'];
+                        $new_info[$ok]['show_year'][$show__year]['dbas'] = $sv['dbas'];
+                    }
+                }
+            }
+        }
+//        var_dump($new_info);die;
+        return $new_info;
     }
     /*
      * 为年份匹配数据库字段
@@ -329,17 +395,13 @@ class TestHzbDataBatchYear extends Model
      * @param string $status 冲刺保守保底
      */
     public function CheckType($status,$score_max,$score,$table,$type,$batch,$join_table_name,$last_year){
-//        var_dump($page);die;
         if($status == 1){
-//            var_dump($status);die;
             $red = $this->Sprint($score_max,$score,$table,$type,$batch,$join_table_name,$last_year);
             return $red;
         }elseif ($status == 2){
-//            var_dump($status);die;
             $blue = $this->Conservative($score_max,$score,$table,$type,$batch,$join_table_name,$last_year);
             return $blue;
         }elseif ($status == 3){
-//            var_dump($status);die;
             $green = $this->Guaranteed($score_max,$score,$table,$type,$batch,$join_table_name,$last_year);
             return $green;
         }

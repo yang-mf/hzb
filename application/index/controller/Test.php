@@ -105,13 +105,16 @@ class Test extends Frontend
             $year = date('Y');
             $result = model('TestHzbDataBatchYear')->getBatchData($score,$type,$year,$batch);
         }
-        $data = $this->groupByInitials($result['info'], 'school_province');
-//        var_dump($data);die;
-        $data = ['code'=>1,'info'=>$data,];
+        $M_data = $this->groupByInitials($result['info'], 'school_province');
+        $S_data = $this->province($M_data);
+        $province = $this->get_province($S_data);
+//        var_dump($province);die;
+        $data = ['code'=>1,'show_info'=>$S_data,'info'=>$result['info'],'province'=>$province];
         return $data;
     }
     //附加条件搜索
     public function get_select_info(){
+        print_r($_POST['province_select_name']);die;
         $show_info =$_POST['show_info'];
         $show_info = json_decode($show_info);
         $show_info = json_decode( json_encode( $show_info),true);
@@ -119,6 +122,10 @@ class Test extends Frontend
         $sta_school =$_POST['sta_school'];
         $profession =$_POST['profession'];
         $pp_type =$_POST['pp_type'];
+        $province_select_name =$_POST['province_select_name'];
+//        $province_select_name = json_decode($province_select_name);
+//        $province_select_name = json_decode( json_encode( $province_select_name),true);
+        var_dump($province_select_name);die;
         if (!empty($sta_profession)) {
             $show_info = model('TestHzbDataSelectBatch')->check_sta_profession($show_info,$sta_profession,$profession);
         }
@@ -133,12 +140,14 @@ class Test extends Frontend
         }
         if(empty($show_info))
         {
-            $show_info=['code'=>2,'message'=>'请重新选择'];
-        }else
-        {
-            $show_info=['code'=>1,'info'=>$show_info];
+            return $show_info=['code'=>2,'message'=>'请重新选择'];
         }
-        return $show_info;
+//        var_dump($show_info);die;
+        $M_data = $this->groupByInitials($show_info, 'school_province');
+        $S_data = $this->province($M_data);
+        $province = $this->get_province($S_data);
+        $data = ['code'=>1,'show_info'=>$S_data,'info'=>$show_info,'province'=>$province];
+        return $data;
     }
 
     //获取部分profession_name数据
@@ -169,21 +178,45 @@ class Test extends Frontend
         $result = model('TestHzbDataCategory')->getSchoolNameSelectData($word);
         return $result;
     }
-
     //省份排序
-    public function province()
+    public function province($info)
     {
-        $province=array(
-            [ "school_province"=> "河北省"],
-            [ "school_province"=> "福建省"],
-            [ "school_province"=> "新疆维吾尔自治区"],
-            [ "school_province"=> "湖北省"],
-            [ "school_province"=> "辽宁省"],
-            [ "school_province"=> "吉林省"],
-        );
-//        var_dump($province);die;
-        $province = $this->initialsProvince($province);
-
+        $new_info = [];
+        foreach ($info as $k => $v)
+        {
+            foreach ($v as $kk => $vv)
+            {
+                $new_info[$vv['school_province']][]=$vv;
+            }
+        }
+        return $new_info;
+    }
+    //获取省份名称，用于复选框展示
+    public function get_province($S_data)
+    {
+        $province = [];
+        foreach ($S_data as $k => $v)
+        {
+            $province[]['province_name']=$k;
+        }
+        return $province;
+    }
+    //获取依次传入的省份
+    public function get_id_province()
+    {
+        $id = $_POST['id'];
+        $style = $_POST['style'];
+        $arr = [[]];
+        $arr [$id]= [$id=>$style];
+        return $arr;
+        foreach ($arr as $k => $v)
+        {
+            if($k == $id)
+            {
+                $arr[$id][$k]=$style;
+            }
+        }
+        return $arr;
     }
     /**
      * 二维数组根据首字母分组排序
@@ -201,7 +234,6 @@ class Test extends Frontend
         $data = $this->sortInitials($data);
         return $data;
     }
-
     /**
      * 按字母排序
      * @param  array  $data
@@ -216,7 +248,6 @@ class Test extends Frontend
         ksort($sortData);
         return $sortData;
     }
-
     /**
      * 获取首字母
      * @param  string $str 汉字字符串
@@ -226,11 +257,9 @@ class Test extends Frontend
     {
         if (empty($str)) {return '';}
         $fchar = ord($str{0});
-
         if ($fchar >= ord('A') && $fchar <= ord('z')) {
             return strtoupper($str{0});
         }
-
         $s1  = iconv('UTF-8', 'gb2312', $str);
         $s2  = iconv('gb2312', 'UTF-8', $s1);
         $s   = $s2 == $str ? $s1 : $str;
@@ -238,247 +267,79 @@ class Test extends Frontend
         if ($asc >= -20319 && $asc <= -20284) {
             return 'A';
         }
-
         if ($asc >= -20283 && $asc <= -19776) {
             return 'B';
         }
-
         if ($asc >= -19775 && $asc <= -19219) {
             return 'C';
         }
-
         if ($asc >= -19218 && $asc <= -18711) {
             return 'D';
         }
-
         if ($asc >= -18710 && $asc <= -18527) {
             return 'E';
         }
-
         if ($asc >= -18526 && $asc <= -18240) {
             return 'F';
         }
-
         if ($asc >= -18239 && $asc <= -17923) {
             return 'G';
         }
-
         if ($asc >= -17922 && $asc <= -17418) {
             return 'H';
         }
-
         if ($asc >= -17417 && $asc <= -16475) {
             return 'J';
         }
-
         if ($asc >= -16474 && $asc <= -16213) {
             return 'K';
         }
-
         if ($asc >= -16212 && $asc <= -15641) {
             return 'L';
         }
-
         if ($asc >= -15640 && $asc <= -15166) {
             return 'M';
         }
-
         if ($asc >= -15165 && $asc <= -14923) {
             return 'N';
         }
-
         if ($asc >= -14922 && $asc <= -14915) {
             return 'O';
         }
-
         if ($asc >= -14914 && $asc <= -14631) {
             return 'P';
         }
-
         if ($asc >= -14630 && $asc <= -14150) {
             return 'Q';
         }
-
         if ($asc >= -14149 && $asc <= -14091) {
             return 'R';
         }
-
         if ($asc >= -14090 && $asc <= -13319) {
             return 'S';
         }
-
         if ($asc >= -13318 && $asc <= -12839) {
             return 'T';
         }
-
         if ($asc >= -12838 && $asc <= -12557) {
             return 'W';
         }
-
         if ($asc >= -12556 && $asc <= -11848) {
             return 'X';
         }
-
         if ($asc >= -11847 && $asc <= -11056) {
             return 'Y';
         }
-
         if ($asc >= -11055 && $asc <= -10247) {
             return 'Z';
         }
-
         return null;
     }
     public function initialsProvince($province){
-        // 按首字母排序
-//        $cityName = Db::query("select `id`,`title`,
-//`domain`,`pinyin` from `agent`
-//where `status`=1 order by convert(`title` using gb2312) asc");
-
         $data = $this->groupByInitials($province, 'school_province');
         dump($data);
     }
 
-    public function tst()
-    {
-        $arr=[];
-        /*
-        $arr =[
-            ["G"]=> [
-                ['0']=> [
-                    ["id"] => ['355'],
-                    ["school_num"=> "4815"],
-                    ["school_name"=> "东莞理工学院"],
-                    ["the_year"=> 2016],
-                    ["plan"=> 29],
-                    ["admit"=> 29] ,
-                    ["fraction_max"=> 574] ,
-                    ["fraction_min"=> 523] ,
-                    ["msd"=>0] ,
-                    ["ler"=> 70854 ],
-                    ["tas"=>  "537.6"] ,
-                    ["dbas"=>  "14.6" ],
-                    ["batch"=> 1 ],
-                    ["type"=>  "reason"] ,
-                    ["color"=>  "red"] ,
-                    ["school_type"=> "公办" ],
-                    ["school_management"=> "广东省" ],
-                    ["school_province"=>  "广东省" ],
-                    ["school_city"=>  "东莞市" ],
-                    ["school_nature"=>  "本科" ],
-                    ["province_school_number"=>  "154所" ],
-                    ["school_renown"=> 2 ],
-                    ["school_independent"=> NULL ],
-                    ["show_year"=> [
-                        ['2016'=> [
-                            ["the_year"=> 2016 ],
-                            ["plan"=> 29 ],
-                            ["admit"=> 29 ],
-                            ["fraction_max"=> 574 ],
-                            ["fraction_min"=> 523 ],
-                            ["msd"=> 0 ],
-                            ["ler"=> 70854 ],
-                            ["tas"=>  "537.6" ],
-                            ["dbas"=>  "14.6"] ,
-                        ]
-                        ] ,
-                    ] ,
-                    ],
-                    ["initials"=>  "G"] ,
-                ],
-                ['1']=> [
-                    ["id"=> '355'],
-                    ["school_num"=> "4815"],
-                    ["school_name"=> "东莞理工学院"],
-                    ["the_year"=> 2016],
-                    ["plan"=> 29],
-                    ["admit"=> 29] ,
-                    ["fraction_max"=> 574] ,
-                    ["fraction_min"=> 523] ,
-                    ["msd"=>0] ,
-                    ["ler"=> 70854 ],
-                    ["tas"=>  "537.6"] ,
-                    ["dbas"=>  "14.6" ],
-                    ["batch"=> 1 ],
-                    ["type"=>  "reason"] ,
-                    ["color"=>  "red"] ,
-                    ["school_type"=> "公办" ],
-                    ["school_management"=> "广东省" ],
-                    ["school_province"=>  "广东省" ],
-                    ["school_city"=>  "东莞市" ],
-                    ["school_nature"=>  "本科" ],
-                    ["province_school_number"=>  "154所" ],
-                    ["school_renown"=> 2 ],
-                    ["school_independent"=> NULL ],
-                    ["show_year"=> [
-                        ['2016'=> [
-                            ["the_year"=> 2016 ],
-                            ["plan"=> 29 ],
-                            ["admit"=> 29 ],
-                            ["fraction_max"=> 574 ],
-                            ["fraction_min"=> 523 ],
-                            ["msd"=> 0 ],
-                            ["ler"=> 70854 ],
-                            ["tas"=>  "537.6" ],
-                            ["dbas"=>  "14.6"] ,
-                        ]
-                        ] ,
-                    ] ,
-                    ],
-                    ["initials"=>  "G"] ,
-                ],
-                ['2']=> [
-                    ["id"=> '355'],
-                    ["school_num"=> "4815"],
-                    ["school_name"=> "东莞理工学院"],
-                    ["the_year"=> 2016],
-                    ["plan"=> 29],
-                    ["admit"=> 29] ,
-                    ["fraction_max"=> 574] ,
-                    ["fraction_min"=> 523] ,
-                    ["msd"=>0] ,
-                    ["ler"=> 70854 ],
-                    ["tas"=>  "537.6"] ,
-                    ["dbas"=>  "14.6" ],
-                    ["batch"=> 1 ],
-                    ["type"=>  "reason"] ,
-                    ["color"=>  "red"] ,
-                    ["school_type"=> "公办" ],
-                    ["school_management"=> "广东省" ],
-                    ["school_province"=>  "广东省" ],
-                    ["school_city"=>  "东莞市" ],
-                    ["school_nature"=>  "本科" ],
-                    ["province_school_number"=>  "154所" ],
-                    ["school_renown"=> 2 ],
-                    ["school_independent"=> NULL ],
-                    ["show_year"=> [
-                        ['2016'=> [
-                            ["the_year"=> 2016 ],
-                            ["plan"=> 29 ],
-                            ["admit"=> 29 ],
-                            ["fraction_max"=> 574 ],
-                            ["fraction_min"=> 523 ],
-                            ["msd"=> 0 ],
-                            ["ler"=> 70854 ],
-                            ["tas"=>  "537.6" ],
-                            ["dbas"=>  "14.6"] ,
-                        ]
-                        ] ,
-                    ] ,
-                    ],
-                    ["initials"=>  "G"] ,
-                ],
-            ]
-        ];
-        foreach ($arr as $k => $v)
-        {
-            foreach ($v as $kk => $vv)
-            {
-                echo $v;
-                echo "<br>";
-            }
-        }
-        */
-    }
+
 
 }

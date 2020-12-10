@@ -21,18 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6a2dd538-ed0a-4624-87c1-fc809c5df608" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/controller/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/controller/Test.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/model/TestHzbDataBatch.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/model/TestHzbDataBatch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/model/TestHzbDataBatchYear.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/model/TestHzbDataBatchYear.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/view/test/agent.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/test/agent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/test/check.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/test/check.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/test/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/test/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/test/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/test/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/test/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/test/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/view/test/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/test/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/46ac6ac839170c81cadb115fcb6eb2d0.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/46ac6ac839170c81cadb115fcb6eb2d0.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/temp/d7a4cb5d99d707f1fc8b58de7876f684.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/d7a4cb5d99d707f1fc8b58de7876f684.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -156,7 +147,8 @@
       <workItem from="1607217288484" duration="20507000" />
       <workItem from="1607247836687" duration="649000" />
       <workItem from="1607389192317" duration="23630000" />
-      <workItem from="1607475947222" duration="26703000" />
+      <workItem from="1607475947222" duration="27109000" />
+      <workItem from="1607562038564" duration="22464000" />
     </task>
     <servers />
   </component>
@@ -176,10 +168,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="649" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606892050966">
+    <state x="649" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607564654123">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="649" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606892050966" />
+    <state x="649" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607564654123" />
     <state x="484" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607067645621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -212,13 +204,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="901" y="236" width="598" height="804" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606902522435" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1607159825794">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1607592571497">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607159825794" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607410930802">
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607592571497" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607592919642">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607410930802" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607592919642" />
   </component>
 </project>

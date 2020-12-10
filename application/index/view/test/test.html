@@ -68,14 +68,15 @@
             </el-form-item>
             <el-form-item label="省份" style="width: 20%">
                 <template>
-                    <el-checkbox-group v-model="checkList">
-                        <el-checkbox label="复选框 A"></el-checkbox>
-                        <el-checkbox label="复选框 B"></el-checkbox>
-                        <el-checkbox label="复选框 C"></el-checkbox>
-                    </el-checkbox-group>
+                    <div
+                            v-for="(item, index) in province"
+                    >
+                        <el-checkbox  @change="province_name($event,index)" >
+                            <span hidden >{{index}}</span>
+                            {{ item.province_name }}
+                        </el-checkbox>
+                    </div>
                 </template>
-                <!--<el-button @click.native="province_type($event)"
-                id="province" :type="province_primary('province')">省份排序</el-button>-->
             </el-form-item>
         </div>
         <el-form-item>
@@ -91,14 +92,208 @@
                     style="width: 100%"
                     v-for="(info,index) in show_info"
             >
+                <div>
+                    <p style="text-align: center">{{index}}</p>
+                </div>
                 <el-table
-                        v-for="now_info in info"
+                        :data="info"
                         style="width: 100%"
+                        :cell-style="cellStyle"
                 >
-                    <el-table-column label="省份首字母">
-                        <span>
-                            {{now_info}}
-                        </span>
+                    <el-table-column type="expand">
+                        <template slot-scope="props">
+                            <el-form
+                                    label-position="left"
+                                    inline class="demo-table-expand"
+                            >
+                                <el-form-item label="院校名称">
+                                    <span>{{ props.row.school_name }}</span>
+                                </el-form-item>
+                                <el-form-item label="院校代码">
+                                    <span>{{ props.row.school_num }}</span>
+                                </el-form-item>
+                                <el-form-item label="本科/专科">
+                                    <span>{{ props.row.school_nature }}</span>
+                                </el-form-item>
+                                <el-form-item label="公办/民办">
+                                    <span>{{ props.row.school_type }}</span>
+                                </el-form-item>
+                                <el-form-item label="所在省份">
+                                    <span>{{ props.row.school_province }}</span>
+                                </el-form-item>
+                                <el-form-item label="所在市">
+                                    <span>{{ props.row.school_city }}</span>
+                                </el-form-item>
+                                <el-form-item label="省份大学数量">
+                                    <span>{{ props.row.province_school_number }}</span>
+                                </el-form-item>
+                            </el-form>
+                            <el-form
+                                    label-position="left"
+                                    inline class="demo-table-expand"
+                                    v-for="the_year_info in props.row.show_year "
+                            >
+                                <el-form-item label="计划招收">
+                                    <span>{{ the_year_info.plan }}</span>
+                                </el-form-item>
+                                <el-form-item label="实际招收">
+                                    <span>{{ the_year_info.admit }}</span>
+                                </el-form-item>
+                                <el-form-item label="最高分">
+                                    <span>{{ the_year_info.fraction_max }}</span>
+                                </el-form-item>
+                                <el-form-item label="最低分">
+                                    <span>{{ the_year_info.fraction_min }}</span>
+                                </el-form-item>
+                                <el-form-item label="最低分与分数线差值">
+                                    <span>{{ the_year_info.msd }}</span>
+                                </el-form-item>
+                                <el-form-item label="录取最低分位次">
+                                    <span>{{ the_year_info.ler }}</span>
+                                </el-form-item>
+                                <el-form-item label="平均分">
+                                    <span>{{ the_year_info.tas }}</span>
+                                </el-form-item>
+                                <el-form-item label="平均分与分数线差值">
+                                    <span>{{ the_year_info.dbas }}</span>
+                                </el-form-item>
+                            </el-form>
+                        </template>
+                    </el-table-column>
+                    <el-table-column
+                            label="院校名称"
+                    >
+                        <template slot-scope="props">
+                            <span>{{ props.row.school_name }}</span>
+                        </template>
+                    </el-table-column>
+                    <el-table-column
+                            label="院校代码"
+                    >
+                        <template slot-scope="props">
+                            <span>{{ props.row.school_num }}</span>
+                        </template>
+                    </el-table-column>
+                    <el-table-column
+                            label="公办/民办"
+                    >
+                        <template slot-scope="props">
+                            <span>{{ props.row.school_type }}</span>
+                        </template>
+                    </el-table-column>
+                    <el-table-column
+                            label="省份"
+                    >
+                        <template slot-scope="props">
+                            <span>{{ props.row.school_province }}</span>
+                        </template>
+                    </el-table-column>
+                </el-table>
+            </div>
+        </template>
+    </div>
+    <div v-show="show_select_data">
+        <template>
+            <div
+                    :data="show_select_info"
+                    style="width: 100%"
+                    v-for="(info,index) in show_select_info"
+            >
+                <div>
+                    <p style="text-align: center">{{index}}</p>
+                </div>
+                <el-table
+                        :data="info"
+                        style="width: 100%"
+                        :cell-style="cellStyle"
+                >
+                    <el-table-column type="expand">
+                        <template slot-scope="props">
+                            <el-form
+                                    label-position="left"
+                                    inline class="demo-table-expand"
+                            >
+                                <el-form-item label="院校名称">
+                                    <span>{{ props.row.school_name }}</span>
+                                </el-form-item>
+                                <el-form-item label="院校代码">
+                                    <span>{{ props.row.school_num }}</span>
+                                </el-form-item>
+                                <el-form-item label="本科/专科">
+                                    <span>{{ props.row.school_nature }}</span>
+                                </el-form-item>
+                                <el-form-item label="公办/民办">
+                                    <span>{{ props.row.school_type }}</span>
+                                </el-form-item>
+                                <el-form-item label="所在省份">
+                                    <span>{{ props.row.school_province }}</span>
+                                </el-form-item>
+                                <el-form-item label="所在市">
+                                    <span>{{ props.row.school_city }}</span>
+                                </el-form-item>
+                                <el-form-item label="省份大学数量">
+                                    <span>{{ props.row.province_school_number }}</span>
+                                </el-form-item>
+                            </el-form>
+                            <el-form
+                                    label-position="left"
+                                    inline class="demo-table-expand"
+                                    v-for="the_year_info in props.row.show_year "
+                            >
+                                <el-form-item label="计划招收">
+                                    <span>{{ the_year_info.plan }}</span>
+                                </el-form-item>
+                                <el-form-item label="实际招收">
+                                    <span>{{ the_year_info.admit }}</span>
+                                </el-form-item>
+                                <el-form-item label="最高分">
+                                    <span>{{ the_year_info.fraction_max }}</span>
+                                </el-form-item>
+                                <el-form-item label="最低分">
+                                    <span>{{ the_year_info.fraction_min }}</span>
+                                </el-form-item>
+                                <el-form-item label="最低分与分数线差值">
+                                    <span>{{ the_year_info.msd }}</span>
+                                </el-form-item>
+                                <el-form-item label="录取最低分位次">
+                                    <span>{{ the_year_info.ler }}</span>
+                                </el-form-item>
+                                <el-form-item label="平均分">
+                                    <span>{{ the_year_info.tas }}</span>
+                                </el-form-item>
+                                <el-form-item label="平均分与分数线差值">
+                                    <span>{{ the_year_info.dbas }}</span>
+                                </el-form-item>
+                            </el-form>
+                        </template>
+                    </el-table-column>
+                    <el-table-column
+                            label="院校名称"
+                    >
+                        <template slot-scope="props">
+                            <span>{{ props.row.school_name }}</span>
+                        </template>
+                    </el-table-column>
+                    <el-table-column
+                            label="院校代码"
+                    >
+                        <template slot-scope="props">
+                            <span>{{ props.row.school_num }}</span>
+                        </template>
+                    </el-table-column>
+                    <el-table-column
+                            label="公办/民办"
+                    >
+                        <template slot-scope="props">
+                            <span>{{ props.row.school_type }}</span>
+                        </template>
+                    </el-table-column>
+                    <el-table-column
+                            label="省份"
+                    >
+                        <template slot-scope="props">
+                            <span>{{ props.row.school_province }}</span>
+                        </template>
                     </el-table-column>
                 </el-table>
             </div>
@@ -135,12 +330,14 @@
                     show_info: '',  //分数值
                     region:false
                 },
+                province_index:'',              //省份id值
                 checkList: '',
                 show_table: true,               //条件搜索的div，默认为true不改变
                 show_data: true,               //条件搜索的div，默认为false普通搜索之后改为true
                 show_select_data: false,        //附加条件搜索的div，默认为false筛选搜索之后改为true
                 show_add:false,                 //附加条件筛选的div，默认为false普通搜索之后改为true
                 input_show:true,                //输入搜索条件的div，默认为true不改变
+                info:[],                        //PHP页面传参的值（搜索的数据未进行省份处理）
                 show_info:[],                   //普通搜索之后的用来展示的数据
                 show_select_info:[],            //加筛选条件搜索之后的用来展示的数据
                 profession_restaurants: [],     //专业下拉框展示数据
@@ -152,7 +349,9 @@
                 sta_school:'',                  //input输入的学校值
                 profession:'',                  //专业（本科/专科）值
                 pp_type:'',                     //公办民办值
-                province:'',                    //省份值
+                province:'',                    //后台获取的所有省份值
+                province_type:'',               //获取的该省份的状态
+                province_select_name:[],        //复选框选中的省份的名字
             }
         },
         methods: {
@@ -167,10 +366,12 @@
                 var profession = this.profession ? this.profession: 'profession1';                  //专业（本科/专科）值
                 var pp_type = this.pp_type ? this.pp_type: '';                                      //公办民办值
                 var province = this.province ? this.province: '';                                   //省份值
-                var show_info = this.show_info ;
+                var info = this.info ;                                                              //
+                var province_select_name = this.province_select_name ;                              //省份值
+
                 var _this = this   //很重要！！
                 if(sta_profession=='' && sta_school==''
-                    && pp_type=='' ){
+                    && pp_type=='' && province_select_name=='' ){
                     //查询当前输入的分数，批次，文理科，年份
                     $.post('/index/test/get_ajax_info', {
                         'score':score ,
@@ -180,12 +381,13 @@
                     }, function (response) {
                             //默认为false，有值改为true
                         if(response){
-                            // _this.form.region=true
+                            _this.info = response.info;
+                            _this.province = response.province;
                             _this.show_data=true;
-                            _this.show_add=false;
+                            _this.show_add=true;
                             _this.show_select_data=false;
-                            _this.show_info = response.info;
-                            console.log( response.info);
+                            _this.show_info = response.show_info;
+                            console.log(_this.info);
                         }else if(response['code']==2){
                             _this.show_data=false;
                             _this.show_add=false;
@@ -196,12 +398,20 @@
                     return
                 }
                 //查询当前输入的分数，批次，文理科，年份以及专业名称，学校名称，专业（本科/专科），公民办，省份排序值
+                var controller_province=[];
+                for (var item in province_select_name )
+                {
+                    console.log(item['status'])
+                }
+
+                return
                 $.post('/index/test/get_select_info', {
-                    'show_info':JSON.stringify(show_info),
+                    'show_info':JSON.stringify(info),
                     'sta_profession':sta_profession,
                     'sta_school':sta_school,
                     'profession':profession,
                     'pp_type':pp_type,
+                    'province_select_name':province_select_name,
                 }, function (response) {
                     if(response['code']==2){
                         _this.show_data=false;
@@ -209,13 +419,16 @@
                         alert(response['message']);return ;
                     }
                     if(response['code']==1){
+                        _this.info = response.info;
+                        _this.province = response.province;
                         _this.show_add=true;
                         _this.show_data=false;
                         _this.show_select_data=true;
-                        _this.show_select_info = response['info'];
+                        _this.show_select_info = response.show_info;
+                        // console.log( response.show_info);
                     }
                 });
-                return;
+                // return;
             },
             cellStyle(row,column,rowIndex,columnIndex){
                 if(row.row.color==='red'){
@@ -317,28 +530,23 @@
                 }
             },
             //省份
-            province_type:function (e){
-                //获取当前点击的按钮的id值
-                var current_id = e.currentTarget.id;
-                var _this = this;
-                var province = _this.province;
-                _this.province=current_id;
-                if(province==current_id){
-                    _this.province = '';
+            province_name (e,index){
+                var _this= this;
+                _this.province_index = index;
+                _this.province_type = e;
+                var id = _this.province_index;
+                var style = _this.province_type;
+                if(style == true)
+                {
+                    style = 's'
+                }else if(style == false)
+                {
+                    style = 'f'
                 }
-                var show_info = _this.show_info
-                $.post('/index/test/province', {
-
-                }, function (response) {
-                    that.school_restaurants = response;
-                    cb(response);
-                    return
-                });
-
-            },
-            //省份排序
-            clickShow(row, event, column){
-                console.log(row.school_num)
+                var province_select_name=_this.province_select_name;
+                    province_select_name[id] = [];
+                    province_select_name[id]['status'] = style
+                console.log(province_select_name);return
             },
             //更改专业默认选中值
             profession_primary(val){

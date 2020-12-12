@@ -9,8 +9,7 @@ use think\Db;
 
 class TestHzbDataBatch extends Model
 {
-    // 设置主表名
-    // protected $table = 'yzx_hzb_data_2016_batch';
+
     /**
      * 获取导航
      *
@@ -59,24 +58,49 @@ class TestHzbDataBatch extends Model
         $this_year_Previous_score=[
             'score' => $score + 1
         ];
-        //今年得分位次
-        $this_year_now=Db::name('hzb_rank')->where($this_year_now_score)->find();
-        $this_year_now = $this_year_now[$year_name['this_year']];
-        //加分之后的位次
-        $this_year_Previous=Db::name('hzb_rank')->where($this_year_Previous_score)->find();
-        $this_year_Previous = $this_year_Previous[$year_name['this_year']];
+        if($type == 'reason')
+        {
+            //今年得分位次
+            $this_year_now=Db::name('hzb_reason_rank')
+                ->where($this_year_now_score)
+                ->find();
+            $this_year_now = $this_year_now[$year_name['this_year']];
+            //加分之后的位次
+            $this_year_Previous=Db::name('hzb_reason_rank')
+                ->where($this_year_Previous_score)
+                ->find();
+            $this_year_Previous = $this_year_Previous[$year_name['this_year']];
+            //得出去年得分
+            $last_year_score=Db::name('hzb_reason_rank')
+                ->where($year_name['last_year'],'>=',$this_year_now)
+                ->find();
+            $last_year_score = $last_year_score['score'];
+        }else if ($type == 'culture')
+        {
+            //今年得分位次
+            $this_year_now=Db::name('hzb_culture_rank')
+                ->where($this_year_now_score)
+                ->find();
+            $this_year_now = $this_year_now[$year_name['this_year']];
+            //加分之后的位次
+            $this_year_Previous=Db::name('hzb_culture_rank')
+                ->where($this_year_Previous_score)
+                ->find();
+            $this_year_Previous = $this_year_Previous[$year_name['this_year']];
+            //得出去年得分
+            $last_year_score=Db::name('hzb_culture_rank')
+                ->where($year_name['last_year'],'>=',$this_year_now)
+                ->find();
+            $last_year_score = $last_year_score['score'];
+        }
         //位次之差
         $rank = $this_year_now - $this_year_Previous;
         //得出加分项
         $w=floor($rank/100);
-        //得出去年得分
-        $last_year_score=Db::name('hzb_rank')->where($year_name['last_year'],'>=',$this_year_now)->find();
-        $last_year_score = $last_year_score['score'];
         //今年应得分数有加分项
         $score_max =floor($last_year_score + $w) ;
         //今年应得分数无加分项
         $score = floor($last_year_score);
-//        var_dump($score_max);die;
         //查询去年的录取信息
         $table='hzb_data_batch';
         $join_table_name = 'hzb_data_school_info';
@@ -87,7 +111,7 @@ class TestHzbDataBatch extends Model
         }else{
             $batch = ['score_max'=>$batch,'score'=>$batch];
         }
-//        var_dump($score);die;
+//        var_dump($score_max);die;
         //演示时输入状态  冲刺保守保底 判断，直接返回值
         if(!empty($status)){
             $result = $this->CheckType($status,$score_max,$score,$table,$type,$batch,$join_table_name,$last_year);
@@ -107,7 +131,7 @@ class TestHzbDataBatch extends Model
             ->where('ler','>=',$this_year_now)
             ->select();
         if(empty($object)){
-            return $data=['code'=>2,'message'=>'请重新输入分数，或选择批次'];die;
+            return $data=[];
         }
         foreach ($object as $key => $value) {
             $school_num[] = $value['school_num'];
@@ -169,8 +193,9 @@ class TestHzbDataBatch extends Model
                 }
             }
         }
-        $new_info=$this->GetYearInfo($school_num,$type,$batch,$new_info,$this_year);
 //        var_dump($new_info);die;
+
+        $new_info=$this->GetYearInfo($school_num,$type,$batch,$new_info,$this_year);
         $data = ['info'=>$new_info];
         return $data;
     }

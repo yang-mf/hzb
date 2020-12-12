@@ -7,7 +7,7 @@ use think\Config;
 use think\Exception;
 use think\Db;
 
-class TestHzbDataSelectBatch extends Model
+class AgentHzbDataSelectBatch extends Model
 {
     /**
      * 获取导航
@@ -131,7 +131,6 @@ class TestHzbDataSelectBatch extends Model
      */
     public function check_province($show_info,$test)
     {
-
         $new_show_info=[];
         foreach ($test as $k=>$v)
         {

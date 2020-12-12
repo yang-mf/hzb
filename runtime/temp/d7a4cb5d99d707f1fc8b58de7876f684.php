@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\test\test.html";i:1607595079;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\test\test.html";i:1607764564;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,14 +7,18 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/assets/css/index.css">
-    <title>test</title>
+    <title>Test</title>
 </head>
 <body>
 <div id="app">
     <div v-show="show_table">
-    <el-form ref="form" :model="form" label-width="80px">
+    <el-form ref="form"
+             :model="form"
+             label-width="100px"
+             :rules="formRules"
+    >
         <div v-show="input_show">
-            <el-form-item label="分数" style="width: 20%">
+            <el-form-item label="分数" style="width: 20%" prop="score">
                 <el-input v-model="form.score" placeholder="请输入分数" :disabled=form.region ></el-input>
             </el-form-item>
             <el-form-item label="年份">
@@ -33,7 +37,7 @@
                     <el-option label="大专" value="4"></el-option>
                 </el-select>
             </el-form-item>
-            <el-form-item label="文科/理科">
+            <el-form-item label="文科/理科" prop="type">
                 <el-select v-model="form.type" placeholder="请选择文科/理科" :disabled=form.region>
                     <el-option label="理科" value="reason"></el-option>
                     <el-option label="文科" value="culture"></el-option>
@@ -41,7 +45,7 @@
             </el-form-item>
         </div>
         <div v-show="show_add">
-            <el-form-item label="专业" style="width: 30%">
+            <el-form-item label="专业" style="width: 40%">
                 <el-autocomplete
                         v-model="state"
                         :fetch-suggestions="querySearchProfession"
@@ -61,22 +65,22 @@
                         @select="handleSelectSchool"
                 ></el-autocomplete>
             </el-form-item>
-            <el-form-item label="办学类型" style="width: 30%">
+            <el-form-item label="办学类型" style="width: 50%">
                 <el-button @click.native="school_type($event)" id="type1" :type="type_primary('type1')">公办</el-button>
                 <el-button @click.native="school_type($event)" id="type2" :type="type_primary('type2')">民办</el-button>
                 <el-button @click.native="school_type($event)" id="type3" :type="type_primary('type3')">内地与港澳台地区合作办学</el-button>
                 <el-button @click.native="school_type($event)" id="type4" :type="type_primary('type4')">中外合作办学</el-button>
             </el-form-item>
-            <el-form-item label="省份" style="width: 20%">
+            <el-form-item label="省份" style="width: 55%">
                 <template>
-                    <div
-                            v-for="(item, index) in province"
-                    >
-                        <el-checkbox  @change="province_name($event,index)" >
-                            <span hidden >{{index}}</span>
-                            {{ item.province_name }}
-                        </el-checkbox>
-                    </div>
+                    <el-checkbox-group
+                            v-model="test"
+                            @change="province_name()">
+                        <el-checkbox
+                                v-for="item in province"
+                                :label="item.province_name"
+                                >{{item.province_name}}</el-checkbox>
+                    </el-checkbox-group>
                 </template>
             </el-form-item>
         </div>
@@ -134,6 +138,9 @@
                                     inline class="demo-table-expand"
                                     v-for="the_year_info in props.row.show_year "
                             >
+                                <el-form-item label="年份">
+                                    <span>{{ the_year_info.the_year }}</span>
+                                </el-form-item>
                                 <el-form-item label="计划招收">
                                     <span>{{ the_year_info.plan }}</span>
                                 </el-form-item>
@@ -241,6 +248,9 @@
                                     inline class="demo-table-expand"
                                     v-for="the_year_info in props.row.show_year "
                             >
+                                <el-form-item label="年份">
+                                    <span>{{ the_year_info.the_year }}</span>
+                                </el-form-item>
                                 <el-form-item label="计划招收">
                                     <span>{{ the_year_info.plan }}</span>
                                 </el-form-item>
@@ -331,6 +341,16 @@
                     show_info: '',  //分数值
                     region:false
                 },
+                formRules: {
+                    score: [
+                        {required: true, message: '请输入分数', trigger: 'blur'},
+                        {min: 3, max: 3, message: '长度为 3 个字符', trigger: 'blur'},
+                        {pattern :'^[1-9]{1}[0-9]{2}$',message: '请输入正确的分数'},
+                    ],
+                    type: [
+                        {required: true, },
+                    ],
+                },
                 province_index:'',              //省份id值
                 checkList: '',
                 show_table: true,               //条件搜索的div，默认为true不改变
@@ -345,14 +365,12 @@
                 school_restaurants: [],         //学校下拉框展示数据
                 state: '',                      //专业下拉框输入的或者选中的数据
                 state_school:'',                //学校下拉框输入的或者选中的数据
-                timeout:  null,
                 sta_profession:'',              //input输入的专业值
                 sta_school:'',                  //input输入的学校值
                 profession:'',                  //专业（本科/专科）值
                 pp_type:'',                     //公办民办值
                 province:'',                    //后台获取的所有省份值
-                province_type:'',               //获取的该省份的状态
-                province_select_name:[],        //复选框选中的省份的名字
+                test:[],                        //获取选中的省份
             }
         },
         methods: {
@@ -364,15 +382,18 @@
                 var sta_profession = this.sta_profession.profession_name
                     ? this.sta_profession.profession_name : '';                                     //input输入的专业值
                 var sta_school = this.sta_school.school_name ? this.sta_school.school_name : '';    //input输入的学校值
-                var profession = this.profession ? this.profession: 'profession1';                  //专业（本科/专科）值
-                var pp_type = this.pp_type ? this.pp_type: '';                                      //公办民办值
-                var province = this.province ? this.province: '';                                   //省份值
-                var info = this.info ;                                                              //
-                var province_select_name = this.province_select_name ;                              //省份值
-
+                var profession = this.profession ? this.profession : 'profession1';                  //专业（本科/专科）值
+                var pp_type = this.pp_type ? this.pp_type : '';                                      //公办民办值
+                var province = this.province ? this.province : '';                                   //省份值
+                var info = this.info ? this.info : '';                                               //后续判断筛选的传参值
+                var test = this.test  ?  this.test :  '';                                            //后续判断筛选的传参值
+                if(test.length == 0){
+                    var test='';                        //空值
+                }
+                // var show_info = this.show_info ? this.show_info: '';                              //
                 var _this = this   //很重要！！
                 if(sta_profession=='' && sta_school==''
-                    && pp_type=='' && province_select_name=='' ){
+                    && pp_type=='' && test=='' ){
                     //查询当前输入的分数，批次，文理科，年份
                     $.post('/index/test/get_ajax_info', {
                         'score':score ,
@@ -381,9 +402,11 @@
                         'year':year,
                     }, function (response) {
                             //默认为false，有值改为true
-                        if(response){
+                        if(response['code']==1){
+                            _this.form.region = true;
                             _this.info = response.info;
                             _this.province = response.province;
+                            _this.province_select_name='';
                             _this.show_data=true;
                             _this.show_add=true;
                             _this.show_select_data=false;
@@ -398,21 +421,14 @@
                     });
                     return
                 }
-                //查询当前输入的分数，批次，文理科，年份以及专业名称，学校名称，专业（本科/专科），公民办，省份排序值
-                var controller_province=[];
-                for (var item in province_select_name )
-                {
-                    console.log(item['status'])
-                }
-
-                return
                 $.post('/index/test/get_select_info', {
                     'show_info':JSON.stringify(info),
                     'sta_profession':sta_profession,
                     'sta_school':sta_school,
                     'profession':profession,
                     'pp_type':pp_type,
-                    'province_select_name':province_select_name,
+                    'province':province,
+                    'test':test,
                 }, function (response) {
                     if(response['code']==2){
                         _this.show_data=false;
@@ -420,17 +436,21 @@
                         alert(response['message']);return ;
                     }
                     if(response['code']==1){
+                        _this.form.region = true;
                         _this.info = response.info;
                         _this.province = response.province;
+                        _this._num=0;
                         _this.show_add=true;
                         _this.show_data=false;
                         _this.show_select_data=true;
                         _this.show_select_info = response.show_info;
-                        // console.log( response.show_info);
+                        console.log('in code = 1');
+                        console.log((_this.info));return
                     }
                 });
                 // return;
             },
+            //根据color字段更改文字颜色
             cellStyle(row,column,rowIndex,columnIndex){
                 if(row.row.color==='red'){
                     return 'color:red'
@@ -440,7 +460,7 @@
                     return 'color:green'
                 }
             },
-            //从后台获取部分的专业数据
+            //从后台获取专业数据
             load_profession_name(state=null, cb) {
                 var that = this;
                 var profession = this.profession ? this.profession: '';      //专业（本科/专科）值
@@ -462,7 +482,7 @@
                     });
                 }
             },
-            //从后台获取部分的学校数据
+            //从后台获取学校数据
             load_school_name(state_school=null, cb) {
                 var that = this;
                 if(state_school){
@@ -500,10 +520,12 @@
                 _this.sta_school=state_school;
                 _this.load_school_name(state_school, cb);return
             },
+            //选中的专业名称赋值
             handleSelectProfession(item) {
                 this.sta_profession = item;
                 console.log(item);
             },
+            //选中的学校名称赋值
             handleSelectSchool(item) {
                 this.sta_school = item;
                 console.log(item);
@@ -530,24 +552,9 @@
                     _this.pp_type = '';
                 }
             },
-            //省份
-            province_name (e,index){
-                var _this= this;
-                _this.province_index = index;
-                _this.province_type = e;
-                var id = _this.province_index;
-                var style = _this.province_type;
-                if(style == true)
-                {
-                    style = 's'
-                }else if(style == false)
-                {
-                    style = 'f'
-                }
-                var province_select_name=_this.province_select_name;
-                    province_select_name[id] = [];
-                    province_select_name[id]['status'] = style
-                console.log(province_select_name);return
+            //省份选中，查看传参
+            province_name (){
+                console.log(this.test);return
             },
             //更改专业默认选中值
             profession_primary(val){

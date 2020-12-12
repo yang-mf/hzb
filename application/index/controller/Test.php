@@ -27,50 +27,14 @@ class Test extends Frontend
     {
         return $this->view->fetch('test/test');
     }
-    //获取学生位次信息
-    /*
+    /**
+     * 根据用户输入的条件获取用来展示的数据
      * $score  分数
-     * $status 状态
-     * $year   年份，测试版有，正式版直接在model中获取今年
+     * $year   年份，
      * $type   文理科
      * $batch  批次
-     * $result 获取用来展示的数据
+     * $data 获取用来展示的数据
      */
-    public function get_info()
-    {
-        //分数
-        $score = $this->request->request('score');
-        //状态
-        $status = $this->request->request('status');
-        //年份，测试版有，正式版直接在model中获取今年
-        $year = $this->request->request('year');
-        //文理科
-        $type = $this->request->request('type');
-        //批次
-        $batch = $this->request->request('batch');
-        if(empty($score) && empty($type) ){
-            $score = session('score');
-            $year = session('year');
-            $type = session('type');
-            $batch = session('batch');
-            $status = session('status');
-        }else{
-            session('score',$score);
-            session('status',$status);
-            session('year',$year);
-            session('type',$type);
-            session('batch',$batch);
-        }
-        //获取数据
-        if(empty($year)){
-            $year = date('Y');
-        }
-        $result = model('TestHzbDataBatch')->getBatchData($score,$status,$type,$year,$batch);
-        $province = model('TestHzbDataBatch')->getBatchProvince($result['info']);
-
-        $this->assign('info',$result['info']);
-        return $this->view->fetch('test/testshow');
-    }
     public function get_ajax_info()
     {
         $score =$_POST['score'];
@@ -80,11 +44,8 @@ class Test extends Frontend
         if(!($score)){
             return $data=['code'=>2,'message'=>'请输入正确的分数'];
         }
-        if(!($batch)){
-            return $data=['code'=>2,'message'=>'请输入选择批次'];
-        }
         if(!($type)){
-            return $data=['code'=>2,'message'=>'请输入选择文理科'];
+            return $data=['code'=>2,'message'=>'请选择文理科'];
         }
         if(empty($score) && empty($type) ){
             $score = session('score');
@@ -98,36 +59,42 @@ class Test extends Frontend
             session('batch',$batch);
         }
         //获取数据
-        if(!empty($year)){
-            $year = date($year);
-            $result = model('TestHzbDataBatch')->getBatchData($score,$type,$year,$batch);
-        }else{
-            $year = date('Y');
-            $result = model('TestHzbDataBatchYear')->getBatchData($score,$type,$year,$batch);
+        $year = date($year);
+        $result = model('TestHzbDataBatch')->getBatchData($score,$type,$year,$batch);
+        if(empty($result))
+        {
+            return $data=['code'=>2,'message'=>'请重新输入分数，或选择批次'];
         }
         $M_data = $this->groupByInitials($result['info'], 'school_province');
+
         $S_data = $this->province($M_data);
+//        var_dump($S_data);die;
+
         $province = $this->get_province($S_data);
-//        var_dump($province);die;
+        if(empty($S_data))
+        {
+            return $data=['code'=>2,'message'=>'请重新选择'];
+        }
         $data = ['code'=>1,'show_info'=>$S_data,'info'=>$result['info'],'province'=>$province];
         return $data;
     }
-    //附加条件搜索
+    /**
+     * 附加条件搜索
+     */
     public function get_select_info(){
-        print_r($_POST['province_select_name']);die;
-        $show_info =$_POST['show_info'];
+        $show_info = $_POST['show_info'];
+        $test = $_POST['test'];
         $show_info = json_decode($show_info);
         $show_info = json_decode( json_encode( $show_info),true);
-        $sta_profession =$_POST['sta_profession'];
-        $sta_school =$_POST['sta_school'];
-        $profession =$_POST['profession'];
-        $pp_type =$_POST['pp_type'];
-        $province_select_name =$_POST['province_select_name'];
-//        $province_select_name = json_decode($province_select_name);
-//        $province_select_name = json_decode( json_encode( $province_select_name),true);
-        var_dump($province_select_name);die;
+        $sta_profession = $_POST['sta_profession'];
+        $sta_school = $_POST['sta_school'];
+        $profession = $_POST['profession'];
+        $pp_type = $_POST['pp_type'];
+        $province = $_POST['province'];
+        //专业名称搜索
         if (!empty($sta_profession)) {
-            $show_info = model('TestHzbDataSelectBatch')->check_sta_profession($show_info,$sta_profession,$profession);
+            $show_info = model('TestHzbDataSelectBatch')
+                ->check_sta_profession($show_info,$sta_profession,$profession);
         }
         //学校名称搜索
         if (!empty($sta_school)) {
@@ -138,26 +105,37 @@ class Test extends Frontend
             $show_info = model('TestHzbDataSelectBatch')->check_pp_type($show_info,$pp_type);
 
         }
-        if(empty($show_info))
+        //学校省份搜索
+        if (!empty($test)) {
+            $M_data = $this->groupByInitials($show_info, 'school_province');
+            $province_show_info = $this->province($M_data);
+            $province_show_info = model('TestHzbDataSelectBatch')
+                ->check_province($province_show_info,$test);
+        }else
         {
-            return $show_info=['code'=>2,'message'=>'请重新选择'];
+            $M_data = $this->groupByInitials($show_info, 'school_province');
+            $province_show_info = $this->province($M_data);
+            $province = $this->get_province($province_show_info);
         }
-//        var_dump($show_info);die;
-        $M_data = $this->groupByInitials($show_info, 'school_province');
-        $S_data = $this->province($M_data);
-        $province = $this->get_province($S_data);
-        $data = ['code'=>1,'show_info'=>$S_data,'info'=>$show_info,'province'=>$province];
+        if(empty($province_show_info))
+        {
+            return $data=['code'=>2,'message'=>'请重新选择'];
+        }
+        $data = ['code'=>1,'show_info'=>$province_show_info,'info'=>$show_info,'province'=>$province];
         return $data;
     }
-
-    //获取部分profession_name数据
+    /**
+     * 获取部分profession_name数据
+     */
     public function get_profession_name()
     {
         $profession=$_POST['profession'];
         $result = model('TestHzbDataCategory')->getProfessionData($profession);
         return $result;
     }
-    //根据客户输入的关键字查询获取全部profession_name数据
+    /**
+     * 根据客户输入的关键字查询获取全部profession_name数据
+     */
     public function get_select_profession_name()
     {
         $profession=$_POST['profession'];
@@ -165,20 +143,26 @@ class Test extends Frontend
         $result = model('TestHzbDataCategory')->getProfessionSelectData($word,$profession);
         return $result;
     }
-    //获取部分school_name数据
+    /**
+     * 获取部分school_name数据
+     */
     public function get_school_name()
     {
         $result = model('TestHzbDataCategory')->getSchoolNameData();
         return $result;
     }
-    //根据客户输入的关键字查询获取全部school_name数据
+    /**
+     * 根据客户输入的关键字查询获取全部school_name数据
+     */
     public function get_select_school_name()
     {
         $word=$_POST['word'];
         $result = model('TestHzbDataCategory')->getSchoolNameSelectData($word);
         return $result;
     }
-    //省份排序
+    /**
+     * 省份排序
+     */
     public function province($info)
     {
         $new_info = [];
@@ -191,7 +175,9 @@ class Test extends Frontend
         }
         return $new_info;
     }
-    //获取省份名称，用于复选框展示
+    /**
+     * 获取省份名称，用于复选框展示
+     */
     public function get_province($S_data)
     {
         $province = [];
@@ -200,23 +186,6 @@ class Test extends Frontend
             $province[]['province_name']=$k;
         }
         return $province;
-    }
-    //获取依次传入的省份
-    public function get_id_province()
-    {
-        $id = $_POST['id'];
-        $style = $_POST['style'];
-        $arr = [[]];
-        $arr [$id]= [$id=>$style];
-        return $arr;
-        foreach ($arr as $k => $v)
-        {
-            if($k == $id)
-            {
-                $arr[$id][$k]=$style;
-            }
-        }
-        return $arr;
     }
     /**
      * 二维数组根据首字母分组排序

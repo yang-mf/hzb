@@ -7,10 +7,8 @@ use think\Config;
 use think\Exception;
 use think\Db;
 
-class HzbDataBatchAgent extends Model
+class AgentHzbDataBatch extends Model
 {
-    // 设置主表名
-    // protected $table = 'yzx_hzb_data_2016_batch';
     /**
      * 获取导航
      *
@@ -25,16 +23,15 @@ class HzbDataBatchAgent extends Model
      * @param string $type 文理科
      * @param null $batch 批次
      * @param string $status 冲刺保守保底
-     *
+     *$score,$type,$year,$batch
      */
-    public function getBatchData($score,$type,$year=null,$batch=null,$status=null)
+    public function getBatchData($score,$type,$year=null,$batch=null ,$status=null)
     {
         $result =  $this->test($score,$year,$type,$batch,$status);
         return $result;
     }
-
     /**
-     * 测试
+     * 查询所能上的大学信息
      *
      * @param string $score 分数
      * @param string $year 年
@@ -59,19 +56,45 @@ class HzbDataBatchAgent extends Model
         $this_year_Previous_score=[
             'score' => $score + 1
         ];
-        //今年得分位次
-        $this_year_now=Db::name('hzb_rank')->where($this_year_now_score)->find();
-        $this_year_now = $this_year_now[$year_name['this_year']];
-        //加分之后的位次
-        $this_year_Previous=Db::name('hzb_rank')->where($this_year_Previous_score)->find();
-        $this_year_Previous = $this_year_Previous[$year_name['this_year']];
+        if($type == 'reason')
+        {
+            //今年得分位次
+            $this_year_now=Db::name('hzb_reason_rank')
+                ->where($this_year_now_score)
+                ->find();
+            $this_year_now = $this_year_now[$year_name['this_year']];
+            //加分之后的位次
+            $this_year_Previous=Db::name('hzb_reason_rank')
+                ->where($this_year_Previous_score)
+                ->find();
+            $this_year_Previous = $this_year_Previous[$year_name['this_year']];
+            //得出去年得分
+            $last_year_score=Db::name('hzb_reason_rank')
+                ->where($year_name['last_year'],'>=',$this_year_now)
+                ->find();
+            $last_year_score = $last_year_score['score'];
+        }else if ($type == 'culture')
+        {
+            //今年得分位次
+            $this_year_now=Db::name('hzb_culture_rank')
+                ->where($this_year_now_score)
+                ->find();
+            $this_year_now = $this_year_now[$year_name['this_year']];
+            //加分之后的位次
+            $this_year_Previous=Db::name('hzb_culture_rank')
+                ->where($this_year_Previous_score)
+                ->find();
+            $this_year_Previous = $this_year_Previous[$year_name['this_year']];
+            //得出去年得分
+            $last_year_score=Db::name('hzb_culture_rank')
+                ->where($year_name['last_year'],'>=',$this_year_now)
+                ->find();
+            $last_year_score = $last_year_score['score'];
+        }
         //位次之差
         $rank = $this_year_now - $this_year_Previous;
         //得出加分项
         $w=floor($rank/100);
-        //得出去年得分
-        $last_year_score=Db::name('hzb_rank')->where($year_name['last_year'],'>=',$this_year_now)->find();
-        $last_year_score = $last_year_score['score'];
         //今年应得分数有加分项
         $score_max =floor($last_year_score + $w) ;
         //今年应得分数无加分项
@@ -86,7 +109,6 @@ class HzbDataBatchAgent extends Model
         }else{
             $batch = ['score_max'=>$batch,'score'=>$batch];
         }
-//        var_dump($score);die;
         //演示时输入状态  冲刺保守保底 判断，直接返回值
         if(!empty($status)){
             $result = $this->CheckType($status,$score_max,$score,$table,$type,$batch,$join_table_name,$last_year);
@@ -106,7 +128,7 @@ class HzbDataBatchAgent extends Model
             ->where('ler','>=',$this_year_now)
             ->select();
         if(empty($object)){
-            print_r("请重新输入分数，或选择批次");die;
+            return $data=[];
         }
         foreach ($object as $key => $value) {
             $school_num[] = $value['school_num'];
@@ -117,6 +139,7 @@ class HzbDataBatchAgent extends Model
         $school_data = Db::name('hzb_data_all_school_info')
             ->where($where_school_num)
             ->select();
+
         //上颜色
         foreach ($object as $k => &$v){
             $fraction_max = $v['fraction_max'];
@@ -168,8 +191,76 @@ class HzbDataBatchAgent extends Model
                 }
             }
         }
+        $new_info=$this->GetYearInfo($school_num,$type,$batch,$new_info,$this_year);
         $data = ['info'=>$new_info];
         return $data;
+    }
+
+    public function GetYearInfo($school_num,$type,$batch,$new_info,$this_year)
+    {
+        $where_school_num = array();
+        $where_school_num ['school_num'] = array('in',$school_num);
+        $year_info = $school_data = Db::name('hzb_data_batch')
+            ->where($where_school_num)
+            ->where('type','=',$type)
+            ->where('batch','=',$batch['score_max'])
+            ->select();
+        $show_year = $this_year - 2016;
+        $show__year=[];
+        if($show_year<=1)
+        {
+            $show__year=$this_year-1;
+        }else if($show_year<3 && $show_year>1)
+        {
+            $show__year[]=$this_year-1;
+            $show__year[]=$this_year-2;
+        }else if($show_year>=3)
+        {
+            $show__year[]=$this_year-1;
+            $show__year[]=$this_year-2;
+            $show__year[]=$this_year-3;
+        }
+        foreach ($new_info as $ok => $ov)
+        {
+            foreach ($year_info as $sk => $sv)
+            {
+                if(is_array($show__year)){
+                    foreach ($show__year as $kk => $vv)
+                    {
+                        if($sv['the_year'] == $vv && $ov['school_num'] == $sv['school_num'] )
+                        {
+                            $new_info[$ok]['show_year'][$vv]['the_year'] = $sv['the_year'];
+                            $new_info[$ok]['show_year'][$vv]['plan'] = $sv['plan'];
+                            $new_info[$ok]['show_year'][$vv]['admit'] = $sv['admit'];
+                            $new_info[$ok]['show_year'][$vv]['fraction_max'] = $sv['fraction_max'];
+                            $new_info[$ok]['show_year'][$vv]['fraction_min'] = $sv['fraction_min'];
+                            $new_info[$ok]['show_year'][$vv]['msd'] = $sv['msd'];
+                            $new_info[$ok]['show_year'][$vv]['ler'] = $sv['ler'];
+                            $new_info[$ok]['show_year'][$vv]['tas'] = $sv['tas'];
+                            $new_info[$ok]['show_year'][$vv]['dbas'] = $sv['dbas'];
+                        }
+                    }
+                }else{
+                    if($sv['the_year'] == $show__year && $ov['school_num'] == $sv['school_num'])
+                    {
+                        $new_info[$ok]['show_year'][$show__year]['the_year'] = $sv['the_year'];
+
+                        $new_info[$ok]['show_year'][$show__year]['the_year'] = $sv['the_year'];
+                        $new_info[$ok]['show_year'][$show__year]['plan'] = $sv['plan'];
+                        $new_info[$ok]['show_year'][$show__year]['admit'] = $sv['admit'];
+                        $new_info[$ok]['show_year'][$show__year]['fraction_max'] = $sv['fraction_max'];
+                        $new_info[$ok]['show_year'][$show__year]['fraction_min'] = $sv['fraction_min'];
+                        $new_info[$ok]['show_year'][$show__year]['msd'] = $sv['msd'];
+                        $new_info[$ok]['show_year'][$show__year]['ler'] = $sv['ler'];
+                        $new_info[$ok]['show_year'][$show__year]['tas'] = $sv['tas'];
+                        $new_info[$ok]['show_year'][$show__year]['dbas'] = $sv['dbas'];
+                    }
+                }
+            }
+        }
+
+//        var_dump($new_info);die;
+        return $new_info;
     }
     /*
      * 为年份匹配数据库字段
@@ -326,244 +417,34 @@ class HzbDataBatchAgent extends Model
      */
     public function CheckType($status,$score_max,$score,$table,$type,$batch,$join_table_name,$last_year){
         if($status == 1){
-//            var_dump($status);die;
             $red = $this->Sprint($score_max,$score,$table,$type,$batch,$join_table_name,$last_year);
             return $red;
         }elseif ($status == 2){
-//            var_dump($status);die;
             $blue = $this->Conservative($score_max,$score,$table,$type,$batch,$join_table_name,$last_year);
             return $blue;
         }elseif ($status == 3){
-//            var_dump($status);die;
             $green = $this->Guaranteed($score_max,$score,$table,$type,$batch,$join_table_name,$last_year);
             return $green;
         }
     }
 
-
-
-
-
-
-    /**
-     * 测试
-     *
-     * @param string $score 分数
-     * @param string $year 年
-     * @param string $type 文理科
-     * @param null $batch 批次
-     * @param string $status 冲刺保守保底
-     * @return array|bool|\PDOStatement|string|\think\Collection
-     * @throws \think\db\exception\DataNotFoundException
-     * @throws \think\db\exception\ModelNotFoundException
-     * @throws \think\exception\DbException
-     *//*
-    public function test($score,$year,$type,$batch=null,$status)
+    public function getBatchProvince($info)
     {
+        $school_province=[];
+        foreach ($info as $k => $v)
+        {
+            foreach ( $school_province as $kk => $vv )
+            {
+                if(empty($school_province)){
+                    $school_province[]=$v['school_province'];
+                }else if($vv['school_province'] != $v['school_province'])
+                {
+                    $school_province[]=$v['school_province'];
+                }
+            }
 
-        $this_year=$year;
-        $last_year=$year-1;
-        $year_name =  $this->CheckYear($this_year);
-        //今年得分
-        $this_year_now_score=[
-            'score' => $score
-        ];
-        //今年得分加一分，
-        $this_year_Previous_score=[
-            'score' => $score + 1
-        ];
-        //今年得分位次
-        $this_year_now=Db::name('hzb_rank')->where($this_year_now_score)->find();
-        $this_year_now = $this_year_now[$year_name['this_year']];
-        //加分之后的位次
-        $this_year_Previous=Db::name('hzb_rank')->where($this_year_Previous_score)->find();
-        $this_year_Previous = $this_year_Previous[$year_name['this_year']];
-        //位次之差
-        $rank = $this_year_now - $this_year_Previous;
-        //得出加分项
-        $w=floor($rank/100);
-        //得出去年得分
-        $last_year_score=Db::name('hzb_rank')->where($year_name['last_year'],'>=',$this_year_now)->select();
-        $last_year_score = $last_year_score[0]['score'];
-        //今年应得分数有加分项
-        $score_max =floor($last_year_score + $w) ;
-//        var_dump($score_max);die;
-        //今年应得分数无加分项
-        $score = floor($last_year_score);
-        //查询去年的录取信息
-        $table='hzb_data_'.$last_year.'_batch';
-        $join_table_name = 'hzb_data_school_info';
-        //学校批次，若没有则用程序自己判断
-        if(empty($batch)){
-            //计算学校批次
-            $batch = $this->Batch($last_year,$type,$score_max,$score);
-        }else{
-            $batch = ['score_max'=>$batch,'score'=>$batch];
         }
-        //演示时输入状态  冲刺保守保底 判断，直接返回值
-        if(empty(!$status)){
-            $result = $this->CheckType($status,$score_max,$score,$table,$type,$batch,$join_table_name);
-            return $result;
-        }
-        $red = $this->Sprint($score_max,$table,$type,$batch,$join_table_name);
-        $blue = $this->Conservative($score,$table,$type,$batch,$join_table_name);
-        $green = $this->Guaranteed($score,$table,$type,$batch,$join_table_name);
-        $school_info = ['red'=>$red,'blue'=>$blue,'green'=>$green];
-        return $school_info;
+        return $school_province;
     }
-    /*
-     * 为年份匹配数据库字段
-     *
-     * @param string $this_year 所输入的成绩的年份
-     *//*
-    public function CheckYear($this_year)
-    {
-        if($this_year==2020) {
-            $this_year_name='ershi';
-            $last_year_name='yijiu';
-        }elseif ($this_year==2019){
-            $this_year_name='yijiu';
-            $last_year_name='yiba';
-        }elseif ($this_year==2018){
-            $this_year_name='yiba';
-            $last_year_name='yiqi';
-        }elseif ($this_year==2017){
-            $this_year_name='yiqi';
-            $last_year_name='yiliu';
-        }
-        $year_name = ['this_year'=>$this_year_name,'last_year'=>$last_year_name];
-        return $year_name;
-    }
-    /*
-     * @param string $last_year 上一年
-     * @param string $type 文理科
-     * @param string $score_max 最高得分（有加分）
-     * @param string $score 得分（无加分）
-     * @return string[]
-     * @throws \think\db\exception\DataNotFoundException
-     * @throws \think\db\exception\ModelNotFoundException
-     * @throws \think\exception\DbException
-     */
-    //查询得分所能达到的学校批次
-    /*
-    public function Batch($last_year,$type,$score_max,$score)
-    {
-        $batch_data = Db::name('hzb_batch')
-            ->where('year','=',$last_year)
-            ->where('type','=',$type)
-            ->find();
-        if($score_max>=$batch_data['first_batch']){
-            $batch_max='1';
-        }elseif ($score_max>=$batch_data['second_batch']){
-            $batch_max='2';
-        }elseif (empty($batch_data['third_batch'])){
-            $batch_max='4';
-        }elseif (!empty($batch_data['third_batch']) && $score_max>=$batch_data['third_batch']  ){
-            $batch_max='3';
-        }elseif ($score_max>=$batch_data['spe_batch']){
-            $batch_max='4';
-        }
-        if($score>=$batch_data['first_batch']){
-            $batch='1';
-        }elseif ($score>=$batch_data['second_batch']){
-            $batch='2';
-        }elseif (empty($batch_data['third_batch'])){
-            $batch='4';
-        }elseif (!empty($batch_data['third_batch']) && $score>=$batch_data['third_batch']){
-            $batch='3';
-        }elseif ($score>=$batch_data['spe_batch']){
-            $batch='4';
-        }
-        $batch = ['score_max'=>$batch_max,'score'=>$batch];
-        return $batch;
-    }
-    //冲刺
-    /*
-     * //冲刺
-     * @param string $score_max 最高得分（有加分）
-     * @param string $score 得分（无加分）
-     * @param string $type 文理科
-     * @param null $batch 批次
-     * @param string $table 表名字
-     *//*
-    public function Sprint($score_max,$table,$type,$batch,$join_table_name)
-    {
-        $where = 'fraction_max >= '.$score_max.' and fraction_min <= ' .$score_max;
-        $red=Db::name($table)
-            ->alias('a')    // alias 表示命名数据库的别称为a
-            ->join($join_table_name .' j','a.school_num = j.school_num')
-            ->where($where)
-            ->where('type', '=',$type)
-            ->where('batch','=',$batch['score_max'])
-            ->select();
-        return $red;
-    }
-    //保守
-    /*
-     * //保守
-     * @param string $score_max 最高得分（有加分）
-     * @param string $score 得分（无加分）
-     * @param string $type 文理科
-     * @param null $batch 批次
-     * @param string $table 表名字
-     */
-    /*
-    public function Conservative($score,$table,$type,$batch,$join_table_name)
-    {
-        $where = 'fraction_max >= '.$score.' and fraction_min <= ' .$score;
-        $blue=Db::name($table)
-            ->alias('a')    // alias 表示命名数据库的别称为a
-            ->join($join_table_name .' j','a.school_num = j.school_num')
-            ->where($where)
-            ->where('type', '=',$type)
-            ->where('batch','=',$batch['score'])
-            ->select();
-        return $blue;
-    }
-    //保底
-    /*
-     * //保底
-     * @param string $score_max 最高得分（有加分）
-     * @param string $score 得分（无加分）
-     * @param string $type 文理科
-     * @param null $batch 批次
-     * @param string $table 表名字
-     */
-    /*
-    public function Guaranteed($score,$table,$type,$batch,$join_table_name)
-    {
-        $where = 'fraction_min <= ' .$score;
-        $green=Db::name($table)
-            ->alias('a')    // alias 表示命名数据库的别称为a
-            ->join($join_table_name .' j','a.school_num = j.school_num')
-            ->where($where)
-            ->where('type', '=',$type)
-            ->where('batch','=',$batch['score'])
-            ->select();
-        return $green;
-    }
-    //判断冲刺保守保底
-    /*
-     * //判断冲刺保守保底
-     * @param string $score_max 最高得分（有加分）
-     * @param string $score 得分（无加分）
-     * @param string $table 表名字字段
-     * @param string $type 文理科
-     * @param null $batch 批次
-     * @param string $status 冲刺保守保底
-     */
-    /*
-    public function CheckType($status,$score_max,$score,$table,$type,$batch,$join_table_name){
-        if($status == 1){
-            $red = $this->Sprint($score_max,$table,$type,$batch,$join_table_name);
-            return $red;
-        }elseif ($status == 2){
-            $blue = $this->Conservative($score,$table,$type,$batch,$join_table_name);
-            return $blue;
-        }elseif ($status == 3){
-            $green = $this->Guaranteed($score,$table,$type,$batch,$join_table_name);
-            return $green;
-        }
-    }
-    */
+
 }

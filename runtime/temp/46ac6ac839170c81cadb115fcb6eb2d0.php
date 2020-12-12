@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\test\index.html";i:1607421854;s:68:"E:\phpstudy_pro\WWW\fw366.cn\application\index\view\test\header.html";i:1607421870;s:68:"E:\phpstudy_pro\WWW\fw366.cn\application\index\view\test\footer.html";i:1607421769;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\test\index.html";i:1607675968;s:68:"E:\phpstudy_pro\WWW\fw366.cn\application\index\view\test\header.html";i:1607678040;s:68:"E:\phpstudy_pro\WWW\fw366.cn\application\index\view\test\footer.html";i:1607421769;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,12 +12,35 @@
 <body>
 
 <div>
-    <el-header>11Header</el-header>
+    <div style="margin-left: 300px">
+        <div >
+            <a href="http://www.heao.com.cn/main/html/">河南省招生考试信息网</a>
+            <a href="http://www.moe.gov.cn/">中国教育部</a>
+            <a href="http://www.baidu.com/">百度</a>
+            <a href="http://www.app371.com/">云互联</a>
+            <a href="https://www.qq.com/">腾讯</a>
+        </div>
+    </div>
+    <div>
+        <div>
+            <img src="" alt="">
+            <span>云智选</span>
+        </div>
+        <div>
+            <span>登录</span>
+            "/"
+            <span>注册</span>
+        </div>
+    </div>
+    <div>
+
+    </div>
 </div>
 
-<!--<div>-->
-<!--    {__CONTENT__}-->
-<!--</div>-->
+
+<div>
+
+</div>
 
 <div >
     <p>底部内容</p>

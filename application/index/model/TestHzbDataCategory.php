@@ -20,7 +20,7 @@ class TestHzbDataCategory extends Model
      *
      */
 
-    //获取部分Profession数据
+    //获取Profession数据
     public function getProfessionData($profession)
     {
         if(empty($profession) || $profession=='profession1'){
@@ -50,7 +50,7 @@ class TestHzbDataCategory extends Model
         }
         return $result;
     }
-    //获取部分SchoolName数据
+    //获取SchoolName数据
     public function getSchoolNameData()
     {
         $result = Db::table('yzx_hzb_data_school_info')->field('school_name')->select();

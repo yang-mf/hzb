@@ -20,20 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a2dd538-ed0a-4624-87c1-fc809c5df608" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/index/model/AgentHzbDataSelectBatch.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/controller/Agent.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Agent.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/controller/Test.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/model/HzbDataBatchAgent.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/model/AgentHzbDataBatch.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/model/TestHzbDataBatch.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/model/TestHzbDataBatch.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/model/TestHzbDataCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/model/TestHzbDataCategory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/model/TestHzbDataSelectBatch.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/model/TestHzbDataSelectBatch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/test/agent.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/test/agent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/test/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/test/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/test/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/test/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/view/test/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/test/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/46ac6ac839170c81cadb115fcb6eb2d0.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/46ac6ac839170c81cadb115fcb6eb2d0.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/55bf04c4712a927f3e6c2c8f5c0aece5.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/55bf04c4712a927f3e6c2c8f5c0aece5.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/temp/d7a4cb5d99d707f1fc8b58de7876f684.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/d7a4cb5d99d707f1fc8b58de7876f684.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -161,7 +154,8 @@
       <workItem from="1607562038564" duration="24706000" />
       <workItem from="1607648236154" duration="27555000" />
       <workItem from="1607735301444" duration="1383000" />
-      <workItem from="1607736729858" duration="15829000" />
+      <workItem from="1607736729858" duration="16722000" />
+      <workItem from="1607822037279" duration="23998000" />
     </task>
     <servers />
   </component>

@@ -111,7 +111,6 @@ class TestHzbDataBatch extends Model
         }else{
             $batch = ['score_max'=>$batch,'score'=>$batch];
         }
-//        var_dump($score_max);die;
         //演示时输入状态  冲刺保守保底 判断，直接返回值
         if(!empty($status)){
             $result = $this->CheckType($status,$score_max,$score,$table,$type,$batch,$join_table_name,$last_year);
@@ -133,10 +132,11 @@ class TestHzbDataBatch extends Model
         if(empty($object)){
             return $data=[];
         }
+        //school_num
         foreach ($object as $key => $value) {
             $school_num[] = $value['school_num'];
         }
-        //根据school_num获取学校基本信息
+//        //根据school_num获取学校基本信息
         $where_school_num = array();
         $where_school_num ['school_num'] = array('in',$school_num);
         $school_data = Db::name('hzb_data_all_school_info')
@@ -193,13 +193,58 @@ class TestHzbDataBatch extends Model
                 }
             }
         }
-//        var_dump($new_info);die;
-
+        //去除没有省份的值（相当于去除学校详细信息中该学校没有学院代码，也就是不在河南招生）
+        foreach ($new_info as $key => $value) {
+            if(!isset($value['school_province']))
+            {
+                unset($new_info[$key]);
+            }
+        }
+        $new_info = array_values($new_info);
+        if($batch['score']==$batch['score_max']){
+            $school_nature[]=$batch['score_max'];
+        }else if($batch['score']<$batch['score_max'] && $batch['score']==4)
+        {
+            $school_nature[]=$batch['score_max'];
+            $school_nature[]=$batch['score'];
+        }
+        foreach ($new_info as $key => $value) {
+            $school_name[] = $value['school_name'];
+        }
         $new_info=$this->GetYearInfo($school_num,$type,$batch,$new_info,$this_year);
-        $data = ['info'=>$new_info];
+        $school_type=$this->GetTypeInfo($new_info);
+//        var_dump($school_type);die;
+        $data = ['info'=>$new_info,
+                'school_nature'=>$school_nature,
+                'school_num'=>$school_num,
+                'school_name'=>$school_name,
+                'school_type'=>$school_type,
+            ];
         return $data;
     }
 
+    public function GetTypeInfo($new_info)
+    {
+        $school_type=[];
+        foreach ($new_info as $k => $v)
+        {
+            $school_type[]=$v['school_type'];
+        }
+        $school_type=array_unique($school_type);
+        return $school_type;
+    }
+    /**
+     * 给信息增加历年信息
+     * @param $school_num
+     * @param $type
+     * @param $batch
+     * @param $new_info
+     * @param $this_year
+     * @return mixed
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     */
     public function GetYearInfo($school_num,$type,$batch,$new_info,$this_year)
     {
         $where_school_num = array();
@@ -248,8 +293,6 @@ class TestHzbDataBatch extends Model
                     if($sv['the_year'] == $show__year && $ov['school_num'] == $sv['school_num'])
                     {
                         $new_info[$ok]['show_year'][$show__year]['the_year'] = $sv['the_year'];
-
-                        $new_info[$ok]['show_year'][$show__year]['the_year'] = $sv['the_year'];
                         $new_info[$ok]['show_year'][$show__year]['plan'] = $sv['plan'];
                         $new_info[$ok]['show_year'][$show__year]['admit'] = $sv['admit'];
                         $new_info[$ok]['show_year'][$show__year]['fraction_max'] = $sv['fraction_max'];
@@ -263,10 +306,9 @@ class TestHzbDataBatch extends Model
             }
         }
 
-//        var_dump($new_info);die;
         return $new_info;
     }
-    /*
+    /**
      * 为年份匹配数据库字段
      *
      * @param string $this_year 所输入的成绩的年份
@@ -289,7 +331,8 @@ class TestHzbDataBatch extends Model
         $year_name = ['this_year'=>$this_year_name,'last_year'=>$last_year_name];
         return $year_name;
     }
-    /*
+    /**
+     * 查询得分所能达到的学校批次
      * @param string $last_year 上一年
      * @param string $type 文理科
      * @param string $score_max 最高得分（有加分）
@@ -299,7 +342,6 @@ class TestHzbDataBatch extends Model
      * @throws \think\db\exception\ModelNotFoundException
      * @throws \think\exception\DbException
      */
-    //查询得分所能达到的学校批次
     public function Batch($last_year,$type,$score_max,$score)
     {
         $batch_data = Db::name('hzb_batch')
@@ -331,9 +373,8 @@ class TestHzbDataBatch extends Model
         $batch = ['score_max'=>$batch_max,'score'=>$batch];
         return $batch;
     }
-    //冲刺
-    /*
-     * //冲刺
+    /**
+     * 冲刺
      * @param string $score_max 最高得分（有加分）
      * @param string $score 得分（无加分）
      * @param string $type 文理科
@@ -357,9 +398,8 @@ class TestHzbDataBatch extends Model
         $data = ['info'=>$info];
         return $data;
     }
-    //保守
-    /*
-     * //保守
+    /**
+     * 保守
      * @param string $score_max 最高得分（有加分）
      * @param string $score 得分（无加分）
      * @param string $type 文理科
@@ -383,9 +423,8 @@ class TestHzbDataBatch extends Model
         $data = ['info'=>$info];
         return $data;
     }
-    //保底
-    /*
-     * //保底
+    /**
+     * 保底
      * @param string $score_max 最高得分（有加分）
      * @param string $score 得分（无加分）
      * @param string $type 文理科
@@ -409,9 +448,8 @@ class TestHzbDataBatch extends Model
         $data = ['info'=>$info];
         return $data;
     }
-    //判断冲刺保守保底
-    /*
-     * //判断冲刺保守保底
+    /**
+     * 判断冲刺保守保底
      * @param string $score_max 最高得分（有加分）
      * @param string $score 得分（无加分）
      * @param string $table 表名字字段
@@ -431,7 +469,11 @@ class TestHzbDataBatch extends Model
             return $green;
         }
     }
-
+    /**
+     * 获取省份
+     * @param $info
+     * @return array
+     */
     public function getBatchProvince($info)
     {
         $school_province=[];

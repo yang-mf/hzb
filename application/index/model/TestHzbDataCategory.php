@@ -21,47 +21,83 @@ class TestHzbDataCategory extends Model
      */
 
     //获取Profession数据
-    public function getProfessionData($profession)
+    public function getProfessionData($school_nature,$school_num,$school_name)
     {
-        if(empty($profession) || $profession=='profession1'){
-            $result = Db::table('yzx_hzb_data_und_profession_info')
+        $where_school_num = array();
+        $where_school_num ['school_num'] = array('in',$school_num);
+        if($school_nature[0]<4){
+            $result = Db::table('yzx_hzb_data_und_profession_data')
+                ->where($where_school_num)
                 ->field('profession_name')
                 ->select();
-        }elseif ($profession=='profession2'){
-            $result = Db::table('yzx_hzb_data_spe_profession_info')
+            $result = array_column($result, NULL, 'profession_name');   //以ID为索引
+            $result = array_values($result);//去除关联索引
+        }elseif ($school_nature[0]=4){
+            $where_school_num = array();
+            $where_school_num ['school_num'] = array('in',$school_name);
+            $result = Db::table('yzx_hzb_data_spe_profession_data')
+                ->where($where_school_num)
                 ->field('profession_name')
                 ->select();
         }
         return $result;
     }
     //获取搜索的Profession数据
-    public function getProfessionSelectData($word,$profession)
+    public function getProfessionSelectData($word,$school_nature,$school_num,$school_name,$profession_restaurants)
     {
-        if(empty($profession) || $profession=='profession1'){
+//        var_dump($profession_restaurants);die;
+        if($school_nature[0]<4){
             $result = Db::table('yzx_hzb_data_und_profession_info')
                 ->field('profession_name')
                 ->where('profession_name','like','%'.$word.'%')
                 ->select();
-        }elseif ($profession=='profession2'){
+        }elseif ($school_nature[0]=4){
             $result = Db::table('yzx_hzb_data_spe_profession_info')
                 ->field('profession_name')
                 ->where('profession_name','like','%'.$word.'%')
                 ->select();
         }
+        foreach ($profession_restaurants as $k => $v) {
+            foreach ($result as $kk => $vv) {
+                if($vv['profession_name'] == $v['profession_name'])
+                {
+                    $new_result[]=$vv;
+                }
+            }
+        }
+        $result = $new_result;
         return $result;
     }
     //获取SchoolName数据
-    public function getSchoolNameData()
+    public function getSchoolNameData($show_info)
     {
-        $result = Db::table('yzx_hzb_data_school_info')->field('school_name')->select();
+        $school_num=[];
+        foreach ($show_info as $key => $value) {
+            $school_num[] = $value['school_num'];
+        }
+        $where_school_num = array();
+        $where_school_num ['school_num'] = array('in',$school_num);
+        $result = Db::table('yzx_hzb_data_school_info')
+            ->where($where_school_num)
+            ->field('school_name')
+            ->select();
+
         return $result;
     }
     //获取搜索的SchoolName数据
-    public function getSchoolNameSelectData($word)
+    public function getSchoolNameSelectData($word,$show_info)
     {
-        $result = Db::table('yzx_hzb_data_school_info')->field('school_name')->where('school_name','like','%'.$word.'%')->select();
+        $school_num=[];
+        foreach ($show_info as $key => $value) {
+            $school_num[] = $value['school_num'];
+        }
+        $where_school_num = array();
+        $where_school_num ['school_num'] = array('in',$school_num);
+        $result = Db::table('yzx_hzb_data_school_info')
+            ->where($where_school_num)
+            ->field('school_name')
+            ->where('school_name','like','%'.$word.'%')
+            ->select();
         return $result;
     }
-
-
 }

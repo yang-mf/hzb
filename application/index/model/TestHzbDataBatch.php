@@ -208,16 +208,12 @@ class TestHzbDataBatch extends Model
             $school_nature[]=$batch['score_max'];
             $school_nature[]=$batch['score'];
         }
-        foreach ($new_info as $key => $value) {
-            $school_name[] = $value['school_name'];
-        }
         $new_info=$this->GetYearInfo($school_num,$type,$batch,$new_info,$this_year);
         $school_type=$this->GetTypeInfo($new_info);
 //        var_dump($school_type);die;
         $data = ['info'=>$new_info,
                 'school_nature'=>$school_nature,
                 'school_num'=>$school_num,
-                'school_name'=>$school_name,
                 'school_type'=>$school_type,
             ];
         return $data;

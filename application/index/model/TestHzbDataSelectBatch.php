@@ -10,13 +10,14 @@ use think\Db;
 class TestHzbDataSelectBatch extends Model
 {
     /**
-     *专业信息搜索
-     *
+     *专业信息筛选
+     * @param $school_nature    //院校状态，用于判单是本科或专科，小于4是本科，等于4是专科
     */
-    public function check_sta_profession($show_info,$sta_profession,$profession)
+    //返回值名称全部为$show_new_info
+    public function check_sta_profession($show_info,$sta_profession,$school_nature)
     {
         $show_new_info=[];
-        if($profession =='profession1' || $profession =='')
+        if($school_nature[0]<4)
         {
             $res = Db::name('hzb_data_und_profession_info')
                 ->where('profession_name','=',$sta_profession)
@@ -41,15 +42,14 @@ class TestHzbDataSelectBatch extends Model
                 }
             }
             return  $show_new_info;
-        }elseif ($profession =='profession2')
-        {
+        } else
+            {
             $res = Db::name('hzb_data_spe_profession_info')
                 ->where('profession_name','=',$sta_profession)
                 ->find();
-
             if($res)
             {
-                $school_info = Db::name('hzb_data_spe_profession_data')
+                $school_info = Db::name('hzb_data_spe_profession_all_data')
                     ->where('profession_name','=',$sta_profession)
                     ->select();
             }
@@ -70,7 +70,7 @@ class TestHzbDataSelectBatch extends Model
         }
     }
     /**
-     *学校名称搜索
+     *学校名称筛选
      *
      */
     public function check_sta_school($show_info,$sta_school)
@@ -83,11 +83,10 @@ class TestHzbDataSelectBatch extends Model
                 $show_new_info[]=$v;
             }
         }
-
         return  $show_new_info;
     }
     /**
-     *办学类型搜索
+     *办学类型筛选
      *
      */
     public function check_checked_province_name($show_info,$checked_school_type)
@@ -101,7 +100,6 @@ class TestHzbDataSelectBatch extends Model
                     $show_new_info[]=$v;
                 }
             }
-
         }
         return  $show_new_info;
     }
@@ -109,11 +107,11 @@ class TestHzbDataSelectBatch extends Model
      *省份的筛选
      *
      */
-    public function check_province($show_info,$test)
+    public function check_province($show_info,$checked_province)
     {
 
         $new_show_info=[];
-        foreach ($test as $k=>$v)
+        foreach ($checked_province as $k=>$v)
         {
             foreach ($show_info as $kk=>$vv)
             {

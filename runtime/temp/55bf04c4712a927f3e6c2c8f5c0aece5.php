@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\test\agent.html";i:1607765056;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"E:\phpstudy_pro\WWW\fw366.cn\public/../application/index\view\test\agent.html";i:1608084384;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,20 +7,27 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/assets/css/index.css">
-    <title>Agent</title>
+    <title>Test</title>
 </head>
 <body>
 <div id="app">
     <div v-show="show_table">
         <el-form ref="form"
                  :model="form"
-                 label-width="80px"
+                 label-width="100px"
                  :rules="formRules"
         >
             <div v-show="input_show">
                 <el-form-item label="分数" style="width: 20%" prop="score">
                     <el-input v-model="form.score" placeholder="请输入分数" :disabled=form.region ></el-input>
-                    <!--                <el-input v-model="ruleForm.score"></el-input>-->
+                </el-form-item>
+                <el-form-item label="年份">
+                    <el-select v-model="form.year" placeholder="请选择年份" :disabled=form.region>
+                        <el-option label="2017" value="2017"></el-option>
+                        <el-option label="2018" value="2018"></el-option>
+                        <el-option label="2019" value="2019"></el-option>
+                        <el-option label="2020" value="2020"></el-option>
+                    </el-select>
                 </el-form-item>
                 <el-form-item label="批次">
                     <el-select v-model="form.batch" placeholder="请选择批次" :disabled=form.region>
@@ -30,7 +37,7 @@
                         <el-option label="大专" value="4"></el-option>
                     </el-select>
                 </el-form-item>
-                <el-form-item label="文科/理科">
+                <el-form-item label="文科/理科" prop="type">
                     <el-select v-model="form.type" placeholder="请选择文科/理科" :disabled=form.region>
                         <el-option label="理科" value="reason"></el-option>
                         <el-option label="文科" value="culture"></el-option>
@@ -46,28 +53,34 @@
                             placeholder="请输入专业（默认本科专业）"
                             @select="handleSelectProfession"
                     ></el-autocomplete>
-                    <el-button @click.native="profession_name($event)" id="profession1" :type="profession_primary('profession1')">本科</el-button>
-                    <el-button @click.native="profession_name($event)" id="profession2" :type="profession_primary('profession2')">专科</el-button>
                 </el-form-item>
                 <el-form-item label="院校名称" style="width: 40%">
                     <el-autocomplete
                             v-model="state_school"
                             :fetch-suggestions="querySearchSchool"
                             value-key="school_name"
+                            data-id="school_num"
                             placeholder="请输入院校名称"
                             @select="handleSelectSchool"
-                    ></el-autocomplete>
+                    >
+                    </el-autocomplete>
                 </el-form-item>
-                <el-form-item label="办学类型" style="width: 50%">
-                    <el-button @click.native="school_type($event)" id="type1" :type="type_primary('type1')">公办</el-button>
-                    <el-button @click.native="school_type($event)" id="type2" :type="type_primary('type2')">民办</el-button>
-                    <el-button @click.native="school_type($event)" id="type3" :type="type_primary('type3')">内地与港澳台地区合作办学</el-button>
-                    <el-button @click.native="school_type($event)" id="type4" :type="type_primary('type4')">中外合作办学</el-button>
+                <el-form-item label="办学类型" style="width: 55%">
+                    <template>
+                        <el-checkbox-group
+                                v-model="checked_school_type"
+                        >
+                            <el-checkbox
+                                    v-for="item in school_type"
+                                    :label="item"
+                            >{{item}}</el-checkbox>
+                        </el-checkbox-group>
+                    </template>
                 </el-form-item>
                 <el-form-item label="省份" style="width: 55%">
                     <template>
                         <el-checkbox-group
-                                v-model="test"
+                                v-model="checked_province"
                                 @change="province_name()">
                             <el-checkbox
                                     v-for="item in province"
@@ -330,6 +343,7 @@
                     score: '',      //分数值
                     batch: '',      //批次值
                     type: '',       //文科理科值
+                    year: '',       //年份值
                     show_info: '',  //分数值
                     region:false
                 },
@@ -339,9 +353,11 @@
                         {min: 3, max: 3, message: '长度为 3 个字符', trigger: 'blur'},
                         {pattern :'^[1-9]{1}[0-9]{2}$',message: '请输入正确的分数'},
                     ],
+                    type: [
+                        {required: true, },
+                    ],
                 },
                 province_index:'',              //省份id值
-                checkList: '',
                 show_table: true,               //条件搜索的div，默认为true不改变
                 show_data: true,               //条件搜索的div，默认为false普通搜索之后改为true
                 show_select_data: false,        //附加条件搜索的div，默认为false筛选搜索之后改为true
@@ -354,99 +370,113 @@
                 school_restaurants: [],         //学校下拉框展示数据
                 state: '',                      //专业下拉框输入的或者选中的数据
                 state_school:'',                //学校下拉框输入的或者选中的数据
-                timeout:  null,
                 sta_profession:'',              //input输入的专业值
                 sta_school:'',                  //input输入的学校值
-                profession:'',                  //专业（本科/专科）值
-                pp_type:'',                     //公办民办值
                 province:'',                    //后台获取的所有省份值
-                test:[],                        //获取选中的省份
+                checked_province:[],            //获取选中的省份
+                school_nature:[],               //后台传值（本科/专科）
+                school_num:[],                  //后台传值（分数位次对应的院校代码）
+                all_school_num:[],              //后台传值（分数位次搜索之后所有的分数位次对应的院校代码）
+                school_type:[],                 //后台传值（分数位次对应的学校类型）
+                checked_school_type:[],         //后台传值（选中的分数位次对应的学校类型）
             }
         },
         methods: {
             onSubmit() {
                 var score = this.form.score;                //分数值
                 var batch = this.form.batch;                //批次值
-                if(batch=='')
-                {
-                    alert('请选择批次');return ;
-                }
                 var type = this.form.type;                  //文科理科值
-                if(type=='')
-                {
-                    alert('请选择文理科');return ;
-                }
                 var year = this.form.year;                  //年份值
                 var sta_profession = this.sta_profession.profession_name
                     ? this.sta_profession.profession_name : '';                                     //input输入的专业值
-                var sta_school = this.sta_school.school_name ? this.sta_school.school_name : '';    //input输入的学校值
-                var profession = this.profession ? this.profession : 'profession1';                  //专业（本科/专科）值
-                var pp_type = this.pp_type ? this.pp_type : '';                                      //公办民办值
+                var school_nature = this.school_nature ? this.school_nature : '';                 //专业（本科/专科）值
+                var sta_school = this.sta_school ? this.sta_school : '';                 //专业（本科/专科）值
+                var checked_school_type =
+                    this.checked_school_type ? this.checked_school_type : '';                    //公办民办值
                 var province = this.province ? this.province : '';                                   //省份值
                 var info = this.info ? this.info : '';                                               //后续判断筛选的传参值
-                // var show_info = this.show_info ? this.show_info: '';                              //
-                var test = this.test  ?  this.test :  '';                                            //后续判断筛选的传参值
-                if(test.length == 0){
-                    var test='';                        //空值
+                var checked_province = this.checked_province  ?  this.checked_province :  '';                                            //后续判断筛选的传参值
+                if(checked_province.length == 0){
+                    var checked_province='';     //空值
+                }
+                if(checked_school_type.length == 0){
+                    var checked_school_type='';     //空值
                 }
                 var _this = this   //很重要！！
                 if(sta_profession=='' && sta_school==''
-                    && pp_type=='' && test=='' ){
+                    && checked_school_type=='' && checked_province=='' ){
                     //查询当前输入的分数，批次，文理科，年份
                     $.post('/index/agent/get_ajax_info', {
                         'score':score ,
                         'batch':batch ,
                         'type':type,
+                        'year':year,
                     }, function (response) {
-                        //默认为false，有值改为true
+                        if(response['code']==2){
+                            _this.show_data=false;
+                            _this.show_add=false;
+                            _this.show_select_data=false;
+                            // _this.show_info = response.show_info;
+                            alert(response['message']);return ;
+                        }
                         if(response['code']==1){
                             _this.form.region = true;
                             _this.info = response.info;
                             _this.province = response.province;
-                            _this.province_select_name='';
-                            _this.show_data=true;
+                            _this.school_type = response.school_type;
                             _this.show_add=true;
                             _this.show_select_data=false;
                             _this.show_info = response.show_info;
+                            _this.show_data=true;
+                            _this.school_nature = response.school_nature;
+                            _this.school_num = response.school_num;
+                            _this.all_school_num = response.school_num;
                             console.log(_this.info);
-                        }else if(response['code']==2){
-                            _this.show_data=false;
-                            _this.show_add=false;
-                            _this.show_select_data=false;
-                            alert(response['message']);return ;
+                            _this.load_school_name()
+                            _this.load_profession_name()
                         }
+                        console.log((_this.school_num));
                     });
                     return
+                }   else
+                {
+                    $.post('/index/agent/get_select_info', {
+                        'info':JSON.stringify(info),
+                        'sta_profession':sta_profession,
+                        'sta_school':sta_school,
+                        'school_nature':school_nature,
+                        'province':province,
+                        'checked_province':checked_province,
+                        'checked_school_type':checked_school_type,
+                    }, function (response) {
+                        if(response['code']==2){
+                            _this.show_data=true;
+                            _this.show_select_data=true;
+                            alert(response['message']);return ;
+                        }
+                        if(response['code']==1){
+                            _this.form.region = true;
+                            _this.show_select_data=false;
+                            _this.info = response.info;
+                            _this.province = response.province;
+                            _this.school_type = response.show_school_type;
+                            _this.school_num = response.show_school_num;
+                            _this.show_add=true;
+                            _this.show_data=false;
+                            _this.show_select_info = response.show_info;
+                            _this.show_select_data=true;
+                            console.log('in code = 1');
+                            console.log((_this.info));
+                            console.log((response.show_school_num));
+                            _this.load_school_name();
+                            _this.load_profession_name();
+                            return
+                        }
+                    });
                 }
-                // console.log(info);return
-                $.post('/index/agent/get_select_info', {
-                    'show_info':JSON.stringify(info),
-                    'sta_profession':sta_profession,
-                    'sta_school':sta_school,
-                    'profession':profession,
-                    'pp_type':pp_type,
-                    'province':province,
-                    'test':test,
-                }, function (response) {
-                    if(response['code']==2){
-                        _this.show_data=false;
-                        _this.show_select_data=false;
-                        alert(response['message']);return ;
-                    }
-                    if(response['code']==1){
-                        _this.form.region = true;
-                        _this.info = response.info;
-                        _this.province = response.province;
-                        _this.show_add=true;
-                        _this.show_data=false;
-                        _this.show_select_data=true;
-                        _this.show_select_info = response.show_info;
-                        console.log('in code = 1');
-                        console.log(_this.info);
-                    }
-                });
-                // return;
+                return;
             },
+            //根据color字段更改文字颜色
             cellStyle(row,column,rowIndex,columnIndex){
                 if(row.row.color==='red'){
                     return 'color:red'
@@ -456,13 +486,24 @@
                     return 'color:green'
                 }
             },
-            //从后台获取部分的专业数据
+            //从后台获取专业数据
             load_profession_name(state=null, cb) {
                 var that = this;
-                var profession = this.profession ? this.profession: '';      //专业（本科/专科）值
+                var school_nature = this.school_nature ? this.school_nature : '';   //后台传值（本科/专科）
+                if(that.state_school.length==0&& that.checked_school_type=='' && that.checked_province=='')
+                {
+                    var school_num = this.all_school_num ? this.all_school_num : '';            //后台传值（院校代码）
+                }else
+                {
+                    var school_num = this.school_num ? this.school_num : '';            //后台传值（院校代码）
+                }
+                // var school_num = this.school_num ? this.school_num : '';            //后台传值（院校代码）
+                var info = this.info ? this.info : '';     //后台传值（分数位次第一次搜索得出的信息，不会改变
                 if(state){
-                    $.post('/index/test/get_select_profession_name', {
-                        'profession':profession,
+                    $.post('/index/agent/get_select_profession_name', {
+                        'info':JSON.stringify(info),
+                        'school_nature':school_nature,
+                        'school_num':school_num,
                         'word':state,
                         async: false,
                     }, function (response) {
@@ -470,19 +511,30 @@
                         cb(response);return
                     });
                 }else {
-                    $.post('/index/test/get_profession_name', {
-                        'profession':profession,
+                    $.post('/index/agent/get_profession_name', {
+                        'info':JSON.stringify(info),
+                        'school_nature':school_nature,
+                        'school_num':school_num,
                     }, function (response) {
                         that.profession_restaurants = response;
                         cb(response);return
                     });
                 }
             },
-            //从后台获取部分的学校数据
+            //从后台获取学校数据
             load_school_name(state_school=null, cb) {
                 var that = this;
+                if(that.state.length==0&& that.checked_school_type=='' && that.checked_province=='')
+                {
+                    var school_num = this.all_school_num ? this.all_school_num : '';            //后台传值（院校代码）
+                }else
+                {
+                    var school_num = this.school_num ? this.school_num : '';            //后台传值（院校代码）
+                }
+                // var school_num = this.school_num ? this.school_num : '';                    //后台传值（分数位次对应的院校代码）
                 if(state_school){
-                    $.post('/index/test/get_select_school_name', {
+                    $.post('/index/agent/get_select_school_name', {
+                        'school_num':school_num,
                         'word':state_school,
                         async: false,
                     }, function (response) {
@@ -491,7 +543,8 @@
                         return;
                     });
                 }else {
-                    $.post('/index/test/get_school_name', {
+                    $.post('/index/agent/get_school_name', {
+                        'school_num':school_num,
                     }, function (response) {
                         that.school_restaurants = response;
                         cb(response);
@@ -516,48 +569,20 @@
                 _this.sta_school=state_school;
                 _this.load_school_name(state_school, cb);return
             },
+            //选中的专业名称赋值
             handleSelectProfession(item) {
                 this.sta_profession = item;
                 console.log(item);
             },
+            //选中的学校名称赋值
             handleSelectSchool(item) {
                 this.sta_school = item;
                 console.log(item);
             },
-            //更改专业（本科/专科）
-            profession_name:function (e){
-                //获取当前点击的按钮的id值
-                var current_id = e.currentTarget.id;
-                var _this = this;
-                var profession = _this.profession;
-                _this.profession=current_id;
-                if(profession==current_id){
-                    _this.profession = '';
-                }
-            },
-            //更改公民办
-            school_type:function (e){
-                //获取当前点击的按钮的id值
-                var current_id = e.currentTarget.id;
-                var _this = this;
-                var pp_type = _this.pp_type;
-                _this.pp_type=current_id;
-                if(pp_type==current_id){
-                    _this.pp_type = '';
-                }
-            },
-            //省份
+            //更改公办/民办/内地与港澳台地区合作办学/中外合作办学
+            //省份选中，查看传参
             province_name (){
-                console.log(this.test);return
-            },
-            //更改专业默认选中值
-            profession_primary(val){
-                var _this = this;
-                var profession=_this.profession;
-                // console.log(val);
-                if(val==profession){
-                    return "primary";
-                }
+                console.log(this.checked_province);return
             },
             //更改公民办默认选中值
             type_primary(val){
@@ -580,8 +605,8 @@
 
         },
         mounted() {
-            this.load_profession_name();
-            this.load_school_name();
+            // this.load_profession_name();
+            // this.load_school_name();
         }
     })
 </script>

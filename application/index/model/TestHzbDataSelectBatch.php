@@ -9,11 +9,11 @@ use think\Db;
 
 class TestHzbDataSelectBatch extends Model
 {
+    //返回值名称全部为$show_new_info
     /**
      *专业信息筛选
      * @param $school_nature    //院校状态，用于判单是本科或专科，小于4是本科，等于4是专科
-    */
-    //返回值名称全部为$show_new_info
+     */
     public function check_sta_profession($show_info,$sta_profession,$school_nature)
     {
         $show_new_info=[];
@@ -27,6 +27,8 @@ class TestHzbDataSelectBatch extends Model
             $school_info = Db::name('hzb_data_und_profession_data')
                 ->where('profession_name','=',$sta_profession)
                 ->select();
+            }else{
+                return  $show_new_info=['code'=>2,'message'=>'请重新输入信息'];
             }
             if($school_info)
             {
@@ -41,7 +43,9 @@ class TestHzbDataSelectBatch extends Model
                     }
                 }
             }
-            return  $show_new_info;
+            else{
+                return  $show_new_info=['code'=>2,'message'=>'请重新输入信息'];
+            }
         } else
             {
             $res = Db::name('hzb_data_spe_profession_info')
@@ -52,6 +56,8 @@ class TestHzbDataSelectBatch extends Model
                 $school_info = Db::name('hzb_data_spe_profession_all_data')
                     ->where('profession_name','=',$sta_profession)
                     ->select();
+            }else{
+                return  $show_new_info=['code'=>2,'message'=>'请重新输入信息'];
             }
             if($school_info)
             {
@@ -65,9 +71,12 @@ class TestHzbDataSelectBatch extends Model
                         }
                     }
                 }
+            }else{
+                return  $show_new_info=['code'=>2,'message'=>'请重新输入信息'];
             }
-            return  $show_new_info;
         }
+        return  $show_new_info=['code'=>1,'show_new_info'=>$show_new_info];
+
     }
     /**
      *学校名称筛选
@@ -78,12 +87,15 @@ class TestHzbDataSelectBatch extends Model
         $show_new_info=[];
         foreach ($show_info as $k => $v)
         {
-            if($v['school_name'] == $sta_school)
+            if($v['school_num'] == $sta_school)
             {
                 $show_new_info[]=$v;
             }
         }
-        return  $show_new_info;
+        if(empty($show_new_info)){
+            return  $show_new_info=['code'=>2,'message'=>'请重新输入信息'];
+        }
+        return  $show_new_info=['code'=>1,'show_new_info'=>$show_new_info];
     }
     /**
      *办学类型筛选
@@ -101,7 +113,10 @@ class TestHzbDataSelectBatch extends Model
                 }
             }
         }
-        return  $show_new_info;
+        if(empty($show_new_info)){
+            return  $show_new_info=['code'=>2,'message'=>'请重新输入信息'];
+        }
+        return  $show_new_info=['code'=>1,'show_new_info'=>$show_new_info];
     }
     /**
      *省份的筛选
@@ -117,10 +132,13 @@ class TestHzbDataSelectBatch extends Model
             {
                 if($v == $kk)
                 {
-                    $new_show_info[$v]=$vv;
+                    $show_new_info[$v]=$vv;
                 }
             }
         }
-        return $new_show_info;
+        if(empty($show_new_info)){
+            return  $show_new_info=['code'=>2,'message'=>'请重新输入信息'];
+        }
+        return  $show_new_info=['code'=>1,'show_new_info'=>$show_new_info];
     }
 }

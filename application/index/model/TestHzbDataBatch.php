@@ -9,29 +9,23 @@ use think\Db;
 
 class TestHzbDataBatch extends Model
 {
-
     /**
-     * 获取导航
-     *
-     * @param string $pid 父级ID
-     * @param string $type 导航类型(查询的类型)
-     * @return  array
-     */
-    /*
-     *
+     * 页面展示
      * @param string $score 分数
-     * @param string $year 年
-     * @param string $type 文理科
-     * @param null $batch 批次
-     * @param string $status 冲刺保守保底
-     *$score,$type,$year,$batch
+     * @param string $type  文理科
+     * @param null $year    年
+     * @param null $batch   批次
+     * @param null $status  冲刺保守保底
+     * @return array|bool|\PDOStatement|string|\think\Collection
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
      */
-    public function getBatchData($score,$type,$year=null,$batch=null ,$status=null)
+    public function getBatchData($score,$type,$year=null,$batch=null,$status=null)
     {
         $result =  $this->test($score,$year,$type,$batch,$status);
         return $result;
     }
-
     /**
      * 测试
      *
@@ -210,15 +204,27 @@ class TestHzbDataBatch extends Model
         }
         $new_info=$this->GetYearInfo($school_num,$type,$batch,$new_info,$this_year);
         $school_type=$this->GetTypeInfo($new_info);
-//        var_dump($school_type);die;
+        foreach ($new_info as $key => $value) {
+            $school_name[] = [
+                'school_name'=>$value['school_name'],
+                'school_num'=>$value['school_num'],
+            ];
+        }
+        $school_name = array_column($school_name,null,'school_num');
+        $school_name = array_values($school_name);
         $data = ['info'=>$new_info,
                 'school_nature'=>$school_nature,
                 'school_num'=>$school_num,
+                'school_name'=>$school_name,
                 'school_type'=>$school_type,
             ];
         return $data;
     }
-
+    /**
+     * 获取type的值
+     * @param $new_info         //传值，获取其中值
+     * @return array            //返回值，数组形式，获取type的值
+     */
     public function GetTypeInfo($new_info)
     {
         $school_type=[];
@@ -484,7 +490,6 @@ class TestHzbDataBatch extends Model
                     $school_province[]=$v['school_province'];
                 }
             }
-
         }
         return $school_province;
     }

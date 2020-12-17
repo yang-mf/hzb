@@ -2,6 +2,7 @@
 
 namespace app\index\controller;
 
+use app\index\model\TestHzbDataSelectBatch;
 use think\Controller;
 use think\Request;
 use app\common\controller\Frontend;
@@ -10,7 +11,7 @@ use app\common\model\Config;
 class Agent extends Frontend
 {
     /**
-     * 显示资源列表
+     * 测试模块
      *
      * @return \think\Response
      */
@@ -22,17 +23,17 @@ class Agent extends Frontend
         parent::_initialize();
     }
     //首页展示
-    public function agent()
+    public function index()
     {
-        //代理商的前端展示查学校模块
         return $this->view->fetch('test/agent');
     }
-    /*
+    /**
+     * 根据用户输入的条件获取用来展示的数据
      * $score  分数
-     * $year   年份
+     * $year   年份，为当年年份
      * $type   文理科
      * $batch  批次
-     * $data 获取用来展示的数据
+     * @return array  $data 获取用来展示的数据
      */
     public function get_ajax_info()
     {
@@ -43,11 +44,8 @@ class Agent extends Frontend
         if(!($score)){
             return $data=['code'=>2,'message'=>'请输入正确的分数'];
         }
-        if(!($batch)){
-            return $data=['code'=>2,'message'=>'请输入选择批次'];
-        }
         if(!($type)){
-            return $data=['code'=>2,'message'=>'请输入选择文理科'];
+            return $data=['code'=>2,'message'=>'请选择文理科'];
         }
         if(empty($score) && empty($type) ){
             $score = session('score');
@@ -63,93 +61,156 @@ class Agent extends Frontend
         //获取数据
         $year = date($year);
         $result = model('AgentHzbDataBatch')->getBatchData($score,$type,$year,$batch);
+
         if(empty($result))
         {
             return $data=['code'=>2,'message'=>'请重新输入分数，或选择批次'];
         }
         $M_data = $this->groupByInitials($result['info'], 'school_province');
+
         $S_data = $this->province($M_data);
         $province = $this->get_province($S_data);
         if(empty($S_data))
         {
             return $data=['code'=>2,'message'=>'请重新选择'];
         }
-        $data = ['code'=>1,'show_info'=>$S_data,'info'=>$result['info'],'province'=>$province];
+        $data = ['code'=>1,
+            'show_info'=>$S_data,
+            'info'=>$result['info'],
+            'province'=>$province,
+            'school_nature'=>$result['school_nature'],
+            'school_num'=>$result['school_num'],
+            'school_type'=>$result['school_type'],
+        ];
         return $data;
     }
-    //附加条件搜索
+    /**
+     * 附加条件搜索
+     * $info            //$info传参为第一次分数和位次搜索之后得出，一直不变
+     * $show_info       //$show_info传参为搜索之后得出的数据
+     * $province        //$province传参为搜索之后得出的用于排列的省份数据
+     * @return array    $data 搜索条件之后，获取用来展示的数据
+     */
     public function get_select_info(){
-        $show_info = $_POST['show_info'];
-        $test = $_POST['test'];
-        $show_info = json_decode($show_info);
-        $show_info = json_decode( json_encode( $show_info),true);
+        $info = $_POST['info'];
+        $info = json_decode($info);
+        $info = json_decode( json_encode( $info),true);
+        $show_info = $info;
+        $checked_province = $_POST['checked_province'];
         $sta_profession = $_POST['sta_profession'];
         $sta_school = $_POST['sta_school'];
-        $profession = $_POST['profession'];
-        $pp_type = $_POST['pp_type'];
+        $school_nature = $_POST['school_nature'];
+        $checked_school_type = $_POST['checked_school_type'];
         $province = $_POST['province'];
         //专业名称搜索
         if (!empty($sta_profession)) {
-            $show_info = model('AgentHzbDataSelectBatch')->check_sta_profession($show_info,$sta_profession,$profession);
+            $show_info = model('AgentHzbDataSelectBatch')
+                ->check_sta_profession($show_info,$sta_profession,$school_nature);
         }
         //学校名称搜索
         if (!empty($sta_school)) {
             $show_info = model('AgentHzbDataSelectBatch')->check_sta_school($show_info,$sta_school);
         }
         //办学类型搜索
-        if (!empty($pp_type)) {
-            $show_info = model('AgentHzbDataSelectBatch')->check_pp_type($show_info,$pp_type);
-
+        if (!empty($checked_school_type)) {
+            $show_info = model('AgentHzbDataSelectBatch')
+                ->check_checked_province_name($show_info,$checked_school_type);
         }
         //学校省份搜索
-        if (!empty($test)) {
+        if (!empty($checked_province)) {
             $M_data = $this->groupByInitials($show_info, 'school_province');
             $province_show_info = $this->province($M_data);
             $province_show_info = model('AgentHzbDataSelectBatch')
-                ->check_province($province_show_info,$test);
+                ->check_province($province_show_info,$checked_province);
+            $province = $this->get_province($province_show_info);
+            foreach ($show_info as $key => $value) {
+                $school_num[] = $value['school_num'];
+            }
+            foreach ($show_info as $k => $v)
+            {
+                $school_type[]=$v['school_type'];
+            }
         }else
         {
+            foreach ($show_info as $key => $value) {
+                $school_num[] = $value['school_num'];
+            }
+            foreach ($show_info as $k => $v)
+            {
+                $school_type[]=$v['school_type'];
+            }
+            $school_type=array_unique($school_type);
             $M_data = $this->groupByInitials($show_info, 'school_province');
             $province_show_info = $this->province($M_data);
             $province = $this->get_province($province_show_info);
         }
         if(empty($province_show_info))
         {
-            return $data=['code'=>2,'message'=>'请重新选择'];
+            return $data=[
+                'code'=>2,
+                'message'=>'请重新选择',
+            ];
         }
-        $data = ['code'=>1,'show_info'=>$province_show_info,'info'=>$show_info,'province'=>$province];
+        $school_type=array_unique($school_type);
+        $school_num=array_unique($school_num);
+        $data = ['code'=>1,
+            'show_info'=>$province_show_info,
+            'show_school_num'=>$school_num,
+            'show_school_type'=>$school_type,
+            'info'=>$info,
+            'province'=>$province
+        ];
         return $data;
     }
-
-    //获取部分profession_name数据
+    /**
+     * 获取profession_name数据
+     */
     public function get_profession_name()
     {
-        $profession=$_POST['profession'];
-        $result = model('TestHzbDataCategory')->getProfessionData($profession);
+        $school_nature=$_POST['school_nature'];
+        $school_num=$_POST['school_num'];
+        $school_num=array_unique($school_num);
+        $result = model('AgentHzbDataCategory')->getProfessionData($school_nature,$school_num);
         return $result;
     }
-    //根据客户输入的关键字查询获取全部profession_name数据
+    /**
+     * 根据客户输入的关键字查询获取全部profession_name数据
+     *
+     */
     public function get_select_profession_name()
     {
-        $profession=$_POST['profession'];
+        $school_nature=$_POST['school_nature'];
+        $school_num=$_POST['school_num'];
+        $school_num=array_unique($school_num);
         $word=$_POST['word'];
-        $result = model('TestHzbDataCategory')->getProfessionSelectData($word,$profession);
+        $result = model('AgentHzbDataCategory')
+            ->getProfessionSelectData($word,$school_nature,$school_num);
         return $result;
     }
-    //获取部分school_name数据
+    /**
+     * 获取school_name数据
+     */
     public function get_school_name()
     {
-        $result = model('TestHzbDataCategory')->getSchoolNameData();
+        $school_num=$_POST['school_num'];
+        $school_num=array_unique($school_num);
+        $result = model('AgentHzbDataCategory')->getSchoolNameData($school_num);
         return $result;
     }
-    //根据客户输入的关键字查询获取全部school_name数据
+    /**
+     * 根据客户输入的关键字查询获取全部school_name数据
+     */
     public function get_select_school_name()
     {
+        $school_num=$_POST['school_num'];
+        $school_num=array_unique($school_num);
         $word=$_POST['word'];
-        $result = model('TestHzbDataCategory')->getSchoolNameSelectData($word);
+        $result = model('AgentHzbDataCategory')->getSchoolNameSelectData($word,$school_num);
         return $result;
     }
-    //省份排序
+    /**
+     * 省份排序
+     */
     public function province($info)
     {
         $new_info = [];
@@ -162,7 +223,9 @@ class Agent extends Frontend
         }
         return $new_info;
     }
-    //获取省份名称，用于复选框展示
+    /**
+     * 获取省份名称，用于复选框展示
+     */
     public function get_province($S_data)
     {
         $province = [];
@@ -173,14 +236,13 @@ class Agent extends Frontend
         return $province;
     }
     /**
-     * 二维数组根据首字母分组排序
+     * 二维数组根据首字母分组排序（来源于网络，谨慎修改）
      * @param  array  $data      二维数组
      * @param  string $targetKey 首字母的键名
      * @return array             根据首字母关联的二维数组
      */
     public function groupByInitials(array $data, $targetKey = 'name')
     {
-
         $data = array_map(function ($item) use ($targetKey) {
             return array_merge($item, [
                 'initials' => $this->getInitials($item[$targetKey]),
@@ -290,10 +352,4 @@ class Agent extends Frontend
         }
         return null;
     }
-    public function initialsProvince($province){
-        $data = $this->groupByInitials($province, 'school_province');
-        dump($data);
-    }
-
-
 }

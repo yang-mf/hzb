@@ -7,7 +7,7 @@ use think\Config;
 use think\Exception;
 use think\Db;
 
-class AgentHzbDataSelectBatch extends Model
+class CheckHzbDataSelectBatch extends Model
 {
     //返回值名称全部为$show_new_info
     /**

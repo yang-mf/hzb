@@ -8,7 +8,7 @@ use think\Request;
 use app\common\controller\Frontend;
 use app\common\model\Config;
 
-class Test extends Frontend
+class Batch extends Frontend
 {
     /**
      * 测试模块
@@ -43,7 +43,7 @@ class Test extends Frontend
         $this->view->assign('all_province_name_info',json_encode($province,JSON_UNESCAPED_UNICODE));
         $this->view->assign('all_school_type_name_info',json_encode($school_type,JSON_UNESCAPED_UNICODE));
         $this->view->assign('all_school_name_info',json_encode($school_name,JSON_UNESCAPED_UNICODE));
-        return $this->view->fetch('test/test');
+        return $this->view->fetch('test/testshow');
     }
     //首页展示
     public function testcopy()
@@ -80,15 +80,21 @@ class Test extends Frontend
         $type =$_POST['type'];
         $year =$_POST['year'];
         $rank =$_POST['rank'];
+        $info =$_POST['info'];
+        $show_link =$_POST['show_link'];
+        $sta_profession =$_POST['sta_profession'];
+        $sta_school =$_POST['sta_school'];
+        if( $sta_school ) {
+            foreach ($sta_school as $k=>$v) {
+                $new_sta_school[]=['school_num'=>substr($v,0,4),'school_name'=>substr($v,4)];
+            }
+        }
+        $checked_province =$_POST['checked_province'];
+        $checked_school_type =$_POST['checked_school_type'];
         $the_show_year =$_POST['the_show_year'];
-//        $count = count($batch);
-//        var_dump($batch);die;
         if(!$score){
             return $data=['code'=>2,'message'=>'请输入正确的分数'];
         }
-//        if(!$rank){
-//            return $data=['code'=>2,'message'=>'请输入位次'];
-//        }
         if(!$type){
             return $data=['code'=>2,'message'=>'请选择文理科'];
         }
@@ -98,101 +104,144 @@ class Test extends Frontend
         if( !$batch ) {
             return $data=['code'=>2,'message'=>'请选择批次'];
         }
+        session('batch_info',$batch);
         //获取数据
-        $year  =  date($year);
-        $result = model('TestHzbDataBatch')
-            ->getBatchData($score,$type,$the_show_year,$rank,$year,$batch);
-        if(empty($result))
-        {
-            return $data=['code'=>2,'message'=>'请重新输入分数，或选择批次'];
+        $year   = date($year);
+        //查询数据库获取数据
+        if( $show_link == 1 && empty( $info )) {
+            $result = model('TestHzbDataBatch' )
+                ->getBatchData( $score, $type, $rank, $year, $batch, $the_show_year);
+            if( empty($result) ) {
+                return $data = ['code' => 2,'message' => '请重新输入分数，或选择批次'];
+            }
+            if( $result['code'] == 2) {
+                return $data = ['code' => 2,'message' => '请重新输入分数，或选择批次'];
+            }
+            $show_info = $result['info'];
+        }else if( $info ) {
+            $show_info = $info;
         }
-        if($result['code'] == 2) {
-            return $data=['code'=>2,'message'=>'请重新输入分数，或选择批次'];
-        }
-        /*
-        $info = $result['info'];
-        $checked_province = $_POST['checked_province'];
-        $sta_profession = $_POST['sta_profession'];
-        $sta_school = $_POST['sta_school'];
-        $checked_school_type = $_POST['checked_school_type'];
-        $school_nature = $result['school_nature'][0][0];
-        foreach ($info as $key => $value) {
-            $school_num[] = $value['school_num'];
-        }
-        $show_info = $info;
         //专业名称搜索
-        if (!empty($sta_profession)) {
+        if ( !empty( $sta_profession ) ) {
+            foreach ( $sta_profession as $k => $v ) {
+                $Professionnum = model('TestHzbDataCategory')
+                    ->checkProfession( $v );
+                if( $Professionnum == 1 ) {
+                    $ProfessionInfo['und'][] = $v;
+                }else if( $Professionnum == 2 ) {
+                    $ProfessionInfo['spe'][] = $v;
+                }
+            }
             $show_info = model('TestHzbDataSelectBatch')
-                ->check_sta_profession($show_info,$sta_profession,$school_nature);
-            if($show_info['code']==1) {
+                ->check_sta_profession( $show_info , $ProfessionInfo);
+            if( $show_info['code'] == 1 ) {
                 $show_info = $show_info['show_new_info'];
-            }else{
+            } else {
                 return $show_info;
             }
         }
         //学校名称搜索
-        if (!empty($sta_school)) {
-            $show_info = model('TestHzbDataSelectBatch')->check_sta_school($show_info,$sta_school);
-            if($show_info['code']==1) {
+        if ( !empty($sta_school) ) {
+            foreach ( $new_sta_school as $k => $v ) {
+                $Schoolnum = model('TestHzbDataCategory')
+                    ->checkSchool( $v );
+                if( $Schoolnum == 1 ) {
+                    $SchoolInfo['und'][] = $v;
+                }else if( $Schoolnum == 2 ) {
+                    $SchoolInfo['spe'][] = $v;
+                }
+            }
+            $show_info = model('TestHzbDataSelectBatch' )->check_sta_school( $show_info , $SchoolInfo );
+            if( $show_info['code'] == 1 ) {
                 $show_info = $show_info['show_new_info'];
             }else{
                 return $show_info;
             }
         }
         //办学类型搜索
-        if (!empty($checked_school_type)) {
+        if ( !empty($checked_school_type) ) {
             $show_info = model('TestHzbDataSelectBatch')
-                ->check_checked_province_name($show_info,$checked_school_type);
-            if($show_info['code']==1) {
+                ->check_checked_province_name( $show_info , $checked_school_type );
+            if( $show_info['code'] == 1 ) {
                 $show_info = $show_info['show_new_info'];
-            }else{
+            } else {
                 return $show_info;
             }
         }
+
         //学校省份搜索
-        if (!empty($checked_province)) {
-            $M_data = $this->groupByInitials($show_info, 'school_province');
-            $province_show_info = $this->province($M_data);
-            $province_show_info = model('TestHzbDataSelectBatch')
-                ->check_province($province_show_info,$checked_province);
-            if($province_show_info['code']==1) {
+        if ( !empty($checked_province) ) {
+            $M_data = $this->groupByInitials( $show_info , 'school_province' );
+
+            $province_show_info = $this->province( $M_data );
+            $province_show_info = model('TestHzbDataSelectBatch' )
+                ->check_province( $province_show_info , $checked_province );
+            if( $province_show_info['code'] == 1 ) {
                 $province_show_info = $province_show_info['show_new_info'];
-            }else{
+            } else {
                 return $province_show_info;
             }
         } else {
             $M_data = $this->groupByInitials($show_info, 'school_province');
             $province_show_info = $this->province($M_data);
         }
-        if(empty($province_show_info))
+        //公民办
+        foreach ( $result['school_type'] as $k => $v) {
+            if( $v == '公办' ){
+                $school_type[] = ['school_type_name' => $v , 'school_type_num' => 1];
+            }
+        }
+        foreach ( $result['school_type'] as $k => $v) {
+            if( $v == '民办' ){
+                $school_type[] = ['school_type_name' => $v , 'school_type_num' => 2];
+            }
+        }
+        foreach ( $result['school_type'] as $k => $v) {
+            if( $v == '中外合作办学' ){
+                $school_type[] = ['school_type_name' => $v , 'school_type_num' => 3];
+            }
+        }
+        foreach ( $result['school_type'] as $k => $v) {
+            if( $v == '内地与港澳台地区合作办学' ){
+                $school_type[] = ['school_type_name' => $v , 'school_type_num' => 4];
+            }
+        }
+
+        foreach ( $province_show_info as $k => $v ) {
+            if( $k == 1 ) {
+                $batch_name = '一批次';
+            }else if( $k == 2 ) {
+                $batch_name = '二批次';
+            }else if( $k == 4 ) {
+                $batch_name = '专科批次';
+            }
+            $new_show_info[$batch_name] = $v;
+        }
+//        var_dump($show_info);die;
+        //专业名称
+        $school_num = $result['school_num'];
+        foreach  ( $school_num as $k => $v ) {
+            if( $k=='und' ) {
+                $und_profession_name = model('TestHzbDataCategory')
+                    ->getProfessionData(1,$v) ;
+            }else if( $k=='spe' ) {
+                $spe_profession_name = model('TestHzbDataCategory')
+                    ->getProfessionData(4,$v) ;
+            }
+        }
+        $profession_name = array_merge( $und_profession_name, $spe_profession_name );
+        if( empty($province_show_info) )
         {
             return $data=['code'=>2,'message'=>'请重新选择'];
         }
-        //公民办
-        foreach ( $result['school_type'] as $k => $v) {
-            if($v=='公办'){
-                $school_type[]=['school_type_name'=>$v,'school_type_num'=>1];
-            }
-            if($v=='民办'){
-                $school_type[]=['school_type_name'=>$v,'school_type_num'=>2];
-            }
-            if($v=='中外合作办学'){
-                $school_type[]=['school_type_name'=>$v,'school_type_num'=>3];
-            }
-            if($v=='内地与港澳台地区合作办学'){
-                $school_type[]=['school_type_name'=>$v,'school_type_num'=>4];
-            }
-        }
-        $profession_name = $this->get_profession_name($result['school_nature'][0],$result['school_num']);
-        */
-        $info = $result['info'];
-        $data = ['code'=>1,
-            'show_info'=>$info,
-            'info'=>$info,
-            'province'=>$result['school_province'],
-            'school_name'=>$result['school_name'],
-//            'school_type'=>$school_type,
-//            'profession_name'=>$profession_name,
+        $data = [
+            'code'=>1,
+            'show_info'         => $new_show_info,
+            'info'              => $province_show_info,
+            'profession_name'   => $profession_name,
+            'province'          => $result['school_province'],
+            'school_type'       => $school_type,
+            'school_name'       => $result['school_name'],
         ];
         return $data;
     }
@@ -341,10 +390,23 @@ class Test extends Frontend
     public function province($info)
     {
         $new_info = [];
-        foreach ($info as $k => $v)
-        {
-            foreach ($v as $kk => $vv)
+        foreach ( $info as $key => $value) {
+            foreach ($value as $k => $v)
             {
+                foreach ($v as $kk => $vv)
+                {
+                    $new_info[$key][$vv['school_province']][]=$vv;
+                }
+            }
+        }
+        return $new_info;
+    }
+    //info的处理，用于传值而不是展示
+    public function provinceInfo($info)
+    {
+        $new_info = [];
+        foreach ($info as $k => $v) {
+            foreach ($v as $kk => $vv) {
                 $new_info[$vv['school_province']][]=$vv;
             }
         }
@@ -370,12 +432,26 @@ class Test extends Frontend
      */
     public function groupByInitials(array $data, $targetKey = 'name')
     {
-        $data = array_map(function ($item) use ($targetKey) {
-            return array_merge($item, [
-                'initials' => $this->getInitials($item[$targetKey]),
-            ]);
-        }, $data);
-        $data = $this->sortInitials($data);
+        foreach ( $data as $key => $value ) {
+            $data = array_map(function ($item) use ($targetKey) {
+                return array_merge($item, [
+                    'initials' => $this->getInitials($item[$targetKey]),
+                ]);
+            }, $value);
+            $data = $this->sortInitials($data);
+            $new_data[$key]=$data;
+        }
+        return $new_data;
+    }
+    //info的处理，用于传值而不是展示
+    public function groupByInitialsInfo(array $data, $targetKey = 'name')
+    {
+            $data = array_map(function ($item) use ($targetKey) {
+                return array_merge($item, [
+                    'initials' => $this->getInitials($item[$targetKey]),
+                ]);
+            }, $data);
+            $data = $this->sortInitials($data);
         return $data;
     }
     /**

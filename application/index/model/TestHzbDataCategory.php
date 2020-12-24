@@ -9,6 +9,36 @@ use think\Db;
 
 class TestHzbDataCategory extends Model
 {
+    //将专业分为本科与专科的
+    public function checkProfession($profession_name) {
+
+        $und = Db::table('yzx_hzb_data_und_profession_data')
+            ->where('profession_name','like','%'.$profession_name.'%')
+            ->field('id')
+            ->find();
+        $spe = Db::table('yzx_hzb_data_spe_profession_all_data')
+            ->where('profession_name','like','%'.$profession_name.'%')
+            ->field('id')
+            ->find();
+        if( $und ) {
+            return 1;
+        }else if( $spe ) {
+            return 2;
+        }
+    }
+    //将专业分为本科与专科的
+    public function checkSchool($school) {
+        $res = Db::table('yzx_hzb_data_all_school_info')
+            ->where('school_name',$school['school_name'])
+            ->where('school_num',$school['school_num'])
+            ->field('school_nature')
+            ->find();
+        if( $res['school_nature'] == '本科' ) {
+            return 1;
+        }else if( $res['school_nature'] == '专科' ) {
+            return 2;
+        }
+    }
     /**
      * 获取ProfessionName数据
      * @param $school_nature    //院校状态，用于判单是本科或专科，小于4是本科，等于4是专科
@@ -18,52 +48,25 @@ class TestHzbDataCategory extends Model
      * @throws \think\db\exception\ModelNotFoundException
      * @throws \think\exception\DbException
      */
-    public function getProfessionData($school_nature,$school_num)
+    public function getProfessionData($school_nature,$school_num,$word=null)
     {
         $where_school_num = array();
         $where_school_num ['school_num'] = array('in',$school_num);
-        if($school_nature[0]<4){
+        if($school_nature<4){
             $result = Db::table('yzx_hzb_data_und_profession_data')
                 ->where($where_school_num)
+                ->where('profession_name','like','%'.$word.'%')
                 ->field('profession_name')
                 ->select();
         }else {
             $result = Db::table('yzx_hzb_data_spe_profession_all_data')
                 ->where($where_school_num)
+                ->where('profession_name','like','%'.$word.'%')
                 ->field('profession_name')
                 ->select();
         }
         $result = array_column($result, NULL, 'profession_name');   //以ID为索引
-        $result = array_values($result);//去除关联索引
-        return $result;
-    }
-    /**
-     * 获取搜索的ProfessionName数据
-     * @param $word             //搜索专业信息时，前台页面传来的关键词
-     * @param $school_nature    //院校状态，用于判单是本科或专科，小于4是本科，等于4是专科
-     * @param $school_num       //院校代码，用于搜索条件使用，来自分数位次搜索之后的数据中的院校代码
-     * @return bool|\PDOStatement|string|\think\Collection
-     * @throws \think\db\exception\DataNotFoundException
-     * @throws \think\db\exception\ModelNotFoundException
-     * @throws \think\exception\DbException
-     */
-    public function getProfessionSelectData($word,$school_nature,$school_num)
-    {
-        if($school_nature[0]<4){
-            $result = Db::table('yzx_hzb_data_und_profession_info')
-                ->field('profession_name')
-                ->where('school_num','in',$school_num)
-                ->where('profession_name','like','%'.$word.'%')
-                ->select();
-        }elseif ($school_nature[0]=4){
-            $result = Db::table('yzx_hzb_data_spe_profession_all_data')
-                ->field('profession_name,id')
-                ->where('school_num','in',$school_num)
-                ->where('profession_name','like','%'.$word.'%')
-                ->select();
-        }
-        $result = array_column($result, NULL, 'profession_name');   //以ID为索引
-        $result = array_values($result);//去除关联索引
+        $result = array_values($result);                                            //去除关联索引
         return $result;
     }
     /**
@@ -97,52 +100,54 @@ class TestHzbDataCategory extends Model
     public function getSchoolNameSelectData($word, $school_num, $score, $batch, $type,
                                             $year, $info, $checked_province, $checked_school_type)
     {   //办学类型筛选
-        if($checked_school_type){
-            foreach ($info as $k => $v)
-            {
-                foreach ($checked_school_type as $kk => $vv)
+        $new_info=[];
+        if( $checked_school_type || $checked_province ) {
+            if($checked_school_type){
+                foreach ($info as $k => $v)
                 {
-                    if(!empty($v["school_type"]) && $v["school_type"] == $vv)
+                    foreach ($checked_school_type as $kk => $vv)
                     {
-                        $new_info[]=$v;
+                        if(!empty($v["school_type"]) && $v["school_type"] == $vv)
+                        {
+                            $new_info[]=$v;
+                        }
                     }
                 }
+                if(empty($new_info)){
+                    return  $new_info=['code'=>2,'message'=>'请重新输入信息'];
+                }
             }
-            if(empty($new_info)){
-                return  $new_info=['code'=>2,'message'=>'请重新输入信息'];
-            }
-        }
-        //省份的筛选
-//        var_dump($checked_province);die;
-        if($checked_province) {
-            $new_show_info=[];
-            foreach ($checked_province as $k=>$v)
-            {
-                foreach ($info as $kk=>$vv)
+            //省份的筛选
+            if($checked_province) {
+                $new_show_info=[];
+                foreach ($checked_province as $k=>$v)
                 {
-                    if($v == $vv["school_province"])
+                    foreach ($info as $kk=>$vv)
                     {
-                        $new_info[$v]=$vv;
+                        if($v == $vv["school_province"])
+                        {
+                            $new_info[$v]=$vv;
+                        }
+                    }
+                }
+                if(empty($new_info)){
+                    return  $new_info=['code'=>2,'message'=>'请重新输入信息'];
+                }
+            }
+            if($new_info) {
+                foreach ($school_num as $k => $v) {
+                    foreach ($new_info as $kk => $vv) {
+                        if($v==$vv['school_num']) {
+                            $new_school_num=$v;
+                        }
                     }
                 }
             }
-            if(empty($new_info)){
+            if(!$new_school_num) {
                 return  $new_info=['code'=>2,'message'=>'请重新输入信息'];
+            }else {
+                $school_num = $new_school_num;
             }
-        }
-        if($new_info) {
-            foreach ($school_num as $k => $v) {
-                foreach ($new_info as $kk => $vv) {
-                    if($v==$vv['school_num']) {
-                        $new_school_num=$v;
-                    }
-                }
-            }
-        }
-        if($new_school_num) {
-            $school_num = $new_school_num;
-        }else {
-            return  $new_info=['code'=>2,'message'=>'请重新输入信息'];
         }
         $this_year=$year;
         $last_year=$year-1;
@@ -192,8 +197,10 @@ class TestHzbDataCategory extends Model
         }
         //位次之差
         $rank = $this_year_now - $this_year_Previous;
+        //每年要乘以的倍数，数据库获取
+        $times = model('TestHzbDataChangeTimes')->get_times();
         //得出加分项
-        $w=floor($rank/100);
+        $w=floor(($rank/100) * $times);
         //今年应得分数有加分项
         $score_max =floor($last_year_score + $w) ;
         //今年应得分数无加分项

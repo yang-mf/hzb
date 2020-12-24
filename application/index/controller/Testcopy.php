@@ -53,15 +53,27 @@ class Test extends Frontend
     //判断批次
     public function check_batch()
     {
-        $score = $_POST['score'];
-        $type  = $_POST['type'];
-        $year  = $_POST['year'];
-        if( !$score || !$type || !$year ) {
-            $batch=['batch_code'=>'8','message'=>'抱歉，请您先输入分数或文理科或年份'];
+        $score =$_POST['score'];
+        $type =$_POST['type'];
+        $year =$_POST['year'];
+        if( $score && $type && $year ) {
+            $batch = model('TestHzbDataGetIndexAll')->get_batch($score,$type,$year);
             return $batch;
         }
-        if( $score && $type && $year ) {
-            $batch = model('TestHzbDataGetIndexAll')->get_batch($score, $type, $year);
+        if($score>=500) {
+            $batch[]=['batch_name'=>'一批','batch_value'=>1];
+            $batch[]=['batch_name'=>'二批','batch_value'=>2];
+            $batch[]=['batch_name'=>'专科','batch_value'=>4];
+            return $batch=['batch_code'=>'1','batch_data'=>$batch];
+        }else if($score<500 && $score>350){
+            $batch[]=['batch_name'=>'二批','batch_value'=>2];
+            $batch[]=['batch_name'=>'专科','batch_value'=>4];
+            return $batch=['batch_code'=>'1','batch_data'=>$batch];
+        }else if($score<=350 && $score>=180){
+            $batch[]=['batch_name'=>'专科','batch_value'=>4];
+            return $batch=['batch_code'=>'1','batch_data'=>$batch];
+        }else if($score<180){
+            $batch[]=['batch_code'=>'9','message'=>'抱歉，您输入的分数暂无对于批次'];
             return $batch;
         }
     }
@@ -81,8 +93,6 @@ class Test extends Frontend
         $year =$_POST['year'];
         $rank =$_POST['rank'];
         $the_show_year =$_POST['the_show_year'];
-//        $count = count($batch);
-//        var_dump($batch);die;
         if(!$score){
             return $data=['code'=>2,'message'=>'请输入正确的分数'];
         }
@@ -95,13 +105,24 @@ class Test extends Frontend
         if( !$year ) {
             return $data=['code'=>2,'message'=>'请选择年份'];
         }
-        if( !$batch ) {
-            return $data=['code'=>2,'message'=>'请选择批次'];
+//        if( !$batch ) {
+//            return $data=['code'=>2,'message'=>'请选择批次'];
+//        }
+        if(empty($score) && empty($type) ){
+            $score = session('score');
+            $year = session('year');
+            $type = session('type');
+            $batch = session('batch');
+        }else{
+            session('score',$score);
+            session('year',$year);
+            session('type',$type);
+            session('batch',$batch);
         }
         //获取数据
-        $year  =  date($year);
-        $result = model('TestHzbDataBatch')
-            ->getBatchData($score,$type,$the_show_year,$rank,$year,$batch);
+        $year = date($year);
+        $result = model('TestHzbDataBatch')->getBatchData($score,$type,$the_show_year,$rank,$year,$batch);
+
         if(empty($result))
         {
             return $data=['code'=>2,'message'=>'请重新输入分数，或选择批次'];
@@ -109,17 +130,30 @@ class Test extends Frontend
         if($result['code'] == 2) {
             return $data=['code'=>2,'message'=>'请重新输入分数，或选择批次'];
         }
-        /*
         $info = $result['info'];
         $checked_province = $_POST['checked_province'];
         $sta_profession = $_POST['sta_profession'];
         $sta_school = $_POST['sta_school'];
         $checked_school_type = $_POST['checked_school_type'];
-        $school_nature = $result['school_nature'][0][0];
+        $the_show_year = $_POST['the_show_year'];
+        $school_nature = $result['school_nature'];
         foreach ($info as $key => $value) {
             $school_num[] = $value['school_num'];
         }
-        $show_info = $info;
+        $batch = model('TestHzbDataTheShowYear')
+            ->TheShowYear( $score, $year, $type, $batch, $the_show_year);
+        if( $the_show_year ) {
+            foreach ($info as $ok => $ov) {
+                $info[$ok]['show_year'] = [];
+            }
+            $show_info = model('TestHzbDataTheShowYear')
+                ->GetYearInfo($school_num
+                    ,$type,$batch,$info,$year,$the_show_year);
+        }else {
+            $show_info = model('TestHzbDataTheShowYear')
+                ->GetYearInfo($school_num
+                    ,$type,$batch,$info,$year,$the_show_year);
+        }
         //专业名称搜索
         if (!empty($sta_profession)) {
             $show_info = model('TestHzbDataSelectBatch')
@@ -160,39 +194,69 @@ class Test extends Frontend
             }else{
                 return $province_show_info;
             }
+
+            $province = $this->get_province($province_show_info);
+            foreach ($province_show_info as $key => $value) {
+                foreach ($value as $k => $v) {
+                    $school_name[] = [
+                        'school_name'=>$v['school_name'],
+                        'school_num'=>$v['school_num'],
+                    ];
+                    $show_school_num[] = $v['school_num'];
+                    $new_school_type[]=$v['school_type'];
+                }
+            }
+            $school_name = array_column($school_name,null,'school_num');
+            $school_name = array_values($school_name);
         } else {
+            foreach ($show_info as $key => $value) {
+                $school_name[] = [
+                    'school_name'=>$value['school_name'],
+                    'school_num'=>$value['school_num'],
+                ];
+                $new_school_type[]=$value['school_type'];
+                $show_school_num[] = $value['school_num'];
+            }
+            $school_name = array_column($school_name,null,'school_num');
+            $school_name = array_values($school_name);
             $M_data = $this->groupByInitials($show_info, 'school_province');
             $province_show_info = $this->province($M_data);
+            $province = $this->get_province($province_show_info);
         }
+        if(empty($province_show_info)) {
+            return  $show_info=['code'=>2,'message'=>'请重新输入信息'];
+        }
+        $new_school_type=array_unique($new_school_type);
+        foreach ( $new_school_type as $k => $v) {
+
+            if($v=='公办'){
+                $school_type[]=['school_type'=>$v,'school_type_num'=>1];
+            }
+            if($v=='民办'){
+                $school_type[]=['school_type'=>$v,'school_type_num'=>2];
+            }
+            if($v=='中外合作办学'){
+                $school_type[]=['school_type'=>$v,'school_type_num'=>3];
+            }
+            if($v=='内地与港澳台地区合作办学'){
+                $school_type[]=['school_type'=>$v,'school_type_num'=>4];
+            }
+        }
+        $show_school_num=array_unique($show_school_num);
         if(empty($province_show_info))
         {
             return $data=['code'=>2,'message'=>'请重新选择'];
         }
-        //公民办
-        foreach ( $result['school_type'] as $k => $v) {
-            if($v=='公办'){
-                $school_type[]=['school_type_name'=>$v,'school_type_num'=>1];
-            }
-            if($v=='民办'){
-                $school_type[]=['school_type_name'=>$v,'school_type_num'=>2];
-            }
-            if($v=='中外合作办学'){
-                $school_type[]=['school_type_name'=>$v,'school_type_num'=>3];
-            }
-            if($v=='内地与港澳台地区合作办学'){
-                $school_type[]=['school_type_name'=>$v,'school_type_num'=>4];
-            }
-        }
-        $profession_name = $this->get_profession_name($result['school_nature'][0],$result['school_num']);
-        */
-        $info = $result['info'];
+//        var_dump($school_type);die;
         $data = ['code'=>1,
-            'show_info'=>$info,
-            'info'=>$info,
-            'province'=>$result['school_province'],
-            'school_name'=>$result['school_name'],
-//            'school_type'=>$school_type,
-//            'profession_name'=>$profession_name,
+            'show_info'=>$province_show_info,
+//            'info'=>$result['info'],
+            'info'=>$show_info,
+            'province'=>$province,
+            'school_nature'=>$result['school_nature'],
+            'school_num'=>$show_school_num,
+            'school_name'=>$school_name,
+            'school_type'=>$school_type,
         ];
         return $data;
     }
@@ -215,8 +279,8 @@ class Test extends Frontend
         $checked_school_type = $_POST['checked_school_type'];
         $the_show_year = $_POST['the_show_year'];
         $batch = $_POST['batch'];
-        $type  = $_POST['type'];
-        $year  = $_POST['year'];
+        $type = $_POST['type'];
+        $year = $_POST['year'];
         $score = $_POST['score'];
         foreach ($info as $key => $value) {
             $school_num[] = $value['school_num'];
@@ -227,13 +291,16 @@ class Test extends Frontend
             foreach ($info as $ok => $ov) {
                 $info[$ok]['show_year'] = [];
             }
-            $info = model('TestHzbDataTheShowYear')
+            $show_info = model('TestHzbDataTheShowYear')
                 ->GetYearInfo($school_num
-                ,$type,$batch,$info,$year,$the_show_year);
-            $show_info = $info ;
+                    ,$type,$batch,$info,$year,$the_show_year);
+        }else {
+            $show_info = model('TestHzbDataTheShowYear')
+                ->GetYearInfo($school_num
+                    ,$type,$batch,$info,$year,$the_show_year);
         }
         //专业名称搜索
-        if ( !empty ( $sta_profession ) ) {
+        if (!empty($sta_profession)) {
             $show_info = model('TestHzbDataSelectBatch')
                 ->check_sta_profession($show_info,$sta_profession,$school_nature);
             if($show_info['code']==1) {
@@ -274,7 +341,29 @@ class Test extends Frontend
             }
 
             $province = $this->get_province($province_show_info);
+            foreach ($province_show_info as $key => $value) {
+                foreach ($value as $k => $v) {
+                    $school_name[] = [
+                        'school_name'=>$v['school_name'],
+                        'school_num'=>$v['school_num'],
+                    ];
+                    $show_school_num[] = $v['school_num'];
+                    $school_type[]=$v['school_type'];
+                }
+            }
+            $school_name = array_column($school_name,null,'school_num');
+            $school_name = array_values($school_name);
         } else {
+            foreach ($show_info as $key => $value) {
+                $school_name[] = [
+                    'school_name'=>$value['school_name'],
+                    'school_num'=>$value['school_num'],
+                ];
+                $school_type[]=$value['school_type'];
+                $show_school_num[] = $value['school_num'];
+            }
+            $school_name = array_column($school_name,null,'school_num');
+            $school_name = array_values($school_name);
             $M_data = $this->groupByInitials($show_info, 'school_province');
             $province_show_info = $this->province($M_data);
             $province = $this->get_province($province_show_info);
@@ -282,32 +371,50 @@ class Test extends Frontend
         if(empty($province_show_info)) {
             return  $show_info=['code'=>2,'message'=>'请重新输入信息'];
         }
-        $data = [
-            'code' => 1,
-            'show_info' => $province_show_info,
-            'info' => $info,
+        $school_type=array_unique($school_type);
+        $show_school_num=array_unique($show_school_num);
+        if( $sta_school ) {
+            $name = $sta_school['school_name'];
+            $res = strpos($name,"（");
+            if( $res ) {
+                $data = ['code' => 3,
+                    'show_info' => $province_show_info,
+                    'school_num' => $show_school_num,
+                    'school_name' => $school_name,
+                    'school_type' => $school_type,
+                    'info' => $info,
+                    'province' => $province,
+                ];
+            }
+        } else  {
+            $data = ['code'=>1,
+                'show_info'=>$province_show_info,
+                'school_num'=>$show_school_num,
+                'school_name'=>$school_name,
+                'school_type'=>$school_type,
+                'info'=>$info,
+                'province'=>$province
             ];
+        }
         return $data;
     }
     /**
      * 获取profession_name数据
      */
-    public function get_profession_name($school_nature = null, $school_num = null ){
-        if( !$school_nature && !$school_num) {
-            $school_nature=$_POST['school_nature'];
-            $school_num=$_POST['school_num'];
-            $school_num=array_unique($school_num);
-            $word=$_POST['word'];
-        }else {
-            $word ='';
-        }
+    public function get_profession_name()
+    {
+        $school_nature=$_POST['school_nature'];
+        $school_num=$_POST['school_num'];
+        $school_num=array_unique($school_num);
+        $word=$_POST['word'];
         $result = model('TestHzbDataCategory')->getProfessionData($school_nature,$school_num,$word);
         return $result;
     }
     /**
      * 获取school_name数据
      */
-    public function get_school_name(){
+    public function get_school_name()
+    {
 
         $school_num=$_POST['school_num'];
         $school_num=array_unique($school_num);

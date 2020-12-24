@@ -7,7 +7,7 @@ use think\Config;
 use think\Exception;
 use think\Db;
 
-class AgentHzbDataCategory extends Model
+class CheckHzbDataCategory extends Model
 {
     /**
      * 获取ProfessionName数据

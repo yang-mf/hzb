@@ -10,28 +10,25 @@ use think\Db;
 class AgentHzbDataBatch extends Model
 {
     /**
-     * 获取导航
-     *
-     * @param string $pid 父级ID
-     * @param string $type 导航类型(查询的类型)
-     * @return  array
-     */
-    /*
-     *
+     * 页面展示
      * @param string $score 分数
-     * @param string $year 年
-     * @param string $type 文理科
-     * @param null $batch 批次
-     * @param string $status 冲刺保守保底
-     *$score,$type,$year,$batch
+     * @param string $type  文理科
+     * @param null $year    年
+     * @param null $batch   批次
+     * @param null $status  冲刺保守保底
+     * @return array|bool|\PDOStatement|string|\think\Collection
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
      */
-    public function getBatchData($score,$type,$year=null,$batch=null ,$status=null)
+    public function getBatchData($score,$type,$year=null,$batch=null,$status=null)
     {
+
         $result =  $this->test($score,$year,$type,$batch,$status);
         return $result;
     }
     /**
-     * 查询所能上的大学信息
+     * 测试
      *
      * @param string $score 分数
      * @param string $year 年
@@ -93,8 +90,10 @@ class AgentHzbDataBatch extends Model
         }
         //位次之差
         $rank = $this_year_now - $this_year_Previous;
+        //每年要乘以的倍数，数据库获取
+        $times = model('TestHzbDataChangeTimes')->get_times();
         //得出加分项
-        $w=floor($rank/100);
+        $w=floor(($rank/100) * $times);
         //今年应得分数有加分项
         $score_max =floor($last_year_score + $w) ;
         //今年应得分数无加分项
@@ -106,9 +105,13 @@ class AgentHzbDataBatch extends Model
         if(empty($batch)){
             //计算学校批次
             $batch = $this->Batch($last_year,$type,$score_max,$score);
+            if( $batch['code']==2 ) {
+                return $data = ['code'=>2];
+            }
         }else{
             $batch = ['score_max'=>$batch,'score'=>$batch];
         }
+
         //演示时输入状态  冲刺保守保底 判断，直接返回值
         if(!empty($status)){
             $result = $this->CheckType($status,$score_max,$score,$table,$type,$batch,$join_table_name,$last_year);
@@ -130,16 +133,16 @@ class AgentHzbDataBatch extends Model
         if(empty($object)){
             return $data=[];
         }
+        //school_num
         foreach ($object as $key => $value) {
             $school_num[] = $value['school_num'];
         }
-        //根据school_num获取学校基本信息
+//        //根据school_num获取学校基本信息
         $where_school_num = array();
         $where_school_num ['school_num'] = array('in',$school_num);
         $school_data = Db::name('hzb_data_all_school_info')
             ->where($where_school_num)
             ->select();
-
         //上颜色
         foreach ($object as $k => &$v){
             $fraction_max = $v['fraction_max'];
@@ -191,11 +194,67 @@ class AgentHzbDataBatch extends Model
                 }
             }
         }
+        //去除没有省份的值（相当于去除学校详细信息中该学校没有学院代码，也就是不在河南招生）
+        foreach ($new_info as $key => $value) {
+            if(!isset($value['school_province']))
+            {
+                unset($new_info[$key]);
+            }
+        }
+        $new_info = array_values($new_info);
+        if($batch['score']==$batch['score_max']){
+            $school_nature[]=$batch['score_max'];
+        }else if($batch['score']<$batch['score_max'] && $batch['score']==4)
+        {
+            $school_nature[]=$batch['score_max'];
+            $school_nature[]=$batch['score'];
+        }
         $new_info=$this->GetYearInfo($school_num,$type,$batch,$new_info,$this_year);
-        $data = ['info'=>$new_info];
+        $school_type=$this->GetTypeInfo($new_info);
+        foreach ($new_info as $key => $value) {
+            $school_name[] = [
+                'school_name'=>$value['school_name'],
+                'school_num'=>$value['school_num'],
+            ];
+        }
+        $school_name = array_column($school_name,null,'school_num');
+        $school_name = array_values($school_name);
+        $data = [
+            'code'=>1,
+            'info'=>$new_info,
+            'school_nature'=>$school_nature,
+            'school_name'=>$school_name,
+            'school_type'=>$school_type,
+        ];
         return $data;
     }
-
+    /**
+     * 获取type的值
+     * @param $new_info         //传值，获取其中值
+     * @return array            //返回值，数组形式，获取type的值
+     */
+    public function GetTypeInfo($new_info)
+    {
+        $school_type=[];
+        foreach ($new_info as $k => $v)
+        {
+            $school_type[]=$v['school_type'];
+        }
+        $school_type=array_unique($school_type);
+        return $school_type;
+    }
+    /**
+     * 给信息增加历年信息
+     * @param $school_num
+     * @param $type
+     * @param $batch
+     * @param $new_info
+     * @param $this_year
+     * @return mixed
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     */
     public function GetYearInfo($school_num,$type,$batch,$new_info,$this_year)
     {
         $where_school_num = array();
@@ -205,64 +264,61 @@ class AgentHzbDataBatch extends Model
             ->where('type','=',$type)
             ->where('batch','=',$batch['score_max'])
             ->select();
-        $show_year = $this_year - 2016;
-        $show__year=[];
-        if($show_year<=1)
-        {
-            $show__year=$this_year-1;
-        }else if($show_year<3 && $show_year>1)
-        {
-            $show__year[]=$this_year-1;
-            $show__year[]=$this_year-2;
-        }else if($show_year>=3)
-        {
-            $show__year[]=$this_year-1;
-            $show__year[]=$this_year-2;
-            $show__year[]=$this_year-3;
-        }
+        $show_year = $this_year - 1;
         foreach ($new_info as $ok => $ov)
         {
             foreach ($year_info as $sk => $sv)
             {
-                if(is_array($show__year)){
-                    foreach ($show__year as $kk => $vv)
+                for( $i = $show_year ; $i >= 2016 ; $i-- ) {
+                    $this_new_info = [];
+                    if( $sv['the_year'] == $i
+                        && $ov['school_num'] == $sv['school_num']
+                        && $ov['school_name'] == $sv['school_name'] )
                     {
-                        if($sv['the_year'] == $vv && $ov['school_num'] == $sv['school_num'] )
-                        {
-                            $new_info[$ok]['show_year'][$vv]['the_year'] = $sv['the_year'];
-                            $new_info[$ok]['show_year'][$vv]['plan'] = $sv['plan'];
-                            $new_info[$ok]['show_year'][$vv]['admit'] = $sv['admit'];
-                            $new_info[$ok]['show_year'][$vv]['fraction_max'] = $sv['fraction_max'];
-                            $new_info[$ok]['show_year'][$vv]['fraction_min'] = $sv['fraction_min'];
-                            $new_info[$ok]['show_year'][$vv]['msd'] = $sv['msd'];
-                            $new_info[$ok]['show_year'][$vv]['ler'] = $sv['ler'];
-                            $new_info[$ok]['show_year'][$vv]['tas'] = $sv['tas'];
-                            $new_info[$ok]['show_year'][$vv]['dbas'] = $sv['dbas'];
-                        }
-                    }
-                }else{
-                    if($sv['the_year'] == $show__year && $ov['school_num'] == $sv['school_num'])
-                    {
-                        $new_info[$ok]['show_year'][$show__year]['the_year'] = $sv['the_year'];
-
-                        $new_info[$ok]['show_year'][$show__year]['the_year'] = $sv['the_year'];
-                        $new_info[$ok]['show_year'][$show__year]['plan'] = $sv['plan'];
-                        $new_info[$ok]['show_year'][$show__year]['admit'] = $sv['admit'];
-                        $new_info[$ok]['show_year'][$show__year]['fraction_max'] = $sv['fraction_max'];
-                        $new_info[$ok]['show_year'][$show__year]['fraction_min'] = $sv['fraction_min'];
-                        $new_info[$ok]['show_year'][$show__year]['msd'] = $sv['msd'];
-                        $new_info[$ok]['show_year'][$show__year]['ler'] = $sv['ler'];
-                        $new_info[$ok]['show_year'][$show__year]['tas'] = $sv['tas'];
-                        $new_info[$ok]['show_year'][$show__year]['dbas'] = $sv['dbas'];
+                        $this_new_info['the_year'] = $sv['the_year'];
+                        $this_new_info['plan'] = $sv['plan'];
+                        $this_new_info['admit'] = $sv['admit'];
+                        $this_new_info['fraction_max'] = $sv['fraction_max'];
+                        $this_new_info['fraction_min'] = $sv['fraction_min'];
+                        $this_new_info['msd'] = $sv['msd'];
+                        $this_new_info['ler'] = $sv['ler'];
+                        $this_new_info['tas'] = $sv['tas'];
+                        $this_new_info['dbas'] = $sv['dbas'];
+                        $new_info[$ok]['show_year'][] = $this_new_info;
                     }
                 }
             }
         }
-
-//        var_dump($new_info);die;
+        foreach ( $new_info as $k => $v ) {
+            $new_info[$k]['show_year'] =
+                array_slice($new_info[$k]['show_year'],-3,3);
+        }
         return $new_info;
     }
-    /*
+    public function for_year($show_year,$ok,$ov,$sk,$sv) {
+        $num = 0;
+        for( $i = $show_year ; $i >= 2016 ; $i-- ) {
+            if( $sv['the_year'] == $i && $ov['school_num'] == $sv['school_num'] )
+            {
+                if($num>=3) {
+                    break;
+                }
+                $new_info[$ok]['show_year'][$i]['the_year'] = $sv['the_year'];
+                $new_info[$ok]['show_year'][$i]['plan'] = $sv['plan'];
+                $new_info[$ok]['show_year'][$i]['admit'] = $sv['admit'];
+                $new_info[$ok]['show_year'][$i]['fraction_max'] = $sv['fraction_max'];
+                $new_info[$ok]['show_year'][$i]['fraction_min'] = $sv['fraction_min'];
+                $new_info[$ok]['show_year'][$i]['msd'] = $sv['msd'];
+                $new_info[$ok]['show_year'][$i]['ler'] = $sv['ler'];
+                $new_info[$ok]['show_year'][$i]['tas'] = $sv['tas'];
+                $new_info[$ok]['show_year'][$i]['dbas'] = $sv['dbas'];
+            }else {
+                $this->for_year($show_year,$ok,$ov,$sk,$sv);
+            }
+
+        }
+    }
+    /**
      * 为年份匹配数据库字段
      *
      * @param string $this_year 所输入的成绩的年份
@@ -285,7 +341,8 @@ class AgentHzbDataBatch extends Model
         $year_name = ['this_year'=>$this_year_name,'last_year'=>$last_year_name];
         return $year_name;
     }
-    /*
+    /**
+     * 查询得分所能达到的学校批次
      * @param string $last_year 上一年
      * @param string $type 文理科
      * @param string $score_max 最高得分（有加分）
@@ -295,7 +352,6 @@ class AgentHzbDataBatch extends Model
      * @throws \think\db\exception\ModelNotFoundException
      * @throws \think\exception\DbException
      */
-    //查询得分所能达到的学校批次
     public function Batch($last_year,$type,$score_max,$score)
     {
         $batch_data = Db::name('hzb_batch')
@@ -312,6 +368,8 @@ class AgentHzbDataBatch extends Model
             $batch_max='3';
         }elseif ($score_max>=$batch_data['spe_batch']){
             $batch_max='4';
+        }else {
+            return $batch=['code'=>2];
         }
         if($score>=$batch_data['first_batch']){
             $batch='1';
@@ -323,13 +381,14 @@ class AgentHzbDataBatch extends Model
             $batch='3';
         }elseif ($score>=$batch_data['spe_batch']){
             $batch='4';
+        }else {
+            return $batch=['code'=>2];
         }
-        $batch = ['score_max'=>$batch_max,'score'=>$batch];
+        $batch = ['code'=>1,'score_max'=>$batch_max,'score'=>$batch];
         return $batch;
     }
-    //冲刺
-    /*
-     * //冲刺
+    /**
+     * 冲刺
      * @param string $score_max 最高得分（有加分）
      * @param string $score 得分（无加分）
      * @param string $type 文理科
@@ -353,9 +412,8 @@ class AgentHzbDataBatch extends Model
         $data = ['info'=>$info];
         return $data;
     }
-    //保守
-    /*
-     * //保守
+    /**
+     * 保守
      * @param string $score_max 最高得分（有加分）
      * @param string $score 得分（无加分）
      * @param string $type 文理科
@@ -379,9 +437,8 @@ class AgentHzbDataBatch extends Model
         $data = ['info'=>$info];
         return $data;
     }
-    //保底
-    /*
-     * //保底
+    /**
+     * 保底
      * @param string $score_max 最高得分（有加分）
      * @param string $score 得分（无加分）
      * @param string $type 文理科
@@ -405,9 +462,8 @@ class AgentHzbDataBatch extends Model
         $data = ['info'=>$info];
         return $data;
     }
-    //判断冲刺保守保底
-    /*
-     * //判断冲刺保守保底
+    /**
+     * 判断冲刺保守保底
      * @param string $score_max 最高得分（有加分）
      * @param string $score 得分（无加分）
      * @param string $table 表名字字段
@@ -427,7 +483,11 @@ class AgentHzbDataBatch extends Model
             return $green;
         }
     }
-
+    /**
+     * 获取省份
+     * @param $info
+     * @return array
+     */
     public function getBatchProvince($info)
     {
         $school_province=[];
@@ -442,9 +502,7 @@ class AgentHzbDataBatch extends Model
                     $school_province[]=$v['school_province'];
                 }
             }
-
         }
         return $school_province;
     }
-
 }

@@ -57,9 +57,6 @@ class TestHzbDataGetIndexAll extends Model
         }else if( $last_year_score >= $batch_info[0]['spe_batch']
             && $last_year_score < $batch_info[0]['second_batch'] ) {
             $batch[]=['batch_name'=>'专科','batch_value'=>4];
-        } else if(  $last_year_score < $batch_info['spe_batch'] ) {
-            $batch[]=['batch_code'=>'9','message'=>'抱歉，您输入的分数暂无对于批次'];
-            return $batch;
         }
         $batch=['batch_code'=>'1','batch_data'=>$batch];
         return $batch;
@@ -98,9 +95,14 @@ class TestHzbDataGetIndexAll extends Model
     }
     //获取全部专院校名称，第一次前台 展示
     public function get_school_name() {
-        $school_name = Db::table('yzx_hzb_data_all_school_info')
-            ->field('school_name,school_num')
+//        $school_name = Db::table('yzx_hzb_data_all_school_info')
+//            ->field('school_name,school_num')
+//            ->select();
+        $school_name = Db::table('yzx_hzb_data_batch')
+            ->field('school_name, school_num, batch')
             ->select();
+//        var_dump($school_name);die;
+        $school_name = array_unique($school_name, SORT_REGULAR);
         return $school_name;
     }
     /**

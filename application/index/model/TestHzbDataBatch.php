@@ -110,7 +110,6 @@ class TestHzbDataBatch extends Model
 //        }else{
             $batch = ['score'=>$batch];
 //        }
-
         //根据分数查询数据
         $where_first  = 'fraction_max >= ' .$score_max.' and fraction_min <= ' .$score_max;
         $where_second = 'fraction_max >= ' .$score.' and fraction_min <= ' .$score;
@@ -124,7 +123,8 @@ class TestHzbDataBatch extends Model
             ->whereIn('batch',$batch['score'])
             ->where('ler','>=',$rank)
             ->select();
-
+        //再做多次前几年的院校的查询，然后比对院校名称查看是否有今年招生，去年未招生，但是再之前有过招生的院校
+        //如果有那么根据当前分分数换算至招生当年查看该学校是否你能上，如果可以，加入数据集，不可以则舍弃，执行下一步
         if(empty($object)){
             return $data=[];
         }
@@ -150,7 +150,7 @@ class TestHzbDataBatch extends Model
                 $object[$k]['color'] = "blue";
                 $school_date_info[] = $v;
             }
-            if ($fraction_min <= $score ){
+            if ($fraction_max <= $score ){
                 $object[$k]['color'] = "green";
                 $school_date_info[] = $v;
             }
@@ -196,13 +196,13 @@ class TestHzbDataBatch extends Model
                 unset($new_info[$key]);
             }
         }
-//        $new_info = array_values($new_info);
         $school_nature[]=$batch['score'];
         $new_info=$this->GetYearInfo($school_num,$type,$batch,$new_info,$this_year,$the_show_year);
         foreach ($new_info as $key => $value) {
             $school_name[] = [
                 'school_name'=>$value['school_name'],
                 'school_num'=>$value['school_num'],
+                'batch'=>$value['batch'],
             ];
             $school_type[]=$value['school_type'];
             $province[]=$value['school_province'];
@@ -210,14 +210,13 @@ class TestHzbDataBatch extends Model
         $school_name = array_column($school_name,null,'school_num');
         $school_name = array_values($school_name);
         $school_type = array_unique($school_type);
-        $province = array_unique($province);
+        $province    = array_unique($province);
         foreach ($province as $k => $v ) {
             $province_name[]['school_province']=$v;
         }
         $und=[];$spe=[];
         foreach ( $new_info as $k => $v ) {
             $show_new_info[$v['batch']][]= $v;
-
             if($v['batch']==4) {
                 $spe[]=$v['school_num'];        //本科
             }else {
@@ -235,8 +234,8 @@ class TestHzbDataBatch extends Model
         ];
         $data = [
             'code'=>1,
-            'info'=>$show_new_info,
-            'school_nature'=>$school_nature,
+            'forNextSelectInfo' =>$new_info,
+            'show_info'=>$show_new_info,
             'school_province'=>$province_name,
             'school_name'=>$school_name,
             'school_num'=>$school_num,
@@ -275,35 +274,43 @@ class TestHzbDataBatch extends Model
             foreach ($year_info as $sk => $sv)
             {
                 for( $i = $show_year ; $i >= 2016 ; $i-- ) {
+//                    var_dump($sv);die;
                     $this_new_info = [];
-                    if( $sv['the_year'] == $i
-                        && $ov['school_num'] == $sv['school_num']
-                        && $ov['school_name'] == $sv['school_name'] )
+                    if( $sv['the_year']         == $i
+                        && $ov['school_num']    == $sv['school_num']
+                        && $ov['school_name']   == $sv['school_name']
+                        && $ov['batch']         == $sv['batch'])
                     {
-                        $this_new_info['the_year'] = $sv['the_year'];
-                        $this_new_info['plan'] = $sv['plan'];
-                        $this_new_info['admit'] = $sv['admit'];
-                        $this_new_info['fraction_max'] = $sv['fraction_max'];
-                        $this_new_info['fraction_min'] = $sv['fraction_min'];
-                        $this_new_info['msd'] = $sv['msd'];
-                        $this_new_info['ler'] = $sv['ler'];
-                        $this_new_info['tas'] = $sv['tas'];
-                        $this_new_info['dbas'] = $sv['dbas'];
-                        $new_info[$ok]['show_year'][] = $this_new_info;
+                        $this_new_info['the_year']      = $sv['the_year'];
+                        $this_new_info['plan']          = $sv['plan'];
+                        $this_new_info['admit']         = $sv['admit'];
+                        $this_new_info['fraction_max']  = $sv['fraction_max'];
+                        $this_new_info['fraction_min']  = $sv['fraction_min'];
+                        $this_new_info['msd']           = $sv['msd'];
+                        $this_new_info['ler']           = $sv['ler'];
+                        $this_new_info['tas']           = $sv['tas'];
+                        $this_new_info['dbas']          = $sv['dbas'];
+                        $new_info[$ok]['show_year'][]   = $this_new_info;
                     }
                 }
             }
         }
-        $count = count($new_info[0]['show_year']);
-        if( !$the_show_year ) {
+        $style = '';
+        foreach ($new_info as $k => $v ) {
+            $count = count($new_info[$k]['show_year']);
             if( $count > 3 ) {
+                $style = 1;
+            }
+        }
+        if( !$the_show_year ) {
+            if( $style == 1 ) {
                 foreach ( $new_info as $k => $v ) {
                     $new_info[$k]['show_year'] =
                         array_slice($new_info[$k]['show_year'],-3,3);
                 }
             }
         }else {
-            if( $count > 3 ) {
+            if( $style == 1 ) {
                 foreach ($new_info as $k => $v) {
                     $new_info[$k]['show_year'] =
                         array_slice($new_info[$k]['show_year'], -4, 4);

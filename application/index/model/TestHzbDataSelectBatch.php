@@ -53,11 +53,11 @@ class TestHzbDataSelectBatch extends Model
                             }
                         }
                     }
-                }else{
+                }
+                if( empty($show_new_info) ){
                     return  $show_new_info=['code'=>2,'message'=>'抱歉，请您再选择其他专业'];
                 }
             }
-
         return  $show_new_info=['code'=>1,'show_new_info'=>$show_new_info];
 
     }
@@ -79,9 +79,9 @@ class TestHzbDataSelectBatch extends Model
                             }
                         }
                     }
-                }else if( $showkey = 4 && $schoolkey == 'spe' ) {
+                }else if( $showkey == 4 && $schoolkey == 'spe' ) {
                     foreach ( $showvalue as $key => $value ) {
-                            foreach ( $schoolvalue as $item ) {                 //循环所以获取的学校
+                        foreach ( $schoolvalue as $item ) {                 //循环所以获取的学校
                         if( $value['school_num'] == $item['school_num']
                             && $value['school_name'] == $item['school_name']) {
                             $show_new_info[$showkey][]=$value;
@@ -138,4 +138,5 @@ class TestHzbDataSelectBatch extends Model
         }
         return  $show_new_info=['code'=>1,'show_new_info'=>$show_new_info];
     }
+
 }

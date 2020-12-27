@@ -14,12 +14,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '049a4d0de7ab1fdb756577bf1927aa2f879424cf',
     'name' => 'karsonzhang/fastadmin',
   ),
   'versions' => 
@@ -71,12 +71,12 @@ private static $installed = array (
     ),
     'karsonzhang/fastadmin' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '049a4d0de7ab1fdb756577bf1927aa2f879424cf',
     ),
     'karsonzhang/fastadmin-addons' => 
     array (
@@ -176,6 +176,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'acba50393dd03da69a50226c139722af8b153b11',
+    ),
+    'phpoffice/phpexcel' => 
+    array (
+      'pretty_version' => '1.8.2',
+      'version' => '1.8.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '1441011fb7ecdd8cc689878f54f8b58a6805f870',
     ),
     'phpoffice/phpspreadsheet' => 
     array (

@@ -26,11 +26,12 @@ class TestHzbDataCategory extends Model
             return 2;
         }
     }
-    //将专业分为本科与专科的
+    //将学校分为本科与专科的
     public function checkSchool($school) {
         $res = Db::table('yzx_hzb_data_all_school_info')
-            ->where('school_name',$school['school_name'])
-            ->where('school_num',$school['school_num'])
+            ->where('school_name',$school[1])
+            ->where('school_num',$school[0])
+            ->where('batch',$school[2])
             ->field('school_nature')
             ->find();
         if( $res['school_nature'] == '本科' ) {

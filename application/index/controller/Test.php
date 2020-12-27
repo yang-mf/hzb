@@ -4,393 +4,388 @@ namespace app\index\controller;
 
 use app\index\model\TestHzbDataSelectBatch;
 use think\Controller;
+use think\Db;
 use think\Request;
 use app\common\controller\Frontend;
 use app\common\model\Config;
+use PHPExcel_IOFactory;
+
 
 class Test extends Frontend
 {
     /**
-     * 测试模块
-     *
-     * @return \think\Response
+     * 无需鉴权的方法,但需要登录
+     * @var array
      */
-    protected $noNeedLogin = [];
     protected $noNeedRight = '*';
 
     public function _initialize()
     {
         parent::_initialize();
     }
+
     //测试方法
-    public function data()
-    {
-        $result = model('TestHzbDataChangeTimes')->get_times();
-        var_dump($result);
-    }
-    //首页展示
     public function test()
     {
-        $batch[]=['batch_name'=>'一批','batch_value'=>1];
-        $batch[]=['batch_name'=>'二批','batch_value'=>2];
-        $batch[]=['batch_name'=>'专科','batch_value'=>4];
-        $profession = model('TestHzbDataGetIndexAll')->get_profession();
-        $province = model('TestHzbDataGetIndexAll')->get_province();
-        $school_type = model('TestHzbDataGetIndexAll')->get_school_type();
-        $school_name = model('TestHzbDataGetIndexAll')->get_school_name();
-        $this->view->assign('all_batch_name_info',json_encode($batch,JSON_UNESCAPED_UNICODE));
-        $this->view->assign('all_profession_name_info',json_encode($profession,JSON_UNESCAPED_UNICODE));
-        $this->view->assign('all_province_name_info',json_encode($province,JSON_UNESCAPED_UNICODE));
-        $this->view->assign('all_school_type_name_info',json_encode($school_type,JSON_UNESCAPED_UNICODE));
-        $this->view->assign('all_school_name_info',json_encode($school_name,JSON_UNESCAPED_UNICODE));
-        return $this->view->fetch('test/test');
-    }
-    //首页展示
-    public function testcopy()
-    {
-        return $this->view->fetch('test/testcopy');
-    }
-    //判断批次
-    public function check_batch()
-    {
-        $score = $_POST['score'];
-        $type  = $_POST['type'];
-        $year  = $_POST['year'];
-        if( !$score || !$type || !$year ) {
-            $batch=['batch_code'=>'8','message'=>'抱歉，请您先输入分数或文理科或年份'];
-            return $batch;
+        $user_id = $this->auth->id;
+        $res = Db::table('yzx_hzb_user_checked_info')
+            ->where('user_id', $user_id)
+            ->max('check_num');
+        $res = Db::table('yzx_hzb_user_checked_info')
+            ->where('user_id', $user_id)
+            ->where('check_num',$res)
+            ->select();
+        foreach ( $res as $k => $v ) {
+            $year   = $v['year'];
+            $score  = $v['score'];
+            $batch  = $v['batch'];
+            $type   = $v['type'];
+            $rank   = $v['rank'];
+            $the_show_year          = $v['the_show_year'];
+            $state_profession       = $v['state_profession'];
+            $state_school           = $v['state_school'];
+            $checked_school_type    = $v['checked_school_type'];
+            $checked_province       = $v['checked_province'];
         }
-        if( $score && $type && $year ) {
-            $batch = model('TestHzbDataGetIndexAll')->get_batch($score, $type, $year);
-            return $batch;
+        $year   = date($year);
+        //查询数据库获取数据
+        $result = model('TestHzbDataBatch' )
+            ->getBatchData( $score, $type, $rank, $year, $batch, $the_show_year);
+        if( empty($result) ) {
+            return $data = ['code' => 2,'message' => '抱歉，请重新输入分数或选择批次'];
         }
-    }
-    /**
-     * 根据用户输入的条件获取用来展示的数据
-     * $score  分数
-     * $year   年份，
-     * $type   文理科
-     * $batch  批次
-     * @return array  $data 获取用来展示的数据
-     */
-    public function get_ajax_info()
-    {
-        $score =$_POST['score'];
-        $batch =$_POST['batch'];
-        $type =$_POST['type'];
-        $year =$_POST['year'];
-        $rank =$_POST['rank'];
-        $the_show_year =$_POST['the_show_year'];
-//        $count = count($batch);
-//        var_dump($batch);die;
-        if(!$score){
-            return $data=['code'=>2,'message'=>'请输入正确的分数'];
+        if( $result['code'] == 2) {
+            return $data = ['code' => 2,'message' => '抱歉，请重新输入分数，或选择批次'];
         }
-//        if(!$rank){
-//            return $data=['code'=>2,'message'=>'请输入位次'];
-//        }
-        if(!$type){
-            return $data=['code'=>2,'message'=>'请选择文理科'];
-        }
-        if( !$year ) {
-            return $data=['code'=>2,'message'=>'请选择年份'];
-        }
-        if( !$batch ) {
-            return $data=['code'=>2,'message'=>'请选择批次'];
-        }
-        //获取数据
-        $year  =  date($year);
-        $result = model('TestHzbDataBatch')
-            ->getBatchData($score,$type,$the_show_year,$rank,$year,$batch);
-        if(empty($result))
-        {
-            return $data=['code'=>2,'message'=>'请重新输入分数，或选择批次'];
-        }
-        if($result['code'] == 2) {
-            return $data=['code'=>2,'message'=>'请重新输入分数，或选择批次'];
-        }
-        /*
-        $info = $result['info'];
-        $checked_province = $_POST['checked_province'];
-        $sta_profession = $_POST['sta_profession'];
-        $sta_school = $_POST['sta_school'];
-        $checked_school_type = $_POST['checked_school_type'];
-        $school_nature = $result['school_nature'][0][0];
-        foreach ($info as $key => $value) {
-            $school_num[] = $value['school_num'];
-        }
-        $show_info = $info;
+        $show_info = $result['show_info'];
+
         //专业名称搜索
-        if (!empty($sta_profession)) {
+        if ( !empty( $state_profession ) ) {
+            $state_profession = explode(',',$state_profession);
+            foreach ( $state_profession as $k => $v ) {
+                $Professionnum = model('TestHzbDataCategory')
+                    ->checkProfession( $v );
+                if( $Professionnum == 1 ) {
+                    $ProfessionInfo['und'][] = $v;
+                }else if( $Professionnum == 2 ) {
+                    $ProfessionInfo['spe'][] = $v;
+                }
+            }
             $show_info = model('TestHzbDataSelectBatch')
-                ->check_sta_profession($show_info,$sta_profession,$school_nature);
-            if($show_info['code']==1) {
+                ->check_sta_profession( $show_info , $ProfessionInfo);
+            if( $show_info['code'] == 1 ) {
                 $show_info = $show_info['show_new_info'];
-            }else{
+            } else {
                 return $show_info;
             }
         }
         //学校名称搜索
-        if (!empty($sta_school)) {
-            $show_info = model('TestHzbDataSelectBatch')->check_sta_school($show_info,$sta_school);
-            if($show_info['code']==1) {
+        if ( !empty($state_school) ) {
+            $state_school = explode('+',$state_school);
+            foreach ( $state_school as $k => $v ) {
+                $state_school[$k] = explode(',',$v);
+            }
+            foreach ($state_school as $k => $v) {
+                foreach ($v as $kk => $vv) {
+                    if($kk == 0 ) {
+                        $a['school_num'] = $vv;
+                    }
+                    if($kk == 1 ) {
+                        $a['school_name'] = $vv;
+                    }
+                    if($kk == 2 ) {
+                        $a['type'] = $vv;
+                    }
+                    $state_school[$k]=$a;
+                }
+            }
+            foreach ( $state_school as $k => $v ) {
+                if( $v['type'] == 1 || $v['type'] == 2  ) {
+                    $SchoolInfo['und'][] = $v;
+                }else if( $v['type'] == 4  ) {
+                    $SchoolInfo['spe'][] = $v;
+                }
+            }
+            $show_info = model('TestHzbDataSelectBatch' )->check_sta_school( $show_info , $SchoolInfo );
+            if( $show_info['code'] == 1 ) {
                 $show_info = $show_info['show_new_info'];
             }else{
                 return $show_info;
             }
         }
         //办学类型搜索
-        if (!empty($checked_school_type)) {
+        if ( !empty($checked_school_type) ) {
             $show_info = model('TestHzbDataSelectBatch')
-                ->check_checked_province_name($show_info,$checked_school_type);
-            if($show_info['code']==1) {
+                ->check_checked_province_name( $show_info , $checked_school_type );
+            if( $show_info['code'] == 1 ) {
                 $show_info = $show_info['show_new_info'];
-            }else{
+            } else {
                 return $show_info;
             }
         }
         //学校省份搜索
-        if (!empty($checked_province)) {
-            $M_data = $this->groupByInitials($show_info, 'school_province');
-            $province_show_info = $this->province($M_data);
-            $province_show_info = model('TestHzbDataSelectBatch')
-                ->check_province($province_show_info,$checked_province);
-            if($province_show_info['code']==1) {
+        if ( !empty($checked_province) ) {
+            $M_data = $this->groupByInitials( $show_info , 'school_province' );
+
+            $province_show_info = $this->province( $M_data );
+            $province_show_info = model('TestHzbDataSelectBatch' )
+                ->check_province( $province_show_info , $checked_province );
+            if( $province_show_info['code'] == 1 ) {
                 $province_show_info = $province_show_info['show_new_info'];
-            }else{
+            } else {
                 return $province_show_info;
             }
         } else {
             $M_data = $this->groupByInitials($show_info, 'school_province');
             $province_show_info = $this->province($M_data);
         }
-        if(empty($province_show_info))
+        //分批次
+        foreach ( $province_show_info as $k => $v ) {
+            if( $k == 1 ) {
+                $batch_num[]=$k;
+                $batch_name = '一批次';
+            }else if( $k == 2 ) {
+                $batch_num[]=$k;
+                $batch_name = '二批次';
+            }else if( $k == 4 ) {
+                $batch_num[]=$k;
+                $batch_name = '专科批次';
+            }
+            $new_show_info[$batch_name] = $v;
+        }
+
+        if( empty($province_show_info) )
         {
             return $data=['code'=>2,'message'=>'请重新选择'];
         }
-        //公民办
-        foreach ( $result['school_type'] as $k => $v) {
-            if($v=='公办'){
-                $school_type[]=['school_type_name'=>$v,'school_type_num'=>1];
-            }
-            if($v=='民办'){
-                $school_type[]=['school_type_name'=>$v,'school_type_num'=>2];
-            }
-            if($v=='中外合作办学'){
-                $school_type[]=['school_type_name'=>$v,'school_type_num'=>3];
-            }
-            if($v=='内地与港澳台地区合作办学'){
-                $school_type[]=['school_type_name'=>$v,'school_type_num'=>4];
-            }
-        }
-        $profession_name = $this->get_profession_name($result['school_nature'][0],$result['school_num']);
-        */
-        $info = $result['info'];
-        $data = ['code'=>1,
-            'show_info'=>$info,
-            'info'=>$info,
-            'province'=>$result['school_province'],
-            'school_name'=>$result['school_name'],
-//            'school_type'=>$school_type,
-//            'profession_name'=>$profession_name,
-        ];
-        return $data;
+        $excel = new \PHPExcel();
+        $excel = $this->clientExcel($new_show_info, '', $year);
     }
-    /**
-     * 附加条件搜索
-     * $info            //$info传参为第一次分数和位次搜索之后得出，一直不变
-     * $show_info       //$show_info传参为搜索之后得出的数据
-     * $province        //$province传参为搜索之后得出的用于排列的省份数据
-     * @return array    $data 搜索条件之后，获取用来展示的数据
-     */
-    public function get_select_info(){
-        $info = $_POST['info'];
-        $info = json_decode($info);
-        $info = json_decode( json_encode( $info),true);
-        $show_info = $info;
-        $checked_province = $_POST['checked_province'];
-        $sta_profession = $_POST['sta_profession'];
-        $sta_school = $_POST['sta_school'];
-        $school_nature = $_POST['school_nature'];
-        $checked_school_type = $_POST['checked_school_type'];
-        $the_show_year = $_POST['the_show_year'];
-        $batch = $_POST['batch'];
-        $type  = $_POST['type'];
-        $year  = $_POST['year'];
-        $score = $_POST['score'];
-        foreach ($info as $key => $value) {
-            $school_num[] = $value['school_num'];
-        }
-        $batch = model('TestHzbDataTheShowYear')
-            ->TheShowYear( $score, $year, $type, $batch, $the_show_year);
-        if( $the_show_year ) {
-            foreach ($info as $ok => $ov) {
-                $info[$ok]['show_year'] = [];
-            }
-            $info = model('TestHzbDataTheShowYear')
-                ->GetYearInfo($school_num
-                ,$type,$batch,$info,$year,$the_show_year);
-            $show_info = $info ;
-        }
-        //专业名称搜索
-        if ( !empty ( $sta_profession ) ) {
-            $show_info = model('TestHzbDataSelectBatch')
-                ->check_sta_profession($show_info,$sta_profession,$school_nature);
-            if($show_info['code']==1) {
-                $show_info = $show_info['show_new_info'];
-            }else{
-                return $show_info;
-            }
-        }
-        //学校名称搜索
-        if (!empty($sta_school)) {
-            $show_info = model('TestHzbDataSelectBatch')->check_sta_school($show_info,$sta_school);
-            if($show_info['code']==1) {
-                $show_info = $show_info['show_new_info'];
-            }else{
-                return $show_info;
-            }
-        }
-        //办学类型搜索
-        if (!empty($checked_school_type)) {
-            $show_info = model('TestHzbDataSelectBatch')
-                ->check_checked_province_name($show_info,$checked_school_type);
-            if($show_info['code']==1) {
-                $show_info = $show_info['show_new_info'];
-            }else{
-                return $show_info;
-            }
-        }
-        //学校省份搜索
-        if (!empty($checked_province)) {
-            $M_data = $this->groupByInitials($show_info, 'school_province');
-            $province_show_info = $this->province($M_data);
-            $province_show_info = model('TestHzbDataSelectBatch')
-                ->check_province($province_show_info,$checked_province);
-            if($province_show_info['code']==1) {
-                $province_show_info = $province_show_info['show_new_info'];
-            }else{
-                return $province_show_info;
-            }
 
-            $province = $this->get_province($province_show_info);
-        } else {
-            $M_data = $this->groupByInitials($show_info, 'school_province');
-            $province_show_info = $this->province($M_data);
-            $province = $this->get_province($province_show_info);
-        }
-        if(empty($province_show_info)) {
-            return  $show_info=['code'=>2,'message'=>'请重新输入信息'];
-        }
-        $data = [
-            'code' => 1,
-            'show_info' => $province_show_info,
-            'info' => $info,
-            ];
-        return $data;
-    }
-    /**
-     * 获取profession_name数据
-     */
-    public function get_profession_name($school_nature = null, $school_num = null ){
-        if( !$school_nature && !$school_num) {
-            $school_nature=$_POST['school_nature'];
-            $school_num=$_POST['school_num'];
-            $school_num=array_unique($school_num);
-            $word=$_POST['word'];
-        }else {
-            $word ='';
-        }
-        $result = model('TestHzbDataCategory')->getProfessionData($school_nature,$school_num,$word);
-        return $result;
-    }
-    /**
-     * 获取school_name数据
-     */
-    public function get_school_name(){
+    public function clientExcel($data = [], $name = 'excel', $Checkedyear)
+    {
 
-        $school_num=$_POST['school_num'];
-        $school_num=array_unique($school_num);
-        $result = model('TestHzbDataCategory')->getSchoolNameData($school_num);
-        return $result;
-    }
-    /**
-     * 根据客户输入的关键字查询获取全部school_name数据
-     */
-    public function get_select_school_name()
-    {
-        $info = $_POST['info'];
-        $info = json_decode($info);
-        $info = json_decode( json_encode( $info),true);
-        $checked_province = $_POST['checked_province'];
-        $checked_school_type = $_POST['checked_school_type'];
-        $school_num=$_POST['school_num'];
-        $school_num=array_unique($school_num);
-        $score=$_POST['score'];
-        $batch=$_POST['batch'];
-        $type=$_POST['type'];
-        $year=$_POST['year'];
-        $word=$_POST['word'];
-        $result = model('TestHzbDataCategory')->getSchoolNameSelectData($word,
-            $school_num, $score, $batch, $type, $year, $info, $checked_province, $checked_school_type);
-        return $result;
-    }
-    /**
-     * 省份排序
-     */
-    public function province($info)
-    {
-        $new_info = [];
-        foreach ($info as $k => $v)
-        {
-            foreach ($v as $kk => $vv)
-            {
-                $new_info[$vv['school_province']][]=$vv;
-            }
-        }
-        return $new_info;
-    }
-    /**
-     * 获取省份名称，用于复选框展示
-     */
-    public function get_province($S_data)
-    {
-        $province = [];
-        foreach ($S_data as $k => $v)
-        {
-            $province[]['school_province']=$k;
-        }
-        return $province;
-    }
-    /**
-     * 二维数组根据首字母分组排序（来源于网络，谨慎修改）
-     * @param  array  $data      二维数组
-     * @param  string $targetKey 首字母的键名
-     * @return array             根据首字母关联的二维数组
-     */
-    public function groupByInitials(array $data, $targetKey = 'name')
-    {
-        $data = array_map(function ($item) use ($targetKey) {
-            return array_merge($item, [
-                'initials' => $this->getInitials($item[$targetKey]),
-            ]);
-        }, $data);
-        $data = $this->sortInitials($data);
-        return $data;
-    }
-    /**
-     * 按字母排序
-     * @param  array  $data
-     * @return array
-     */
-    public function sortInitials(array $data)
-    {
-        $sortData = [];
+        $excel = new \PHPExcel(); //引用phpexcel
+        iconv('UTF-8', 'gb2312//IGNORE', $name); //针对中文名转码
+        $excel->setActiveSheetIndex(0);
+        $excel->getActiveSheet()->setTitle($name); //设置表名
+        $excel->getActiveSheet()->getColumnDimension('A')->setWidth(20);
+        $excel->getActiveSheet()->getColumnDimension('B')->setWidth(40);
+        $excel->getActiveSheet()->getColumnDimension('C')->setWidth(50);
+        $excel->getActiveSheet()->getColumnDimension('D')->setWidth(20);
+        $excel->getActiveSheet()->getColumnDimension('E')->setWidth(20);
+        $excel->getActiveSheet()->getColumnDimension('F')->setWidth(30);
+        $excel->getActiveSheet()->getColumnDimension('I')->setWidth(30);
+        $excel->getActiveSheet()->getColumnDimension('J')->setWidth(30);
+        $excel->getActiveSheet()->getColumnDimension('M')->setWidth(30);
+        $excel->getActiveSheet()->getColumnDimension('N')->setWidth(30);
+        $excel->getActiveSheet()->getColumnDimension('Q')->setWidth(30);
+        $excel->getActiveSheet()->getColumnDimension('R')->setWidth(30);
+        //设置表头
+        $excel->setActiveSheetIndex(0)
+            ->setCellValue('A1', '')
+            ->setCellValue('B1', '')
+            ->setCellValue('C1', '')
+            ->setCellValue('D1', '')
+            ->setCellValue('E1', '')
+            ->setCellValue('F1', '')
+            ->setCellValue('G1', '')
+            ->setCellValue('H1', '')
+            ->setCellValue('I1', '')
+            ->setCellValue('J1', '')
+            ->setCellValue('K1', '')
+            ->setCellValue('L1', '')
+            ->setCellValue('M1', '')
+            ->setCellValue('N1', '');
+        $count = 2;
+        $first_year = 2016;
+        // 设置水平居中
         foreach ($data as $key => $value) {
-            $sortData[$value['initials']][] = $value;
+            $excel->getActiveSheet()->getRowDimension('A'.( $count ))->setRowHeight(30);
+            $excel->getActiveSheet()
+                ->mergeCells( 'A'.( $count ).':F'.( $count ))
+                ->setCellValue('A'.( $count ),$key);
+            $excel->getActiveSheet()->getStyle('A'.( $count ))->getAlignment()->setHorizontal(\PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+            $count = $count + 1;
+            foreach ($value as $kk => $item) {
+                $excel->getActiveSheet()->getRowDimension('A'.( $count ))->setRowHeight(15);
+                $excel->getActiveSheet()
+                    ->mergeCells( 'A'.( $count ).':F'.( $count ))
+                    ->setCellValue('A'.( $count ),$kk);
+                $excel->getActiveSheet()->getStyle('A'.( $count ))->getAlignment()->setHorizontal(\PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+                foreach ($item as $itemKey => $itemValue ) {
+                    $count1 = $count + 1;
+                    $itemValueCount = count($itemValue['show_year']);
+                    if( $itemValueCount == 1 ) {
+                        $excel->getActiveSheet()
+                            ->mergeCells( 'G'.( $count ).':J'.( $count ))
+                            ->setCellValue('G'.( $count ), $itemValue['show_year'][0]['the_year'] )
+                            ->setCellValue('G'.( $count1 ), '计划' )
+                            ->setCellValue('H'.( $count1 ), '最低分' )
+                            ->setCellValue('I'.( $count1 ), '录取最低分位次' )
+                            ->setCellValue('J'.( $count1 ), '最低分与分数线差值' );
+                    }
+                    if( $itemValueCount == 2 ) {
+                        $excel->getActiveSheet()
+                            ->mergeCells( 'G'.( $count ).':J'.( $count ))
+                            ->setCellValue('G'.( $count ), $itemValue['show_year'][0]['the_year'] )
+                            ->mergeCells( 'K'.( $count ).':N'.( $count ))
+                            ->setCellValue('K'.( $count ), $itemValue['show_year'][1]['the_year'] )
+                            ->setCellValue('G'.( $count1 ), '计划' )
+                            ->setCellValue('H'.( $count1 ), '最低分' )
+                            ->setCellValue('I'.( $count1 ), '录取最低分位次' )
+                            ->setCellValue('J'.( $count1 ), '最低分与分数线差值' )
+                            ->setCellValue('K'.( $count1 ), '计划' )
+                            ->setCellValue('L'.( $count1 ), '最低分' )
+                            ->setCellValue('M'.( $count1 ), '录取最低分位次' )
+                            ->setCellValue('N'.( $count1 ), '最低分与分数线差值' );
+                    }
+                    if( $itemValueCount == 3 ) {
+                        $excel->getActiveSheet()
+                            ->mergeCells( 'G'.( $count ).':J'.( $count ))
+                            ->setCellValue('G'.( $count ), $itemValue['show_year'][0]['the_year'] )
+                            ->mergeCells( 'K'.( $count ).':N'.( $count ))
+                            ->setCellValue('K'.( $count ), $itemValue['show_year'][1]['the_year'] )
+                            ->mergeCells( 'O'.( $count ).':R'.( $count ))
+                            ->setCellValue( 'O'.( $count ), $itemValue['show_year'][2]['the_year'] )
+                            ->setCellValue('G'.( $count1 ), '计划' )
+                            ->setCellValue('H'.( $count1 ), '最低分' )
+                            ->setCellValue('I'.( $count1 ), '录取最低分位次' )
+                            ->setCellValue('J'.( $count1 ), '最低分与分数线差值' )
+                            ->setCellValue('K'.( $count1 ), '计划' )
+                            ->setCellValue('L'.( $count1 ), '最低分' )
+                            ->setCellValue('M'.( $count1 ), '录取最低分位次' )
+                            ->setCellValue('N'.( $count1 ), '最低分与分数线差值' )
+                            ->setCellValue('O'.( $count1 ), '计划' )
+                            ->setCellValue('P'.( $count1 ), '最低分' )
+                            ->setCellValue('Q'.( $count1 ), '录取最低分位次' )
+                            ->setCellValue('R'.( $count1 ), '最低分与分数线差值' );
+                    }
+                    if( $itemValueCount == 4 ) {
+                        $excel->getActiveSheet()
+                            ->mergeCells( 'G'.( $count ).':J'.( $count ),$itemValue['show_year'][0]['the_year'])
+                            ->setCellValue('G'.( $count ), $itemValue['show_year'][0]['the_year'] )
+                            ->mergeCells( 'K'.( $count ).':N'.( $count ))
+                            ->setCellValue('K'.( $count ), $itemValue['show_year'][1]['the_year'] )
+                            ->mergeCells( 'O'.( $count ).':O'.( $count ))
+                            ->setCellValue('O'.( $count ), $itemValue['show_year'][2]['the_year'] )
+                            ->mergeCells( 'S'.( $count ).':V'.( $count ))
+                            ->setCellValue('S'.( $count1 ), $itemValue['show_year'][3]['the_year'] )
+                            ->setCellValue('G'.( $count1 ), '计划' )
+                            ->setCellValue('H'.( $count1 ), '最低分' )
+                            ->setCellValue('I'.( $count1 ), '录取最低分位次' )
+                            ->setCellValue('J'.( $count1 ), '最低分与分数线差值' )
+                            ->setCellValue('K'.( $count1 ), '计划' )
+                            ->setCellValue('L'.( $count1 ), '最低分' )
+                            ->setCellValue('M'.( $count1 ), '录取最低分位次' )
+                            ->setCellValue('N'.( $count1 ), '最低分与分数线差值' )
+                            ->setCellValue('O'.( $count1 ), '计划' )
+                            ->setCellValue('P'.( $count1 ), '最低分' )
+                            ->setCellValue('Q'.( $count1 ), '录取最低分位次' )
+                            ->setCellValue('R'.( $count1 ), '最低分与分数线差值' )
+                            ->setCellValue('S'.( $count1 ), '计划' )
+                            ->setCellValue('T'.( $count1 ), '最低分' )
+                            ->setCellValue('U'.( $count1 ), '录取最低分位次' )
+                            ->setCellValue('V'.( $count1 ), '最低分与分数线差值' );
+                    }
+                }
+                $excel->getActiveSheet()->getStyle('G'.( $count ).':J'.( $count ) )->getAlignment()->setHorizontal(\PHPExcel_Style_Alignment::HORIZONTAL_CENTER);//居中
+                $excel->getActiveSheet()->getStyle('K'.( $count ).':N'.( $count ) )->getAlignment()->setHorizontal(\PHPExcel_Style_Alignment::HORIZONTAL_CENTER);//居中
+                $excel->getActiveSheet()->getStyle('O'.( $count ).':R'.( $count ) )->getAlignment()->setHorizontal(\PHPExcel_Style_Alignment::HORIZONTAL_CENTER);//居中
+                $count = $count + 1;
+                $excel->getActiveSheet()
+                    ->setCellValue('A'.( $count ),'省份' )
+                    ->setCellValue('B'.( $count ),'城市' )
+                    ->setCellValue('C'.( $count ),'院校名称' )
+                    ->setCellValue('D'.( $count ),'批次' )
+                    ->setCellValue('E'.( $count ),'科类' )
+                    ->setCellValue('F'.( $count ),'办学类型' );
+                $count = $count + 1;
+                foreach ( $item as $itemKey => $itemValue ) {
+                    $excel->getActiveSheet()
+                        ->setCellValue('A'.( $count ), $itemValue['school_province'])
+                        ->setCellValue('B'.( $count ), $itemValue['school_city'])
+                        ->setCellValue('C'.( $count ), $itemValue['school_name'])
+                        ->setCellValue('D'.( $count ), $itemValue['batch'].'批次')
+                        ->setCellValue('E'.( $count ), $itemValue['type'] == 'reason' ? '理科' : '文科' )
+                        ->setCellValue('F'.( $count ), $itemValue['school_type']);
+                    $itemValueCount = count($itemValue['show_year']);
+                    if( $itemValueCount == 1 ) {
+
+                        $excel->getActiveSheet()
+                            ->setCellValue('G'.( $count ), $itemValue['show_year'][0]['plan'] )
+                            ->setCellValue('H'.( $count ), $itemValue['show_year'][0]['fraction_min'] )
+                            ->setCellValue('I'.( $count ), $itemValue['show_year'][0]['ler'] )
+                            ->setCellValue('J'.( $count ), $itemValue['show_year'][0]['msd'] );
+                    }
+                    if( $itemValueCount == 2 ) {
+                        $excel->getActiveSheet()
+                            ->setCellValue('G'.( $count ), $itemValue['show_year'][0]['plan'] )
+                            ->setCellValue('H'.( $count ), $itemValue['show_year'][0]['fraction_min'] )
+                            ->setCellValue('I'.( $count ), $itemValue['show_year'][0]['ler'] )
+                            ->setCellValue('J'.( $count ), $itemValue['show_year'][0]['msd'] )
+                            ->setCellValue('K'.( $count ), $itemValue['show_year'][1]['plan'] )
+                            ->setCellValue('L'.( $count ), $itemValue['show_year'][1]['fraction_min'] )
+                            ->setCellValue('M'.( $count ), $itemValue['show_year'][1]['ler'] )
+                            ->setCellValue('N'.( $count ), $itemValue['show_year'][1]['msd'] );
+                    }
+                    if( $itemValueCount == 3 ) {
+                        $excel->getActiveSheet()
+                            ->setCellValue('G'.( $count ), $itemValue['show_year'][0]['plan'] )
+                            ->setCellValue('H'.( $count ), $itemValue['show_year'][0]['fraction_min'] )
+                            ->setCellValue('I'.( $count ), $itemValue['show_year'][0]['ler'] )
+                            ->setCellValue('J'.( $count ), $itemValue['show_year'][0]['msd'] )
+                            ->setCellValue('K'.( $count ), $itemValue['show_year'][1]['plan'] )
+                            ->setCellValue('L'.( $count ), $itemValue['show_year'][1]['fraction_min'] )
+                            ->setCellValue('M'.( $count ), $itemValue['show_year'][1]['ler'] )
+                            ->setCellValue('N'.( $count ), $itemValue['show_year'][1]['msd'] )
+                            ->setCellValue('O'.( $count ), $itemValue['show_year'][2]['plan'] )
+                            ->setCellValue('P'.( $count ), $itemValue['show_year'][2]['fraction_min'] )
+                            ->setCellValue('Q'.( $count ), $itemValue['show_year'][2]['ler'] )
+                            ->setCellValue('R'.( $count ), $itemValue['show_year'][2]['msd'] );
+                    }
+                    if( $itemValueCount == 4 ) {
+                        $excel->getActiveSheet()
+                            ->setCellValue('G'.( $count ), $itemValue['show_year'][0]['plan'] )
+                            ->setCellValue('H'.( $count ), $itemValue['show_year'][0]['fraction_min'] )
+                            ->setCellValue('I'.( $count ), $itemValue['show_year'][0]['ler'] )
+                            ->setCellValue('J'.( $count ), $itemValue['show_year'][0]['msd'] )
+                            ->setCellValue('K'.( $count ), $itemValue['show_year'][1]['plan'] )
+                            ->setCellValue('L'.( $count ), $itemValue['show_year'][1]['fraction_min'] )
+                            ->setCellValue('M'.( $count ), $itemValue['show_year'][1]['ler'] )
+                            ->setCellValue('N'.( $count ), $itemValue['show_year'][1]['msd'] )
+                            ->setCellValue('O'.( $count ), $itemValue['show_year'][2]['plan'] )
+                            ->setCellValue('P'.( $count ), $itemValue['show_year'][2]['fraction_min'] )
+                            ->setCellValue('Q'.( $count ), $itemValue['show_year'][2]['ler'] )
+                            ->setCellValue('R'.( $count ), $itemValue['show_year'][2]['msd'] )
+                            ->setCellValue('S'.( $count ), $itemValue['show_year'][3]['plan'] )
+                            ->setCellValue('T'.( $count ), $itemValue['show_year'][3]['fraction_min'] )
+                            ->setCellValue('U'.( $count ), $itemValue['show_year'][3]['ler'] )
+                            ->setCellValue('V'.( $count ), $itemValue['show_year'][3]['msd'] );
+                    }
+                    $excel->getActiveSheet()->getStyle('A'.( $count ).':V'.( $count ) )->getAlignment()->setHorizontal(\PHPExcel_Style_Alignment::HORIZONTAL_CENTER);//居中
+                    if( $itemValue['color'] == 'red' ) {
+                        $color = 'FF0000';
+                    }else if( $itemValue['color'] == 'blue' ) {
+                        $color = '0000FF';
+                    } else if( $itemValue['color'] == 'green' ) {
+                        $color = '008000';
+                    }
+                    $excel->getActiveSheet()->getStyle( 'A'.( $count ).':V'.( $count ) )->getFont()->getColor()->setARGB($color);// 设置文字颜色
+                    $count = $count + 1;
+                }
+                $count = $count + 1;
+            }
         }
-        ksort($sortData);
-        return $sortData;
+        //设置单元格边框
+        $excel->getActiveSheet()->getStyle("A1:E" . (count($data) + 1))->getBorders()->getAllBorders()->setBorderStyle();
+        //下载文件
+        ob_end_clean();
+        header('Content-Type: application/vnd.ms-excel');
+        header('Content-Disposition: attachment;filename="' . $name . '.xlsx"');
+        header('Cache-Control: max-age=0');
+        $res_excel = PHPExcel_IOFactory::createWriter($excel, 'Excel2007');
+        $res_excel->save('php://output');
     }
     /**
      * 获取首字母
@@ -478,5 +473,55 @@ class Test extends Frontend
             return 'Z';
         }
         return null;
+    }
+    /**
+     * 按字母排序
+     * @param  array  $data
+     * @return array
+     */
+    public function sortInitials(array $data)
+    {
+        $sortData = [];
+        foreach ($data as $key => $value) {
+            $sortData[$value['initials']][] = $value;
+        }
+        ksort($sortData);
+        return $sortData;
+    }
+    /**
+     * 二维数组根据首字母分组排序（来源于网络，谨慎修改）
+     * @param  array  $data      二维数组
+     * @param  string $targetKey 首字母的键名
+     * @return array             根据首字母关联的二维数组
+     */
+    public function groupByInitials(array $data, $targetKey = 'name')
+    {
+        foreach ( $data as $key => $value ) {
+            $data = array_map(function ($item) use ($targetKey) {
+                return array_merge($item, [
+                    'initials' => $this->getInitials($item[$targetKey]),
+                ]);
+            }, $value);
+            $data = $this->sortInitials($data);
+            $new_data[$key]=$data;
+        }
+        return $new_data;
+    }
+    /**
+     * 省份排序
+     */
+    public function province($info)
+    {
+        $new_info = [];
+        foreach ( $info as $key => $value) {
+            foreach ($value as $k => $v)
+            {
+                foreach ($v as $kk => $vv)
+                {
+                    $new_info[$key][$vv['school_province']][]=$vv;
+                }
+            }
+        }
+        return $new_info;
     }
 }

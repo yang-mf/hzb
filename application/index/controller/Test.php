@@ -158,29 +158,38 @@ class Test extends Frontend
         {
             return $data=['code'=>2,'message'=>'请重新选择'];
         }
+        $new_show_info = [
+            'new_show_info'     =>$new_show_info,
+            'year'              =>$year,
+        ];
         $excel = new \PHPExcel();
-        $excel = $this->clientExcel($new_show_info, '', $year);
+        $excel = $this->clientExcel($new_show_info);
     }
 
-    public function clientExcel($data = [], $name = 'excel', $Checkedyear)
+    public function clientExcel($data = [], $name = 'excel')
     {
+        $new_show_info = $data;
+        $data       = $new_show_info['new_show_info'];
+        $year       = $new_show_info['year'];
+        $user_id = $this->auth->id;
 
+        $user_name = model('TestHzbDataInsertUserChecked')->get_user_name($user_id);
         $excel = new \PHPExcel(); //引用phpexcel
         iconv('UTF-8', 'gb2312//IGNORE', $name); //针对中文名转码
         $excel->setActiveSheetIndex(0);
         $excel->getActiveSheet()->setTitle($name); //设置表名
         $excel->getActiveSheet()->getColumnDimension('A')->setWidth(20);
-        $excel->getActiveSheet()->getColumnDimension('B')->setWidth(40);
+        $excel->getActiveSheet()->getColumnDimension('B')->setWidth(20);
         $excel->getActiveSheet()->getColumnDimension('C')->setWidth(50);
-        $excel->getActiveSheet()->getColumnDimension('D')->setWidth(20);
-        $excel->getActiveSheet()->getColumnDimension('E')->setWidth(20);
+        $excel->getActiveSheet()->getColumnDimension('D')->setWidth(10);
+        $excel->getActiveSheet()->getColumnDimension('E')->setWidth(10);
         $excel->getActiveSheet()->getColumnDimension('F')->setWidth(30);
-        $excel->getActiveSheet()->getColumnDimension('I')->setWidth(30);
-        $excel->getActiveSheet()->getColumnDimension('J')->setWidth(30);
-        $excel->getActiveSheet()->getColumnDimension('M')->setWidth(30);
-        $excel->getActiveSheet()->getColumnDimension('N')->setWidth(30);
-        $excel->getActiveSheet()->getColumnDimension('Q')->setWidth(30);
-        $excel->getActiveSheet()->getColumnDimension('R')->setWidth(30);
+        $excel->getActiveSheet()->getColumnDimension('I')->setWidth(20);
+        $excel->getActiveSheet()->getColumnDimension('J')->setWidth(20);
+        $excel->getActiveSheet()->getColumnDimension('M')->setWidth(20);
+        $excel->getActiveSheet()->getColumnDimension('N')->setWidth(20);
+        $excel->getActiveSheet()->getColumnDimension('Q')->setWidth(20);
+        $excel->getActiveSheet()->getColumnDimension('R')->setWidth(20);
         //设置表头
         $excel->setActiveSheetIndex(0)
             ->setCellValue('A1', '')
@@ -197,8 +206,17 @@ class Test extends Frontend
             ->setCellValue('L1', '')
             ->setCellValue('M1', '')
             ->setCellValue('N1', '');
-        $count = 2;
-        $first_year = 2016;
+        //设置个人信息展示
+        $count = 1;
+        $excel->getActiveSheet()
+            ->mergeCells('A' . ($count) . ':H' . ($count))
+            ->setCellValue('A'.( $count ),($user_name.'-'.$year.'年'.'河南省高考志愿填报模拟填报方案'));
+        $count = $count + 1;
+        $excel->getActiveSheet()
+            ->setCellValue('A'.( $count ) ,('姓名：'.$user_name))
+            ->setCellValue('B'.( $count ) , ('性别：'.$user_name));
+
+        $count = 14;
         // 设置水平居中
         foreach ($data as $key => $value) {
             $excel->getActiveSheet()->getRowDimension('A'.( $count ))->setRowHeight(30);
@@ -215,78 +233,44 @@ class Test extends Frontend
                 $excel->getActiveSheet()->getStyle('A'.( $count ))->getAlignment()->setHorizontal(\PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
                 foreach ($item as $itemKey => $itemValue ) {
                     $count1 = $count + 1;
-                    $itemValueCount = count($itemValue['show_year']);
-                    if( $itemValueCount == 1 ) {
-                        $excel->getActiveSheet()
-                            ->mergeCells( 'G'.( $count ).':J'.( $count ))
-                            ->setCellValue('G'.( $count ), $itemValue['show_year'][0]['the_year'] )
-                            ->setCellValue('G'.( $count1 ), '计划' )
-                            ->setCellValue('H'.( $count1 ), '最低分' )
-                            ->setCellValue('I'.( $count1 ), '录取最低分位次' )
-                            ->setCellValue('J'.( $count1 ), '最低分与分数线差值' );
-                    }
-                    if( $itemValueCount == 2 ) {
-                        $excel->getActiveSheet()
-                            ->mergeCells( 'G'.( $count ).':J'.( $count ))
-                            ->setCellValue('G'.( $count ), $itemValue['show_year'][0]['the_year'] )
-                            ->mergeCells( 'K'.( $count ).':N'.( $count ))
-                            ->setCellValue('K'.( $count ), $itemValue['show_year'][1]['the_year'] )
-                            ->setCellValue('G'.( $count1 ), '计划' )
-                            ->setCellValue('H'.( $count1 ), '最低分' )
-                            ->setCellValue('I'.( $count1 ), '录取最低分位次' )
-                            ->setCellValue('J'.( $count1 ), '最低分与分数线差值' )
-                            ->setCellValue('K'.( $count1 ), '计划' )
-                            ->setCellValue('L'.( $count1 ), '最低分' )
-                            ->setCellValue('M'.( $count1 ), '录取最低分位次' )
-                            ->setCellValue('N'.( $count1 ), '最低分与分数线差值' );
-                    }
-                    if( $itemValueCount == 3 ) {
-                        $excel->getActiveSheet()
-                            ->mergeCells( 'G'.( $count ).':J'.( $count ))
-                            ->setCellValue('G'.( $count ), $itemValue['show_year'][0]['the_year'] )
-                            ->mergeCells( 'K'.( $count ).':N'.( $count ))
-                            ->setCellValue('K'.( $count ), $itemValue['show_year'][1]['the_year'] )
-                            ->mergeCells( 'O'.( $count ).':R'.( $count ))
-                            ->setCellValue( 'O'.( $count ), $itemValue['show_year'][2]['the_year'] )
-                            ->setCellValue('G'.( $count1 ), '计划' )
-                            ->setCellValue('H'.( $count1 ), '最低分' )
-                            ->setCellValue('I'.( $count1 ), '录取最低分位次' )
-                            ->setCellValue('J'.( $count1 ), '最低分与分数线差值' )
-                            ->setCellValue('K'.( $count1 ), '计划' )
-                            ->setCellValue('L'.( $count1 ), '最低分' )
-                            ->setCellValue('M'.( $count1 ), '录取最低分位次' )
-                            ->setCellValue('N'.( $count1 ), '最低分与分数线差值' )
-                            ->setCellValue('O'.( $count1 ), '计划' )
-                            ->setCellValue('P'.( $count1 ), '最低分' )
-                            ->setCellValue('Q'.( $count1 ), '录取最低分位次' )
-                            ->setCellValue('R'.( $count1 ), '最低分与分数线差值' );
-                    }
-                    if( $itemValueCount == 4 ) {
-                        $excel->getActiveSheet()
-                            ->mergeCells( 'G'.( $count ).':J'.( $count ),$itemValue['show_year'][0]['the_year'])
-                            ->setCellValue('G'.( $count ), $itemValue['show_year'][0]['the_year'] )
-                            ->mergeCells( 'K'.( $count ).':N'.( $count ))
-                            ->setCellValue('K'.( $count ), $itemValue['show_year'][1]['the_year'] )
-                            ->mergeCells( 'O'.( $count ).':O'.( $count ))
-                            ->setCellValue('O'.( $count ), $itemValue['show_year'][2]['the_year'] )
-                            ->mergeCells( 'S'.( $count ).':V'.( $count ))
-                            ->setCellValue('S'.( $count1 ), $itemValue['show_year'][3]['the_year'] )
-                            ->setCellValue('G'.( $count1 ), '计划' )
-                            ->setCellValue('H'.( $count1 ), '最低分' )
-                            ->setCellValue('I'.( $count1 ), '录取最低分位次' )
-                            ->setCellValue('J'.( $count1 ), '最低分与分数线差值' )
-                            ->setCellValue('K'.( $count1 ), '计划' )
-                            ->setCellValue('L'.( $count1 ), '最低分' )
-                            ->setCellValue('M'.( $count1 ), '录取最低分位次' )
-                            ->setCellValue('N'.( $count1 ), '最低分与分数线差值' )
-                            ->setCellValue('O'.( $count1 ), '计划' )
-                            ->setCellValue('P'.( $count1 ), '最低分' )
-                            ->setCellValue('Q'.( $count1 ), '录取最低分位次' )
-                            ->setCellValue('R'.( $count1 ), '最低分与分数线差值' )
-                            ->setCellValue('S'.( $count1 ), '计划' )
-                            ->setCellValue('T'.( $count1 ), '最低分' )
-                            ->setCellValue('U'.( $count1 ), '录取最低分位次' )
-                            ->setCellValue('V'.( $count1 ), '最低分与分数线差值' );
+                    foreach ($itemValue['show_year'] as $k => $v ) {
+                        $num = $v['the_year'] - $v['last_year'];
+                        if ($num == 0) {
+                            $excel->getActiveSheet()
+                                ->mergeCells('G' . ($count) . ':J' . ($count))
+                                ->setCellValue('G' . ($count), $v['the_year'])
+                                ->setCellValue('G' . ($count1), '计划')
+                                ->setCellValue('H' . ($count1), '最低分')
+                                ->setCellValue('I' . ($count1), '录取最低分位次')
+                                ->setCellValue('J' . ($count1), '最低分与分数线差值');
+                        }
+                        if ($num == 1) {
+                            $excel->getActiveSheet()
+                                ->mergeCells('K' . ($count) . ':N' . ($count))
+                                ->setCellValue('K' . ($count), $v['the_year'])
+                                ->setCellValue('K' . ($count1), '计划')
+                                ->setCellValue('L' . ($count1), '最低分')
+                                ->setCellValue('M' . ($count1), '录取最低分位次')
+                                ->setCellValue('N' . ($count1), '最低分与分数线差值');
+                        }
+                        if ($num == 2) {
+                            $excel->getActiveSheet()
+                                ->mergeCells('O' . ($count) . ':R' . ($count))
+                                ->setCellValue('O' . ($count), $v['the_year'])
+                                ->setCellValue('O' . ($count1), '计划')
+                                ->setCellValue('P' . ($count1), '最低分')
+                                ->setCellValue('Q' . ($count1), '录取最低分位次')
+                                ->setCellValue('R' . ($count1), '最低分与分数线差值');
+                        }
+                        if ($num == 3) {
+                            $excel->getActiveSheet()
+                                ->mergeCells('S' . ($count) . ':V' . ($count))
+                                ->setCellValue('S' . ($count1), $v['the_year'])
+                                ->setCellValue('S' . ($count1), '计划')
+                                ->setCellValue('T' . ($count1), '最低分')
+                                ->setCellValue('U' . ($count1), '录取最低分位次')
+                                ->setCellValue('V' . ($count1), '最低分与分数线差值');
+                        }
                     }
                 }
                 $excel->getActiveSheet()->getStyle('G'.( $count ).':J'.( $count ) )->getAlignment()->setHorizontal(\PHPExcel_Style_Alignment::HORIZONTAL_CENTER);//居中
@@ -309,61 +293,38 @@ class Test extends Frontend
                         ->setCellValue('D'.( $count ), $itemValue['batch'].'批次')
                         ->setCellValue('E'.( $count ), $itemValue['type'] == 'reason' ? '理科' : '文科' )
                         ->setCellValue('F'.( $count ), $itemValue['school_type']);
-                    $itemValueCount = count($itemValue['show_year']);
-                    if( $itemValueCount == 1 ) {
-
-                        $excel->getActiveSheet()
-                            ->setCellValue('G'.( $count ), $itemValue['show_year'][0]['plan'] )
-                            ->setCellValue('H'.( $count ), $itemValue['show_year'][0]['fraction_min'] )
-                            ->setCellValue('I'.( $count ), $itemValue['show_year'][0]['ler'] )
-                            ->setCellValue('J'.( $count ), $itemValue['show_year'][0]['msd'] );
+                    foreach ($itemValue['show_year'] as $k => $v ) {
+                        $num = $v['the_year'] - $v['last_year'];
+                        if( $num == 0 ) {
+                            $excel->getActiveSheet()
+                                ->setCellValue('G'.( $count ), $v['plan'] )
+                                ->setCellValue('H'.( $count ), $v['fraction_min'] )
+                                ->setCellValue('I'.( $count ), $v['ler'] )
+                                ->setCellValue('J'.( $count ), $v['msd'] );
+                        }
+                        if( $num == 1 ) {
+                            $excel->getActiveSheet()
+                                ->setCellValue('K'.( $count ), $v['plan'] )
+                                ->setCellValue('L'.( $count ), $v['fraction_min'] )
+                                ->setCellValue('M'.( $count ), $v['ler'] )
+                                ->setCellValue('N'.( $count ), $v['msd'] );
+                        }
+                        if( $num == 2 ) {
+                            $excel->getActiveSheet()
+                                ->setCellValue('O'.( $count ), $v['plan'] )
+                                ->setCellValue('P'.( $count ), $v['fraction_min'] )
+                                ->setCellValue('Q'.( $count ), $v['ler'] )
+                                ->setCellValue('R'.( $count ), $v['msd'] );
+                        }
+                        if( $num == 3 ) {
+                            $excel->getActiveSheet()
+                                ->setCellValue('S'.( $count ), $v['plan'] )
+                                ->setCellValue('T'.( $count ), $v['fraction_min'] )
+                                ->setCellValue('U'.( $count ), $v['ler'] )
+                                ->setCellValue('V'.( $count ), $v['msd'] );
+                        }
                     }
-                    if( $itemValueCount == 2 ) {
-                        $excel->getActiveSheet()
-                            ->setCellValue('G'.( $count ), $itemValue['show_year'][0]['plan'] )
-                            ->setCellValue('H'.( $count ), $itemValue['show_year'][0]['fraction_min'] )
-                            ->setCellValue('I'.( $count ), $itemValue['show_year'][0]['ler'] )
-                            ->setCellValue('J'.( $count ), $itemValue['show_year'][0]['msd'] )
-                            ->setCellValue('K'.( $count ), $itemValue['show_year'][1]['plan'] )
-                            ->setCellValue('L'.( $count ), $itemValue['show_year'][1]['fraction_min'] )
-                            ->setCellValue('M'.( $count ), $itemValue['show_year'][1]['ler'] )
-                            ->setCellValue('N'.( $count ), $itemValue['show_year'][1]['msd'] );
-                    }
-                    if( $itemValueCount == 3 ) {
-                        $excel->getActiveSheet()
-                            ->setCellValue('G'.( $count ), $itemValue['show_year'][0]['plan'] )
-                            ->setCellValue('H'.( $count ), $itemValue['show_year'][0]['fraction_min'] )
-                            ->setCellValue('I'.( $count ), $itemValue['show_year'][0]['ler'] )
-                            ->setCellValue('J'.( $count ), $itemValue['show_year'][0]['msd'] )
-                            ->setCellValue('K'.( $count ), $itemValue['show_year'][1]['plan'] )
-                            ->setCellValue('L'.( $count ), $itemValue['show_year'][1]['fraction_min'] )
-                            ->setCellValue('M'.( $count ), $itemValue['show_year'][1]['ler'] )
-                            ->setCellValue('N'.( $count ), $itemValue['show_year'][1]['msd'] )
-                            ->setCellValue('O'.( $count ), $itemValue['show_year'][2]['plan'] )
-                            ->setCellValue('P'.( $count ), $itemValue['show_year'][2]['fraction_min'] )
-                            ->setCellValue('Q'.( $count ), $itemValue['show_year'][2]['ler'] )
-                            ->setCellValue('R'.( $count ), $itemValue['show_year'][2]['msd'] );
-                    }
-                    if( $itemValueCount == 4 ) {
-                        $excel->getActiveSheet()
-                            ->setCellValue('G'.( $count ), $itemValue['show_year'][0]['plan'] )
-                            ->setCellValue('H'.( $count ), $itemValue['show_year'][0]['fraction_min'] )
-                            ->setCellValue('I'.( $count ), $itemValue['show_year'][0]['ler'] )
-                            ->setCellValue('J'.( $count ), $itemValue['show_year'][0]['msd'] )
-                            ->setCellValue('K'.( $count ), $itemValue['show_year'][1]['plan'] )
-                            ->setCellValue('L'.( $count ), $itemValue['show_year'][1]['fraction_min'] )
-                            ->setCellValue('M'.( $count ), $itemValue['show_year'][1]['ler'] )
-                            ->setCellValue('N'.( $count ), $itemValue['show_year'][1]['msd'] )
-                            ->setCellValue('O'.( $count ), $itemValue['show_year'][2]['plan'] )
-                            ->setCellValue('P'.( $count ), $itemValue['show_year'][2]['fraction_min'] )
-                            ->setCellValue('Q'.( $count ), $itemValue['show_year'][2]['ler'] )
-                            ->setCellValue('R'.( $count ), $itemValue['show_year'][2]['msd'] )
-                            ->setCellValue('S'.( $count ), $itemValue['show_year'][3]['plan'] )
-                            ->setCellValue('T'.( $count ), $itemValue['show_year'][3]['fraction_min'] )
-                            ->setCellValue('U'.( $count ), $itemValue['show_year'][3]['ler'] )
-                            ->setCellValue('V'.( $count ), $itemValue['show_year'][3]['msd'] );
-                    }
-                    $excel->getActiveSheet()->getStyle('A'.( $count ).':V'.( $count ) )->getAlignment()->setHorizontal(\PHPExcel_Style_Alignment::HORIZONTAL_CENTER);//居中
+                    $excel->getActiveSheet()->getStyle('A1'.':V'.( $count ) )->getAlignment()->setHorizontal(\PHPExcel_Style_Alignment::HORIZONTAL_CENTER);//居中
                     if( $itemValue['color'] == 'red' ) {
                         $color = 'FF0000';
                     }else if( $itemValue['color'] == 'blue' ) {

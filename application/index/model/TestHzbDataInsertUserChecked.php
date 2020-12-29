@@ -51,4 +51,9 @@ class TestHzbDataInsertUserChecked extends Model
         $res = Db::table('yzx_hzb_user_checked_info')
             ->insert($data);
     }
+    //获取用户姓名
+    public function get_user_name($user_id) {
+        $user_name = Db::table('yzx_user')->where('id',$user_id)->value('nickname');
+        return $user_name;
+    }
 }

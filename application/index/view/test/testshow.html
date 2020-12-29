@@ -175,12 +175,14 @@
             </div>
             <el-form-item>
                 <el-button @click="onSubmit" id="button" :disabled=submit_style >确定</el-button>
-                <el-button>取消</el-button>
+                <el-button @click="onOpen"  >测试</el-button>
+                <el-button :disabled=submit_style >
+                    <a href="/index/test/test"
+                       target="_blank"
+                       style="text-decoration:none;"
+                    >下载保存到本地</a>
+                </el-button>
             </el-form-item>
-            <div >
-                <a href="/index/test/test">下载保存到本地</a>
-                <el-button @click="onExcel"  :disabled=submit_style >下载保存到本地</el-button>
-            </div>
         </el-form>
     </div>
     <div v-show="show_data">
@@ -399,13 +401,13 @@
                 formRules: {
                     score: [
                         {required: true, message: '请输入分数', trigger: 'blur'},
-                        {min: 1, max: 6, message: '请输入正确分数', trigger: 'blur'},
+                        //整数三位及以下的分数或者带一位小数的分数
                         {pattern :/^([1-9][0-9]{0,2})(\.([0-9]{0,1})[1-9])?$/,message: '请输入正确的分数'},
                     ],
                     rank: [
                         {required: true, message: '请输入位次', trigger: 'blur'},
                         {min: 1, max: 6, message: '请输入正确位次', trigger: 'blur'},
-                        {pattern :/^[1-9]{1}[0-9]*$/,message: '请输入正确的位次'},
+                        {pattern :/^[1-9]{1}[0-9]{0,5}$/,message: '请输入正确的位次'},
                     ],
                     type: [
                         {required: true, },
@@ -431,13 +433,6 @@
                 state_school        : [] ,     //学校框输入的或者选中的数据
                 checked_province    : [] ,     //省份框输入的或者选中的数据
                 checked_school_type : [] ,     //学校类型框输入的或者选中的数据
-                all:{
-                    profession_name_info    : [],       //专业名称，后台获取
-                    province_name_info      : [],       //省份名称，后台获取
-                    school_type_name_info   : [],       //学校类型名称，后台获取
-                    school_name_info        : [],       //学校名称，后台获取
-                    batch_name_info         : JSON.parse('{$all_batch_name_info}'),     //批次名称，后台获取
-                },
                 show:{
                     profession_name_info    : [],       //专业名称，后台获取
                     province_name_info      : [],       //省份名称，后台获取
@@ -445,7 +440,6 @@
                     school_name_info        : [],       //学校名称，后台获取
                     batch_name_info         : JSON.parse('{$all_batch_name_info}'),     //批次名称，后台获取
                 },
-                batch_num       :[],                    //用于记录当前搜索的信息中的批次
             }
         },
         methods: {
@@ -510,16 +504,33 @@
                         _this.show.province_name_info    = response.province_name;
                         _this.show.school_type_name_info = response.school_type;
                         _this.show.school_name_info      = response.school_name;
-                        _this.batch_num = response.batch_num;
                         _this.show_add = true;
                         _this.show_select_data = false;
                         _this.show_info = response.show_info;
                         _this.show_data = true;
                         _this.show_warn = false;
+                        _this.$message({
+                            type: 'success',
+                            message: '查询成功!',
+                        });
                         // _this.submit_style = false;
                     }
                 });
                 return
+            },
+            onOpen() {
+                this.$confirm('请仔细核查所填写信息之后再点击确定?', '提示', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                }).then(() => {
+                    this.onSubmit();
+                }).catch(() => {
+                    this.$message({
+                        type: 'info',
+                        message: '已取消查询'
+                    });
+                });
             },
             //根据color字段更改文字颜色
             cellStyle(row,column,rowIndex,columnIndex){
@@ -568,22 +579,13 @@
                 var _this = this;
                 $.post('/index/batch/getSelectAllInfo', {
                 }, function (response) {
-                    _this.all.profession_name_info      = response.all_profession_name_info;
-                    _this.all.province_name_info        = response.all_province_name_info;
-                    _this.all.school_type_name_info     = response.all_school_type_name_info;
-                    _this.all.school_name_info          = response.all_school_name_info;
-
                     _this.show.profession_name_info     = response.all_profession_name_info;
                     _this.show.province_name_info       = response.all_province_name_info;
                     _this.show.school_type_name_info    = response.all_school_type_name_info;
                     _this.show.school_name_info         = response.all_school_name_info;
                 });
             },
-            onExcel() {
-                $.post('/index/test/test', {
-                }, function () {
-                });
-            },
+
         },
 
         mounted() {

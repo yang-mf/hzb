@@ -157,16 +157,6 @@ class Batch extends Frontend
                 }
             }
             foreach ( $state_school as $k => $v ) {
-//                if($v['type'] == 'undefined' ) {
-//                    foreach ( $batch as $kk => $vv ) {
-//                        if( $vv == 1 || $vv == 2  ) {
-//                            $SchoolInfo['und'][] = $v;
-//                        }else if( $vv == 4  ) {
-//                            $SchoolInfo['spe'][] = $v;
-//                        }
-//                    }
-//                    continue;
-//                }
                 if( $v['type'] == 1 || $v['type'] == 2  ) {
                     $SchoolInfo['und'][] = $v;
                 }else if( $v['type'] == 4  ) {
@@ -233,18 +223,14 @@ class Batch extends Frontend
         //分批次
         foreach ( $province_show_info as $k => $v ) {
             if( $k == 1 ) {
-                $batch_num[]=$k;
                 $batch_name = '一批次';
             }else if( $k == 2 ) {
-                $batch_num[]=$k;
                 $batch_name = '二批次';
             }else if( $k == 4 ) {
-                $batch_num[]=$k;
                 $batch_name = '专科批次';
             }
             $new_show_info[$batch_name] = $v;
         }
-        $batch_num = array_unique($batch_num);
         //专业名称
         $school_num = $result['school_num'];
         foreach  ( $school_num as $k => $v ) {
@@ -266,7 +252,6 @@ class Batch extends Frontend
         $data = [
             'code'=>1,
             'show_info'         => $new_show_info,
-            'batch_num'         => $batch_num,
             'info'              => $result['forNextSelectInfo'],
             'profession_name'   => $profession_name,
             'province_name'     => $result['school_province'],
@@ -274,6 +259,7 @@ class Batch extends Frontend
             'school_name'       => $result['school_name'],
         ];
         $user_id = $this->auth->id;
+        $user_name = model('TestHzbDataInsertUserChecked')->get_user_name($user_id);
         model('TestHzbDataInsertUserChecked')
             ->InsertUserChecked($user_id, $score, $batch, $type, $year, $rank, $checked_state_profession,
         $checked_state_school, $checked_province, $checked_school_type, $the_show_year) ;

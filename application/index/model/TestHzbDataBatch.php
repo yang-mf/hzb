@@ -264,17 +264,30 @@ class TestHzbDataBatch extends Model
             ->where('type','=',$type)
             ->whereIn('batch',$batch['score'])
             ->select();
+
         if( !$the_show_year ) {
             $show_year = $this_year - 1;
+            $test_year = $show_year -2016;
+            if($test_year>=3 ) {
+                $last_year = $test_year-3;
+            }else {
+                $last_year = 2016;
+            }
         }else {
             $show_year = (int)$the_show_year;
+            $test_year = $show_year -2016;
+            if($test_year>=4 ) {
+                $last_year = $test_year-4;
+            }else {
+                $last_year = 2016;
+            }
         }
+        $for_show_year = $show_year ;
         foreach ($new_info as $ok => $ov)
         {
             foreach ($year_info as $sk => $sv)
             {
                 for( $i = $show_year ; $i >= 2016 ; $i-- ) {
-//                    var_dump($sv);die;
                     $this_new_info = [];
                     if( $sv['the_year']         == $i
                         && $ov['school_num']    == $sv['school_num']
@@ -290,6 +303,7 @@ class TestHzbDataBatch extends Model
                         $this_new_info['ler']           = $sv['ler'];
                         $this_new_info['tas']           = $sv['tas'];
                         $this_new_info['dbas']          = $sv['dbas'];
+                        $this_new_info['last_year']     = $last_year;
                         $new_info[$ok]['show_year'][]   = $this_new_info;
                     }
                 }
